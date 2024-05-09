@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34601.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDS1F_Grup_4", "SDS1F_Grup_4\SDS1F_Grup_4.csproj", "{B5ECB91B-CF01-4629-B13B-3F5C6827ACDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLS_Daniel_Mugueta", "CLS_Daniel_Mugueta\CLS_Daniel_Mugueta.csproj", "{947E55C5-FE52-4030-974B-F763B1FE2C0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5ECB91B-CF01-4629-B13B-3F5C6827ACDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5ECB91B-CF01-4629-B13B-3F5C6827ACDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5ECB91B-CF01-4629-B13B-3F5C6827ACDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5ECB91B-CF01-4629-B13B-3F5C6827ACDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{947E55C5-FE52-4030-974B-F763B1FE2C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947E55C5-FE52-4030-974B-F763B1FE2C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{947E55C5-FE52-4030-974B-F763B1FE2C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{947E55C5-FE52-4030-974B-F763B1FE2C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2554E39B-9531-43DC-B074-7481BEF48007}
+	EndGlobalSection
+EndGlobal
