@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Proyecto_FINAL
+{
+    public partial class frmManteniment : Form
+    {
+        public frmManteniment()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("MI PO");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("NO");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show("HOLA BUENAS");
+        }
+
+        private void Menu_Click(object sender, EventArgs e)
+        {
+            //this Backcolor = Color yellow;
+        }
+
+        private void testDeGayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lllistaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
