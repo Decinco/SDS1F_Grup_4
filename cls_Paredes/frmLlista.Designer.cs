@@ -1,5 +1,5 @@
 ﻿
-namespace Proyecto_FINAL
+namespace CLS_Juan_Paredes
 {
     partial class frmLlista
     {

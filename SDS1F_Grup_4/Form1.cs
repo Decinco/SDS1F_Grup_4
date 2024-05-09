@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CLS_Daniel_Mugueta;
+using CLS_Leandro_Varas;
+using CLS_Juan_Paredes;
 
 namespace SDS1F_Grup_4
 {
@@ -20,25 +22,25 @@ namespace SDS1F_Grup_4
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show("HOLA BUENAS");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void circuitosYCarrerasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmBBDD Form = new FrmBBDD();
-            Form.Show();
+            CLS_Leandro_Varas.frm_lista form = new frm_lista();
+            form.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void clasificaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmLista Form = new FrmLista();
-            Form.Show();
+            CLS_Juan_Paredes.frmLlista form = new frmLlista();
+            form.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void perfilPilotosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmMantenimiento Form = new FrmMantenimiento();
-            Form.Show();
+            CLS_Daniel_Mugueta.FrmLista form = new FrmLista();
+            form.Show();
         }
     }
 }

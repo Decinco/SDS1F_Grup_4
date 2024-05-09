@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proyecto_FINAL {
+namespace CLS_Juan_Paredes {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace Proyecto_FINAL {
         
         public override string FullResourceName {
             get {
-                return "Proyecto_FINAL.CrystalReport1.rpt";
+                return "CLS_Juan_Paredes.CrystalReport1.rpt";
             }
             set {
                 // Do nothing

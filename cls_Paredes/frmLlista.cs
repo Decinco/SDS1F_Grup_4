@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_FINAL
+namespace CLS_Juan_Paredes
 {
     public partial class frmLlista : Form
     {

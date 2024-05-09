@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_FINAL
+namespace CLS_Juan_Paredes
 {
     static class Program
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace cls_Paredes
+namespace CLS_Juan_Paredes
 {
     partial class frmOracle
     {

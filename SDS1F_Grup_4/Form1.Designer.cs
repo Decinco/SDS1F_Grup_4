@@ -29,61 +29,79 @@ namespace SDS1F_Grup_4
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.informaciónF1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.circuitosYCarrerasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clasificaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfilPilotosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // menuStrip1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(418, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Base de Datos (Lo que sea)";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.informaciónF1ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(447, 30);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // button2
+            // informaciónF1ToolStripMenuItem
             // 
-            this.button2.Location = new System.Drawing.Point(12, 53);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(418, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Informacion F1";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.informaciónF1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.circuitosYCarrerasToolStripMenuItem,
+            this.clasificaciónToolStripMenuItem,
+            this.perfilPilotosToolStripMenuItem});
+            this.informaciónF1ToolStripMenuItem.Name = "informaciónF1ToolStripMenuItem";
+            this.informaciónF1ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.informaciónF1ToolStripMenuItem.Text = "Información F1";
             // 
-            // button3
+            // circuitosYCarrerasToolStripMenuItem
             // 
-            this.button3.Location = new System.Drawing.Point(12, 96);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(418, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Mantenimiento F1";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.circuitosYCarrerasToolStripMenuItem.Name = "circuitosYCarrerasToolStripMenuItem";
+            this.circuitosYCarrerasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.circuitosYCarrerasToolStripMenuItem.Text = "Circuitos y Carreras";
+            this.circuitosYCarrerasToolStripMenuItem.Click += new System.EventHandler(this.circuitosYCarrerasToolStripMenuItem_Click);
+            // 
+            // clasificaciónToolStripMenuItem
+            // 
+            this.clasificaciónToolStripMenuItem.Name = "clasificaciónToolStripMenuItem";
+            this.clasificaciónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clasificaciónToolStripMenuItem.Text = "Clasificación";
+            this.clasificaciónToolStripMenuItem.Click += new System.EventHandler(this.clasificaciónToolStripMenuItem_Click);
+            // 
+            // perfilPilotosToolStripMenuItem
+            // 
+            this.perfilPilotosToolStripMenuItem.Name = "perfilPilotosToolStripMenuItem";
+            this.perfilPilotosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.perfilPilotosToolStripMenuItem.Text = "Perfil Pilotos";
+            this.perfilPilotosToolStripMenuItem.Click += new System.EventHandler(this.perfilPilotosToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 131);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(447, 206);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem informaciónF1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem circuitosYCarrerasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clasificaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfilPilotosToolStripMenuItem;
     }
 }
 
