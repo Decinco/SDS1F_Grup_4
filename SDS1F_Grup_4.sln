@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDS1F_Grup_4", "SDS1F_Grup_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLS_Daniel_Mugueta", "CLS_Daniel_Mugueta\CLS_Daniel_Mugueta.csproj", "{947E55C5-FE52-4030-974B-F763B1FE2C0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cls_Paredes", "..\Proyecto_FINAL\cls_Paredes\cls_Paredes.csproj", "{F9CF76CA-17CA-4C56-97DA-852673DD46CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{947E55C5-FE52-4030-974B-F763B1FE2C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{947E55C5-FE52-4030-974B-F763B1FE2C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{947E55C5-FE52-4030-974B-F763B1FE2C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9CF76CA-17CA-4C56-97DA-852673DD46CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9CF76CA-17CA-4C56-97DA-852673DD46CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9CF76CA-17CA-4C56-97DA-852673DD46CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9CF76CA-17CA-4C56-97DA-852673DD46CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
