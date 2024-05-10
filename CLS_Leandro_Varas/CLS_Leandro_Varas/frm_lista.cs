@@ -16,5 +16,11 @@ namespace CLS_Leandro_Varas
         {
             InitializeComponent();
         }
+
+        private void frm_lista_Load(object sender, EventArgs e)
+        {
+            F1CR gp_info = new F1CR();
+            
+        }
     }
 }
