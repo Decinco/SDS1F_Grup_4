@@ -29,35 +29,37 @@ namespace CLS_Daniel_Mugueta
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.ListadoEscuderiasPilotos1 = new CLS_Daniel_Mugueta.ListadoEscuderiasPilotos();
             this.SuspendLayout();
             // 
-            // label1
+            // crystalReportViewer1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Monocraft", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(318, 187);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 44);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "LISTA";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.ListadoEscuderiasPilotos1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.crystalReportViewer1.TabIndex = 0;
             // 
             // FrmLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.crystalReportViewer1);
             this.Name = "FrmLista";
             this.Text = "FrmLista";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private ListadoEscuderiasPilotos ListadoEscuderiasPilotos1;
     }
 }

@@ -26,5 +26,10 @@ namespace CLS_Daniel_Mugueta
         {
 
         }
+
+        private void FrmBBDD_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

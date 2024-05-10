@@ -44,7 +44,7 @@ namespace SDS1F_Grup_4
             this.informaciónF1ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(447, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(576, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,7 +55,7 @@ namespace SDS1F_Grup_4
             this.clasificaciónToolStripMenuItem,
             this.perfilPilotosToolStripMenuItem});
             this.informaciónF1ToolStripMenuItem.Name = "informaciónF1ToolStripMenuItem";
-            this.informaciónF1ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.informaciónF1ToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.informaciónF1ToolStripMenuItem.Text = "Información F1";
             // 
             // circuitosYCarrerasToolStripMenuItem
@@ -83,7 +83,7 @@ namespace SDS1F_Grup_4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 206);
+            this.ClientSize = new System.Drawing.Size(576, 293);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";

@@ -16,14 +16,14 @@ namespace CLS_Daniel_Mugueta {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class ListadoEscuderiasPilotos : ReportClass {
         
-        public CrystalReport1() {
+        public ListadoEscuderiasPilotos() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "ListadoEscuderiasPilotos.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace CLS_Daniel_Mugueta {
         
         public override string FullResourceName {
             get {
-                return "CLS_Daniel_Mugueta.CrystalReport1.rpt";
+                return "CLS_Daniel_Mugueta.ListadoEscuderiasPilotos.rpt";
             }
             set {
                 // Do nothing
@@ -122,9 +122,9 @@ namespace CLS_Daniel_Mugueta {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class CachedListadoEscuderiasPilotos : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public CachedListadoEscuderiasPilotos() {
         }
         
         [Browsable(false)]
@@ -161,7 +161,7 @@ namespace CLS_Daniel_Mugueta {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            ListadoEscuderiasPilotos rpt = new ListadoEscuderiasPilotos();
             rpt.Site = this.Site;
             return rpt;
         }

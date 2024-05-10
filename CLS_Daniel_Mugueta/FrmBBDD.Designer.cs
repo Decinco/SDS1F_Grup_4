@@ -51,6 +51,7 @@ namespace CLS_Daniel_Mugueta
             this.Controls.Add(this.label1);
             this.Name = "FrmBBDD";
             this.Text = "FrmBBDD";
+            this.Load += new System.EventHandler(this.FrmBBDD_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
