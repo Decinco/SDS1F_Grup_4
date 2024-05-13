@@ -32,5 +32,15 @@ namespace CLS_Daniel_Mugueta.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.0.15.133;Initial Catalog=F1;User ID=sa;Password=MS123456aA.")]
+        public string F1ConnectionString {
+            get {
+                return ((string)(this["F1ConnectionString"]));
+            }
+        }
     }
 }
