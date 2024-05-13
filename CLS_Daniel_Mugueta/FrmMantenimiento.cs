@@ -43,5 +43,11 @@ namespace CLS_Daniel_Mugueta
         {
 
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.BsEscuderia.EndEdit();
+            this.escuderiesTableAdapter.Update(f1DataSet_CLSMugueta1.Escuderies);
+        }
     }
 }
