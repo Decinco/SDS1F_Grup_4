@@ -42,5 +42,11 @@ namespace SDS1F_Grup_4
             CLS_Daniel_Mugueta.FrmLista form = new FrmLista();
             form.Show();
         }
+
+        private void escuderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Daniel_Mugueta.FrmMantenimiento form = new FrmMantenimiento();
+            form.Show();
+        }
     }
 }

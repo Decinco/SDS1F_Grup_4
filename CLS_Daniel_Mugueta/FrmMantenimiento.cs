@@ -16,5 +16,32 @@ namespace CLS_Daniel_Mugueta
         {
             InitializeComponent();
         }
+
+        private void circuitsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmMantenimiento_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'f1DataSet_CLSMugueta1.Escuderies' Puede moverla o quitarla según sea necesario.
+            this.escuderiesTableAdapter.Fill(this.f1DataSet_CLSMugueta1.Escuderies);
+
+        }
+
+        private void descEscuderiaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void escuderiesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

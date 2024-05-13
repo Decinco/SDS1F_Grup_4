@@ -51,6 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="F1DataSet_CLSMugueta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>F1DataSet_CLSMugueta.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ListadoEscuderiasPilotos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,6 +81,11 @@
       <DependentUpon>FrmMantenimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ListadoEscuderiasPilotos.rpt">
@@ -94,6 +104,24 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="F1DataSet_CLSMugueta.xsc">
+      <DependentUpon>F1DataSet_CLSMugueta.xsd</DependentUpon>
+    </None>
+    <None Include="F1DataSet_CLSMugueta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>F1DataSet_CLSMugueta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="F1DataSet_CLSMugueta.xss">
+      <DependentUpon>F1DataSet_CLSMugueta.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
