@@ -81,5 +81,46 @@ namespace CLS_Leandro_Varas
         {
 
         }
+
+        private void select_image_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string imagen;
+            
+            try
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    imagen = openFileDialog1.FileName;
+                    img_pistas.Image = Image.FromFile(imagen);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no se encuentra en la base de datos");
+            }
+        }
+
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+            string imagen;
+
+            imagen = DbCircuits.DataSource.ToString();
+            img_pistas.Image = Image.FromFile(imagen);
+        }
+
+        private void img_pistas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
