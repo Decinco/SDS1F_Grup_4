@@ -8,7 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CLS_Juan_Paredes {
+namespace CLS_Juan_Paredes
+{
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
