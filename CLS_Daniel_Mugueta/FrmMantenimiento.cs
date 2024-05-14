@@ -49,5 +49,12 @@ namespace CLS_Daniel_Mugueta
             this.BsEscuderia.EndEdit();
             this.escuderiesTableAdapter.Update(f1DataSet_CLSMugueta1.Escuderies);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string imagen;
+            openFileDialog1.ShowDialog();
+            imagen = openFileDialog1.FileName;
+        }
     }
 }
