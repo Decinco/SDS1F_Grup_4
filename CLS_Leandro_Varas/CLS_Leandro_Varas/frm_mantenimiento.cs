@@ -112,10 +112,10 @@ namespace CLS_Leandro_Varas
 
         private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-            string imagen;
+            //string imagen;
 
-            imagen = DbCircuits.DataSource.ToString();
-            img_pistas.Image = Image.FromFile(imagen);
+            //imagen = DbCircuits.DataSource.ToString();
+            //img_pistas.Image = Image.FromFile(imagen);
         }
 
         private void img_pistas_Click(object sender, EventArgs e)
