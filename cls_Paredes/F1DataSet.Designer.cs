@@ -28,6 +28,8 @@ namespace cls_Paredes {
         
         private ClassificacioGPDataTable tableClassificacioGP;
         
+        private DetallsIncidenciesDataTable tableDetallsIncidencies;
+        
         private EscuderiesDataTable tableEscuderies;
         
         private GPDataTable tableGP;
@@ -41,6 +43,10 @@ namespace cls_Paredes {
         private global::System.Data.DataRelation relationFK_ClassificacioGP_GP;
         
         private global::System.Data.DataRelation relationFK_ClassificacioGP_Pilots;
+        
+        private global::System.Data.DataRelation relationFK_DetallsIncidencies_Incidencies;
+        
+        private global::System.Data.DataRelation relationFK_DetallsIncidencies_Pilots;
         
         private global::System.Data.DataRelation relationFK_GP_Circuits;
         
@@ -83,6 +89,9 @@ namespace cls_Paredes {
                 }
                 if ((ds.Tables["ClassificacioGP"] != null)) {
                     base.Tables.Add(new ClassificacioGPDataTable(ds.Tables["ClassificacioGP"]));
+                }
+                if ((ds.Tables["DetallsIncidencies"] != null)) {
+                    base.Tables.Add(new DetallsIncidenciesDataTable(ds.Tables["DetallsIncidencies"]));
                 }
                 if ((ds.Tables["Escuderies"] != null)) {
                     base.Tables.Add(new EscuderiesDataTable(ds.Tables["Escuderies"]));
@@ -134,6 +143,16 @@ namespace cls_Paredes {
         public ClassificacioGPDataTable ClassificacioGP {
             get {
                 return this.tableClassificacioGP;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public DetallsIncidenciesDataTable DetallsIncidencies {
+            get {
+                return this.tableDetallsIncidencies;
             }
         }
         
@@ -260,6 +279,9 @@ namespace cls_Paredes {
                 if ((ds.Tables["ClassificacioGP"] != null)) {
                     base.Tables.Add(new ClassificacioGPDataTable(ds.Tables["ClassificacioGP"]));
                 }
+                if ((ds.Tables["DetallsIncidencies"] != null)) {
+                    base.Tables.Add(new DetallsIncidenciesDataTable(ds.Tables["DetallsIncidencies"]));
+                }
                 if ((ds.Tables["Escuderies"] != null)) {
                     base.Tables.Add(new EscuderiesDataTable(ds.Tables["Escuderies"]));
                 }
@@ -320,6 +342,12 @@ namespace cls_Paredes {
                     this.tableClassificacioGP.InitVars();
                 }
             }
+            this.tableDetallsIncidencies = ((DetallsIncidenciesDataTable)(base.Tables["DetallsIncidencies"]));
+            if ((initTable == true)) {
+                if ((this.tableDetallsIncidencies != null)) {
+                    this.tableDetallsIncidencies.InitVars();
+                }
+            }
             this.tableEscuderies = ((EscuderiesDataTable)(base.Tables["Escuderies"]));
             if ((initTable == true)) {
                 if ((this.tableEscuderies != null)) {
@@ -352,6 +380,8 @@ namespace cls_Paredes {
             }
             this.relationFK_ClassificacioGP_GP = this.Relations["FK_ClassificacioGP_GP"];
             this.relationFK_ClassificacioGP_Pilots = this.Relations["FK_ClassificacioGP_Pilots"];
+            this.relationFK_DetallsIncidencies_Incidencies = this.Relations["FK_DetallsIncidencies_Incidencies"];
+            this.relationFK_DetallsIncidencies_Pilots = this.Relations["FK_DetallsIncidencies_Pilots"];
             this.relationFK_GP_Circuits = this.Relations["FK_GP_Circuits"];
             this.relationFK_Incidencies_GP = this.Relations["FK_Incidencies_GP"];
             this.relationFK_Incidencies_TipusIncidencia = this.Relations["FK_Incidencies_TipusIncidencia"];
@@ -370,6 +400,8 @@ namespace cls_Paredes {
             base.Tables.Add(this.tableCircuits);
             this.tableClassificacioGP = new ClassificacioGPDataTable();
             base.Tables.Add(this.tableClassificacioGP);
+            this.tableDetallsIncidencies = new DetallsIncidenciesDataTable();
+            base.Tables.Add(this.tableDetallsIncidencies);
             this.tableEscuderies = new EscuderiesDataTable();
             base.Tables.Add(this.tableEscuderies);
             this.tableGP = new GPDataTable();
@@ -388,6 +420,14 @@ namespace cls_Paredes {
                         this.tablePilots.idPilotColumn}, new global::System.Data.DataColumn[] {
                         this.tableClassificacioGP.idPilotColumn}, false);
             this.Relations.Add(this.relationFK_ClassificacioGP_Pilots);
+            this.relationFK_DetallsIncidencies_Incidencies = new global::System.Data.DataRelation("FK_DetallsIncidencies_Incidencies", new global::System.Data.DataColumn[] {
+                        this.tableIncidencies.idIncidenciaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDetallsIncidencies.idIncidenciaColumn}, false);
+            this.Relations.Add(this.relationFK_DetallsIncidencies_Incidencies);
+            this.relationFK_DetallsIncidencies_Pilots = new global::System.Data.DataRelation("FK_DetallsIncidencies_Pilots", new global::System.Data.DataColumn[] {
+                        this.tablePilots.idPilotColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDetallsIncidencies.idPilotColumn}, false);
+            this.Relations.Add(this.relationFK_DetallsIncidencies_Pilots);
             this.relationFK_GP_Circuits = new global::System.Data.DataRelation("FK_GP_Circuits", new global::System.Data.DataColumn[] {
                         this.tableCircuits.idCircuitColumn}, new global::System.Data.DataColumn[] {
                         this.tableGP.idCircuitColumn}, false);
@@ -415,6 +455,12 @@ namespace cls_Paredes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeClassificacioGP() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeDetallsIncidencies() {
             return false;
         }
         
@@ -508,6 +554,9 @@ namespace cls_Paredes {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void ClassificacioGPRowChangeEventHandler(object sender, ClassificacioGPRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void DetallsIncidenciesRowChangeEventHandler(object sender, DetallsIncidenciesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void EscuderiesRowChangeEventHandler(object sender, EscuderiesRowChangeEvent e);
@@ -1129,6 +1178,331 @@ namespace cls_Paredes {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "ClassificacioGPDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class DetallsIncidenciesDataTable : global::System.Data.TypedTableBase<DetallsIncidenciesRow> {
+            
+            private global::System.Data.DataColumn columnidDetallIncidencia;
+            
+            private global::System.Data.DataColumn columnidPilot;
+            
+            private global::System.Data.DataColumn columnidIncidencia;
+            
+            private global::System.Data.DataColumn columnDescDetallIncidencia;
+            
+            private global::System.Data.DataColumn columnPuntsCarnet;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public DetallsIncidenciesDataTable() {
+                this.TableName = "DetallsIncidencies";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal DetallsIncidenciesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected DetallsIncidenciesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idDetallIncidenciaColumn {
+                get {
+                    return this.columnidDetallIncidencia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idPilotColumn {
+                get {
+                    return this.columnidPilot;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idIncidenciaColumn {
+                get {
+                    return this.columnidIncidencia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DescDetallIncidenciaColumn {
+                get {
+                    return this.columnDescDetallIncidencia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PuntsCarnetColumn {
+                get {
+                    return this.columnPuntsCarnet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public DetallsIncidenciesRow this[int index] {
+                get {
+                    return ((DetallsIncidenciesRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event DetallsIncidenciesRowChangeEventHandler DetallsIncidenciesRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event DetallsIncidenciesRowChangeEventHandler DetallsIncidenciesRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event DetallsIncidenciesRowChangeEventHandler DetallsIncidenciesRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event DetallsIncidenciesRowChangeEventHandler DetallsIncidenciesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddDetallsIncidenciesRow(DetallsIncidenciesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public DetallsIncidenciesRow AddDetallsIncidenciesRow(PilotsRow parentPilotsRowByFK_DetallsIncidencies_Pilots, IncidenciesRow parentIncidenciesRowByFK_DetallsIncidencies_Incidencies, string DescDetallIncidencia, int PuntsCarnet) {
+                DetallsIncidenciesRow rowDetallsIncidenciesRow = ((DetallsIncidenciesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        null,
+                        DescDetallIncidencia,
+                        PuntsCarnet};
+                if ((parentPilotsRowByFK_DetallsIncidencies_Pilots != null)) {
+                    columnValuesArray[1] = parentPilotsRowByFK_DetallsIncidencies_Pilots[0];
+                }
+                if ((parentIncidenciesRowByFK_DetallsIncidencies_Incidencies != null)) {
+                    columnValuesArray[2] = parentIncidenciesRowByFK_DetallsIncidencies_Incidencies[0];
+                }
+                rowDetallsIncidenciesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDetallsIncidenciesRow);
+                return rowDetallsIncidenciesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public DetallsIncidenciesRow FindByidDetallIncidencia(int idDetallIncidencia) {
+                return ((DetallsIncidenciesRow)(this.Rows.Find(new object[] {
+                            idDetallIncidencia})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                DetallsIncidenciesDataTable cln = ((DetallsIncidenciesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new DetallsIncidenciesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnidDetallIncidencia = base.Columns["idDetallIncidencia"];
+                this.columnidPilot = base.Columns["idPilot"];
+                this.columnidIncidencia = base.Columns["idIncidencia"];
+                this.columnDescDetallIncidencia = base.Columns["DescDetallIncidencia"];
+                this.columnPuntsCarnet = base.Columns["PuntsCarnet"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnidDetallIncidencia = new global::System.Data.DataColumn("idDetallIncidencia", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidDetallIncidencia);
+                this.columnidPilot = new global::System.Data.DataColumn("idPilot", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidPilot);
+                this.columnidIncidencia = new global::System.Data.DataColumn("idIncidencia", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidIncidencia);
+                this.columnDescDetallIncidencia = new global::System.Data.DataColumn("DescDetallIncidencia", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescDetallIncidencia);
+                this.columnPuntsCarnet = new global::System.Data.DataColumn("PuntsCarnet", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPuntsCarnet);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidDetallIncidencia}, true));
+                this.columnidDetallIncidencia.AutoIncrement = true;
+                this.columnidDetallIncidencia.AutoIncrementSeed = -1;
+                this.columnidDetallIncidencia.AutoIncrementStep = -1;
+                this.columnidDetallIncidencia.AllowDBNull = false;
+                this.columnidDetallIncidencia.ReadOnly = true;
+                this.columnidDetallIncidencia.Unique = true;
+                this.columnDescDetallIncidencia.MaxLength = 250;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public DetallsIncidenciesRow NewDetallsIncidenciesRow() {
+                return ((DetallsIncidenciesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new DetallsIncidenciesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(DetallsIncidenciesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.DetallsIncidenciesRowChanged != null)) {
+                    this.DetallsIncidenciesRowChanged(this, new DetallsIncidenciesRowChangeEvent(((DetallsIncidenciesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.DetallsIncidenciesRowChanging != null)) {
+                    this.DetallsIncidenciesRowChanging(this, new DetallsIncidenciesRowChangeEvent(((DetallsIncidenciesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.DetallsIncidenciesRowDeleted != null)) {
+                    this.DetallsIncidenciesRowDeleted(this, new DetallsIncidenciesRowChangeEvent(((DetallsIncidenciesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.DetallsIncidenciesRowDeleting != null)) {
+                    this.DetallsIncidenciesRowDeleting(this, new DetallsIncidenciesRowChangeEvent(((DetallsIncidenciesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveDetallsIncidenciesRow(DetallsIncidenciesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                F1DataSet ds = new F1DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "DetallsIncidenciesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3006,6 +3380,168 @@ namespace cls_Paredes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+        public partial class DetallsIncidenciesRow : global::System.Data.DataRow {
+            
+            private DetallsIncidenciesDataTable tableDetallsIncidencies;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal DetallsIncidenciesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableDetallsIncidencies = ((DetallsIncidenciesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int idDetallIncidencia {
+                get {
+                    return ((int)(this[this.tableDetallsIncidencies.idDetallIncidenciaColumn]));
+                }
+                set {
+                    this[this.tableDetallsIncidencies.idDetallIncidenciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int idPilot {
+                get {
+                    try {
+                        return ((int)(this[this.tableDetallsIncidencies.idPilotColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idPilot\' de la tabla \'DetallsIncidencies\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDetallsIncidencies.idPilotColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int idIncidencia {
+                get {
+                    try {
+                        return ((int)(this[this.tableDetallsIncidencies.idIncidenciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idIncidencia\' de la tabla \'DetallsIncidencies\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableDetallsIncidencies.idIncidenciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DescDetallIncidencia {
+                get {
+                    try {
+                        return ((string)(this[this.tableDetallsIncidencies.DescDetallIncidenciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DescDetallIncidencia\' de la tabla \'DetallsIncidencies\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDetallsIncidencies.DescDetallIncidenciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int PuntsCarnet {
+                get {
+                    try {
+                        return ((int)(this[this.tableDetallsIncidencies.PuntsCarnetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PuntsCarnet\' de la tabla \'DetallsIncidencies\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDetallsIncidencies.PuntsCarnetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public IncidenciesRow IncidenciesRow {
+                get {
+                    return ((IncidenciesRow)(this.GetParentRow(this.Table.ParentRelations["FK_DetallsIncidencies_Incidencies"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_DetallsIncidencies_Incidencies"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public PilotsRow PilotsRow {
+                get {
+                    return ((PilotsRow)(this.GetParentRow(this.Table.ParentRelations["FK_DetallsIncidencies_Pilots"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_DetallsIncidencies_Pilots"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsidPilotNull() {
+                return this.IsNull(this.tableDetallsIncidencies.idPilotColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetidPilotNull() {
+                this[this.tableDetallsIncidencies.idPilotColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsidIncidenciaNull() {
+                return this.IsNull(this.tableDetallsIncidencies.idIncidenciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetidIncidenciaNull() {
+                this[this.tableDetallsIncidencies.idIncidenciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDescDetallIncidenciaNull() {
+                return this.IsNull(this.tableDetallsIncidencies.DescDetallIncidenciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDescDetallIncidenciaNull() {
+                this[this.tableDetallsIncidencies.DescDetallIncidenciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPuntsCarnetNull() {
+                return this.IsNull(this.tableDetallsIncidencies.PuntsCarnetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPuntsCarnetNull() {
+                this[this.tableDetallsIncidencies.PuntsCarnetColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
         public partial class EscuderiesRow : global::System.Data.DataRow {
             
             private EscuderiesDataTable tableEscuderies;
@@ -3397,6 +3933,17 @@ namespace cls_Paredes {
             public void SetidTipusIncidenciaNull() {
                 this[this.tableIncidencies.idTipusIncidenciaColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public DetallsIncidenciesRow[] GetDetallsIncidenciesRows() {
+                if ((this.Table.ChildRelations["FK_DetallsIncidencies_Incidencies"] == null)) {
+                    return new DetallsIncidenciesRow[0];
+                }
+                else {
+                    return ((DetallsIncidenciesRow[])(base.GetChildRows(this.Table.ChildRelations["FK_DetallsIncidencies_Incidencies"])));
+                }
+            }
         }
         
         /// <summary>
@@ -3557,6 +4104,17 @@ namespace cls_Paredes {
                     return ((ClassificacioGPRow[])(base.GetChildRows(this.Table.ChildRelations["FK_ClassificacioGP_Pilots"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public DetallsIncidenciesRow[] GetDetallsIncidenciesRows() {
+                if ((this.Table.ChildRelations["FK_DetallsIncidencies_Pilots"] == null)) {
+                    return new DetallsIncidenciesRow[0];
+                }
+                else {
+                    return ((DetallsIncidenciesRow[])(base.GetChildRows(this.Table.ChildRelations["FK_DetallsIncidencies_Pilots"])));
+                }
+            }
         }
         
         /// <summary>
@@ -3679,6 +4237,40 @@ namespace cls_Paredes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ClassificacioGPRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class DetallsIncidenciesRowChangeEvent : global::System.EventArgs {
+            
+            private DetallsIncidenciesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public DetallsIncidenciesRowChangeEvent(DetallsIncidenciesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public DetallsIncidenciesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4722,6 +5314,434 @@ SELECT idClassificacio, posicio, puntuacio, idPilot, idGP FROM ClassificacioGP W
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(global::System.Nullable<int> posicio, global::System.Nullable<int> puntuacio, global::System.Nullable<int> idPilot, global::System.Nullable<int> idGP, int Original_idClassificacio, global::System.Nullable<int> Original_posicio, global::System.Nullable<int> Original_puntuacio, global::System.Nullable<int> Original_idPilot, global::System.Nullable<int> Original_idGP) {
             return this.Update(posicio, puntuacio, idPilot, idGP, Original_idClassificacio, Original_posicio, Original_puntuacio, Original_idPilot, Original_idGP, Original_idClassificacio);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class DetallsIncidenciesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public DetallsIncidenciesTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "DetallsIncidencies";
+            tableMapping.ColumnMappings.Add("idDetallIncidencia", "idDetallIncidencia");
+            tableMapping.ColumnMappings.Add("idPilot", "idPilot");
+            tableMapping.ColumnMappings.Add("idIncidencia", "idIncidencia");
+            tableMapping.ColumnMappings.Add("DescDetallIncidencia", "DescDetallIncidencia");
+            tableMapping.ColumnMappings.Add("PuntsCarnet", "PuntsCarnet");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DetallsIncidencies] WHERE (([idDetallIncidencia] = @Original_idDetallIncidencia) AND ((@IsNull_idPilot = 1 AND [idPilot] IS NULL) OR ([idPilot] = @Original_idPilot)) AND ((@IsNull_idIncidencia = 1 AND [idIncidencia] IS NULL) OR ([idIncidencia] = @Original_idIncidencia)) AND ((@IsNull_DescDetallIncidencia = 1 AND [DescDetallIncidencia] IS NULL) OR ([DescDetallIncidencia] = @Original_DescDetallIncidencia)) AND ((@IsNull_PuntsCarnet = 1 AND [PuntsCarnet] IS NULL) OR ([PuntsCarnet] = @Original_PuntsCarnet)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idDetallIncidencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDetallIncidencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idPilot", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPilot", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idPilot", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPilot", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idIncidencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idIncidencia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idIncidencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idIncidencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DescDetallIncidencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescDetallIncidencia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DescDetallIncidencia", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescDetallIncidencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PuntsCarnet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PuntsCarnet", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PuntsCarnet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PuntsCarnet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DetallsIncidencies] ([idPilot], [idIncidencia], [DescDetallIncidencia], [PuntsCarnet]) VALUES (@idPilot, @idIncidencia, @DescDetallIncidencia, @PuntsCarnet);
+SELECT idDetallIncidencia, idPilot, idIncidencia, DescDetallIncidencia, PuntsCarnet FROM DetallsIncidencies WHERE (idDetallIncidencia = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPilot", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPilot", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idIncidencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idIncidencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DescDetallIncidencia", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescDetallIncidencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PuntsCarnet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PuntsCarnet", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DetallsIncidencies] SET [idPilot] = @idPilot, [idIncidencia] = @idIncidencia, [DescDetallIncidencia] = @DescDetallIncidencia, [PuntsCarnet] = @PuntsCarnet WHERE (([idDetallIncidencia] = @Original_idDetallIncidencia) AND ((@IsNull_idPilot = 1 AND [idPilot] IS NULL) OR ([idPilot] = @Original_idPilot)) AND ((@IsNull_idIncidencia = 1 AND [idIncidencia] IS NULL) OR ([idIncidencia] = @Original_idIncidencia)) AND ((@IsNull_DescDetallIncidencia = 1 AND [DescDetallIncidencia] IS NULL) OR ([DescDetallIncidencia] = @Original_DescDetallIncidencia)) AND ((@IsNull_PuntsCarnet = 1 AND [PuntsCarnet] IS NULL) OR ([PuntsCarnet] = @Original_PuntsCarnet)));
+SELECT idDetallIncidencia, idPilot, idIncidencia, DescDetallIncidencia, PuntsCarnet FROM DetallsIncidencies WHERE (idDetallIncidencia = @idDetallIncidencia)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPilot", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPilot", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idIncidencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idIncidencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DescDetallIncidencia", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescDetallIncidencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PuntsCarnet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PuntsCarnet", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idDetallIncidencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDetallIncidencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idPilot", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPilot", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idPilot", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPilot", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idIncidencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idIncidencia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idIncidencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idIncidencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DescDetallIncidencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescDetallIncidencia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DescDetallIncidencia", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescDetallIncidencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PuntsCarnet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PuntsCarnet", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PuntsCarnet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PuntsCarnet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idDetallIncidencia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idDetallIncidencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::cls_Paredes.Properties.Settings.Default.F1ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT idDetallIncidencia, idPilot, idIncidencia, DescDetallIncidencia, PuntsCarn" +
+                "et FROM dbo.DetallsIncidencies";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(F1DataSet.DetallsIncidenciesDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual F1DataSet.DetallsIncidenciesDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            F1DataSet.DetallsIncidenciesDataTable dataTable = new F1DataSet.DetallsIncidenciesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(F1DataSet.DetallsIncidenciesDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(F1DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "DetallsIncidencies");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_idDetallIncidencia, global::System.Nullable<int> Original_idPilot, global::System.Nullable<int> Original_idIncidencia, string Original_DescDetallIncidencia, global::System.Nullable<int> Original_PuntsCarnet) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idDetallIncidencia));
+            if ((Original_idPilot.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_idPilot.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_idIncidencia.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_idIncidencia.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DescDetallIncidencia == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_DescDetallIncidencia));
+            }
+            if ((Original_PuntsCarnet.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_PuntsCarnet.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(global::System.Nullable<int> idPilot, global::System.Nullable<int> idIncidencia, string DescDetallIncidencia, global::System.Nullable<int> PuntsCarnet) {
+            if ((idPilot.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idPilot.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((idIncidencia.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(idIncidencia.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((DescDetallIncidencia == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(DescDetallIncidencia));
+            }
+            if ((PuntsCarnet.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(PuntsCarnet.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> idPilot, global::System.Nullable<int> idIncidencia, string DescDetallIncidencia, global::System.Nullable<int> PuntsCarnet, int Original_idDetallIncidencia, global::System.Nullable<int> Original_idPilot, global::System.Nullable<int> Original_idIncidencia, string Original_DescDetallIncidencia, global::System.Nullable<int> Original_PuntsCarnet, int idDetallIncidencia) {
+            if ((idPilot.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idPilot.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((idIncidencia.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(idIncidencia.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((DescDetallIncidencia == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(DescDetallIncidencia));
+            }
+            if ((PuntsCarnet.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(PuntsCarnet.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_idDetallIncidencia));
+            if ((Original_idPilot.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_idPilot.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_idIncidencia.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_idIncidencia.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DescDetallIncidencia == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_DescDetallIncidencia));
+            }
+            if ((Original_PuntsCarnet.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_PuntsCarnet.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(idDetallIncidencia));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> idPilot, global::System.Nullable<int> idIncidencia, string DescDetallIncidencia, global::System.Nullable<int> PuntsCarnet, int Original_idDetallIncidencia, global::System.Nullable<int> Original_idPilot, global::System.Nullable<int> Original_idIncidencia, string Original_DescDetallIncidencia, global::System.Nullable<int> Original_PuntsCarnet) {
+            return this.Update(idPilot, idIncidencia, DescDetallIncidencia, PuntsCarnet, Original_idDetallIncidencia, Original_idPilot, Original_idIncidencia, Original_DescDetallIncidencia, Original_PuntsCarnet, Original_idDetallIncidencia);
         }
     }
     
@@ -6675,6 +7695,8 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
         
         private ClassificacioGPTableAdapter _classificacioGPTableAdapter;
         
+        private DetallsIncidenciesTableAdapter _detallsIncidenciesTableAdapter;
+        
         private EscuderiesTableAdapter _escuderiesTableAdapter;
         
         private GPTableAdapter _gPTableAdapter;
@@ -6725,6 +7747,20 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
             }
             set {
                 this._classificacioGPTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public DetallsIncidenciesTableAdapter DetallsIncidenciesTableAdapter {
+            get {
+                return this._detallsIncidenciesTableAdapter;
+            }
+            set {
+                this._detallsIncidenciesTableAdapter = value;
             }
         }
         
@@ -6825,6 +7861,10 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
                             && (this._classificacioGPTableAdapter.Connection != null))) {
                     return this._classificacioGPTableAdapter.Connection;
                 }
+                if (((this._detallsIncidenciesTableAdapter != null) 
+                            && (this._detallsIncidenciesTableAdapter.Connection != null))) {
+                    return this._detallsIncidenciesTableAdapter.Connection;
+                }
                 if (((this._escuderiesTableAdapter != null) 
                             && (this._escuderiesTableAdapter.Connection != null))) {
                     return this._escuderiesTableAdapter.Connection;
@@ -6862,6 +7902,9 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
                     count = (count + 1);
                 }
                 if ((this._classificacioGPTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._detallsIncidenciesTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._escuderiesTableAdapter != null)) {
@@ -6917,21 +7960,30 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._pilotsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Pilots.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._pilotsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._tipusIncidenciaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.TipusIncidencia.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tipusIncidenciaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._incidenciesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Incidencies.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._incidenciesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._pilotsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Pilots.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._pilotsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6944,12 +7996,12 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._incidenciesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Incidencies.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._detallsIncidenciesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.DetallsIncidencies.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._incidenciesTableAdapter.Update(updatedRows));
+                    result = (result + this._detallsIncidenciesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6987,19 +8039,27 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._pilotsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Pilots.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._pilotsTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._tipusIncidenciaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.TipusIncidencia.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tipusIncidenciaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._incidenciesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Incidencies.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._incidenciesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._pilotsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Pilots.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._pilotsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -7011,11 +8071,11 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._incidenciesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Incidencies.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._detallsIncidenciesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.DetallsIncidencies.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._incidenciesTableAdapter.Update(addedRows));
+                    result = (result + this._detallsIncidenciesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -7029,11 +8089,11 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(F1DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._incidenciesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Incidencies.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._detallsIncidenciesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.DetallsIncidencies.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._incidenciesTableAdapter.Update(deletedRows));
+                    result = (result + this._detallsIncidenciesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -7045,19 +8105,27 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tipusIncidenciaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TipusIncidencia.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tipusIncidenciaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._pilotsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Pilots.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._pilotsTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._incidenciesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Incidencies.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._incidenciesTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tipusIncidenciaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TipusIncidencia.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tipusIncidenciaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -7134,6 +8202,11 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
+            if (((this._detallsIncidenciesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._detallsIncidenciesTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
+                        "sma cadena de conexión.");
+            }
             if (((this._escuderiesTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._escuderiesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
@@ -7207,6 +8280,15 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
                     if (this._classificacioGPTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._classificacioGPTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._classificacioGPTableAdapter.Adapter);
+                    }
+                }
+                if ((this._detallsIncidenciesTableAdapter != null)) {
+                    revertConnections.Add(this._detallsIncidenciesTableAdapter, this._detallsIncidenciesTableAdapter.Connection);
+                    this._detallsIncidenciesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._detallsIncidenciesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._detallsIncidenciesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._detallsIncidenciesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._detallsIncidenciesTableAdapter.Adapter);
                     }
                 }
                 if ((this._escuderiesTableAdapter != null)) {
@@ -7319,6 +8401,10 @@ SELECT idTipusIncidencia, DescTipusIncidencia FROM TipusIncidencia WHERE (idTipu
                 if ((this._classificacioGPTableAdapter != null)) {
                     this._classificacioGPTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._classificacioGPTableAdapter]));
                     this._classificacioGPTableAdapter.Transaction = null;
+                }
+                if ((this._detallsIncidenciesTableAdapter != null)) {
+                    this._detallsIncidenciesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._detallsIncidenciesTableAdapter]));
+                    this._detallsIncidenciesTableAdapter.Transaction = null;
                 }
                 if ((this._escuderiesTableAdapter != null)) {
                     this._escuderiesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._escuderiesTableAdapter]));
