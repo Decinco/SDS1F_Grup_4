@@ -44,7 +44,7 @@ namespace SDS1F_Grup_4
             this.informaciónF1ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(447, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(447, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,27 +55,27 @@ namespace SDS1F_Grup_4
             this.clasificaciónToolStripMenuItem,
             this.perfilPilotosToolStripMenuItem});
             this.informaciónF1ToolStripMenuItem.Name = "informaciónF1ToolStripMenuItem";
-            this.informaciónF1ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.informaciónF1ToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.informaciónF1ToolStripMenuItem.Text = "Información F1";
             // 
             // circuitosYCarrerasToolStripMenuItem
             // 
             this.circuitosYCarrerasToolStripMenuItem.Name = "circuitosYCarrerasToolStripMenuItem";
-            this.circuitosYCarrerasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.circuitosYCarrerasToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.circuitosYCarrerasToolStripMenuItem.Text = "Circuitos y Carreras";
             this.circuitosYCarrerasToolStripMenuItem.Click += new System.EventHandler(this.circuitosYCarrerasToolStripMenuItem_Click);
             // 
             // clasificaciónToolStripMenuItem
             // 
             this.clasificaciónToolStripMenuItem.Name = "clasificaciónToolStripMenuItem";
-            this.clasificaciónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clasificaciónToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.clasificaciónToolStripMenuItem.Text = "Clasificación";
             this.clasificaciónToolStripMenuItem.Click += new System.EventHandler(this.clasificaciónToolStripMenuItem_Click);
             // 
             // perfilPilotosToolStripMenuItem
             // 
             this.perfilPilotosToolStripMenuItem.Name = "perfilPilotosToolStripMenuItem";
-            this.perfilPilotosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.perfilPilotosToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.perfilPilotosToolStripMenuItem.Text = "Perfil Pilotos";
             this.perfilPilotosToolStripMenuItem.Click += new System.EventHandler(this.perfilPilotosToolStripMenuItem_Click);
             // 
@@ -88,7 +88,6 @@ namespace SDS1F_Grup_4
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

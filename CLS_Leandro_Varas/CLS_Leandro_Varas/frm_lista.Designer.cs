@@ -48,13 +48,13 @@ namespace CLS_Leandro_Varas
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(264, 102);
+            this.button1.Location = new System.Drawing.Point(269, 102);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "prueba";
+            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frm_lista
             // 

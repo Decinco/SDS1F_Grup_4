@@ -17,40 +17,13 @@ namespace CLS_Leandro_Varas
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void frm_mantenimiento_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'f1_CLS_Leandro1.Circuits' Puede moverla o quitarla según sea necesario.
             this.CirucitsTableAdapter.Fill(this.f1_CLS_Leandro1.Circuits);
             // TODO: esta línea de código carga datos en la tabla 'f1_CLS_Leandro1.Circuits' Puede moverla o quitarla según sea necesario.
             this.CirucitsTableAdapter.Fill(this.f1_CLS_Leandro1.Circuits);
-
         }
-
-        private void circuitLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void circuitTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -110,17 +83,26 @@ namespace CLS_Leandro_Varas
             }
         }
 
-        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        private void tabla_inf_circuits_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //string imagen;
+            string imagen, ruta;
 
-            //imagen = DbCircuits.DataSource.ToString();
-            //img_pistas.Image = Image.FromFile(imagen);
+            imagen = esquemaCircuitTextBox.Text;
+            ruta = "../../imatges/imatges/" + imagen;
+
+            if (imagen == "")
+            {
+                img_pistas.Image = null;
+            }
+            else
+            {
+                img_pistas.Image = Image.FromFile(ruta);
+            }   
         }
 
-        private void img_pistas_Click(object sender, EventArgs e)
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

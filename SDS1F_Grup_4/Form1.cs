@@ -20,11 +20,6 @@ namespace SDS1F_Grup_4
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            MessageBox.Show("HOLA BUENAS");
-        }
-
         private void circuitosYCarrerasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CLS_Leandro_Varas.frm_lista form = new frm_lista();

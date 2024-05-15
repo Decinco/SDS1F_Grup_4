@@ -23,7 +23,7 @@ namespace CLS_Leandro_Varas
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             CLS_Leandro_Varas.frm_mantenimiento form = new frm_mantenimiento();
             form.Show();
