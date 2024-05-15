@@ -55,6 +55,7 @@ namespace CLS_Daniel_Mugueta
             string imagen;
             openFileDialog1.ShowDialog();
             imagen = openFileDialog1.FileName;
+            Image.FromFile(imagen);
         }
     }
 }

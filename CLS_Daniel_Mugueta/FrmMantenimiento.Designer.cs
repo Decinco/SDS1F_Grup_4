@@ -226,6 +226,7 @@ namespace CLS_Daniel_Mugueta
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -287,6 +288,7 @@ namespace CLS_Daniel_Mugueta
             // 
             // button1
             // 
+            this.button1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.BsEscuderia, "Logo", true));
             this.button1.Location = new System.Drawing.Point(129, 89);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 23);
