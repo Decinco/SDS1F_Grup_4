@@ -29,7 +29,9 @@ namespace CLS_Juan_Paredes
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            // TODO: esta línea de código carga datos en la tabla 'f1DataSet1.TipusIncidencia' Puede moverla o quitarla según sea necesario.
+            this.tipusIncidenciaTableAdapter.Fill(this.f1DataSet1.TipusIncidencia);
+
             MessageBox.Show("HOLA BUENAS");
         }
 

@@ -30,21 +30,26 @@ namespace CLS_Juan_Paredes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.f1DataSet1 = new cls_Paredes.F1DataSet();
+            this.tipusIncidenciaTableAdapter = new cls_Paredes.F1DataSetTableAdapters.TipusIncidenciaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
-            // contextMenuStrip1
+            // bindingSource1
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.bindingSource1.DataMember = "TipusIncidencia";
+            this.bindingSource1.DataSource = this.f1DataSet1;
             // 
             // f1DataSet1
             // 
             this.f1DataSet1.DataSetName = "F1DataSet";
             this.f1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tipusIncidenciaTableAdapter
+            // 
+            this.tipusIncidenciaTableAdapter.ClearBeforeFill = true;
             // 
             // frmManteniment
             // 
@@ -54,6 +59,7 @@ namespace CLS_Juan_Paredes
             this.Name = "frmManteniment";
             this.Text = "frmMantenimiento";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSet1)).EndInit();
             this.ResumeLayout(false);
 
@@ -61,8 +67,9 @@ namespace CLS_Juan_Paredes
 
         #endregion
 
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.BindingSource bindingSource1;
         private cls_Paredes.F1DataSet f1DataSet1;
+        private cls_Paredes.F1DataSetTableAdapters.TipusIncidenciaTableAdapter tipusIncidenciaTableAdapter;
     }
 }
 
