@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CLS_Juan_Paredes
+namespace cls_Paredes
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace CLS_Juan_Paredes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmManteniment());
+            Application.Run(new frmMantenimiento2());
         }
     }
 }

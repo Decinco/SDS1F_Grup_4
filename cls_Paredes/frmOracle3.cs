@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CLS_Juan_Paredes
+namespace cls_Paredes
 {
-    public partial class frmOracle : Form
+    public partial class frmOracle3 : Form
     {
-        public frmOracle()
+        public frmOracle3()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿
-namespace CLS_Juan_Paredes
+namespace cls_Paredes
 {
-    partial class frmOracle
+    partial class frmOracle3
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace CLS_Juan_Paredes
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmOracle";
+            this.Text = "frmOracle3";
         }
 
         #endregion
