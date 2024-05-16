@@ -39,7 +39,6 @@ namespace CLS_Daniel_Mugueta
             this.f1DataSet_CLSMugueta1 = new CLS_Daniel_Mugueta.F1DataSet_CLSMugueta();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -57,6 +56,8 @@ namespace CLS_Daniel_Mugueta
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLogoPath = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridEscuderies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BsEscuderia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSet_CLSMugueta1)).BeginInit();
@@ -80,6 +81,9 @@ namespace CLS_Daniel_Mugueta
             this.GridEscuderies.RowTemplate.Height = 24;
             this.GridEscuderies.Size = new System.Drawing.Size(646, 318);
             this.GridEscuderies.TabIndex = 0;
+            this.GridEscuderies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.escuderiesDataGridView_CellContentClick);
+            this.GridEscuderies.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.escuderiesDataGridView_CellContentClick);
+            this.GridEscuderies.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.escuderiesDataGridView_CellContentClick);
             // 
             // idEscuderiaDataGridViewTextBoxColumn
             // 
@@ -133,15 +137,6 @@ namespace CLS_Daniel_Mugueta
             this.label1.TabIndex = 3;
             this.label1.Text = "Nombre";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Logo";
             // 
             // bindingNavigator1
             // 
@@ -226,7 +221,6 @@ namespace CLS_Daniel_Mugueta
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -275,10 +269,9 @@ namespace CLS_Daniel_Mugueta
             // 
             // pictureBox1
             // 
-            this.pictureBox1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.BsEscuderia, "Logo", true));
-            this.pictureBox1.Location = new System.Drawing.Point(440, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(454, 43);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 101);
+            this.pictureBox1.Size = new System.Drawing.Size(137, 88);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -289,19 +282,38 @@ namespace CLS_Daniel_Mugueta
             // button1
             // 
             this.button1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.BsEscuderia, "Logo", true));
-            this.button1.Location = new System.Drawing.Point(129, 89);
+            this.button1.Location = new System.Drawing.Point(312, 89);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 23);
+            this.button1.Size = new System.Drawing.Size(67, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "Elegir...";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Logo";
+            // 
+            // txtLogoPath
+            // 
+            this.txtLogoPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsEscuderia, "Logo", true));
+            this.txtLogoPath.Location = new System.Drawing.Point(129, 90);
+            this.txtLogoPath.Name = "txtLogoPath";
+            this.txtLogoPath.ReadOnly = true;
+            this.txtLogoPath.Size = new System.Drawing.Size(177, 22);
+            this.txtLogoPath.TabIndex = 8;
             // 
             // FrmMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 471);
+            this.Controls.Add(this.txtLogoPath);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bindingNavigator1);
@@ -329,7 +341,6 @@ namespace CLS_Daniel_Mugueta
         private System.Windows.Forms.DataGridView GridEscuderies;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -352,5 +363,7 @@ namespace CLS_Daniel_Mugueta
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtLogoPath;
     }
 }

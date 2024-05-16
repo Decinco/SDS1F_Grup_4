@@ -27,6 +27,8 @@ namespace CLS_Daniel_Mugueta
             // TODO: esta línea de código carga datos en la tabla 'f1DataSet_CLSMugueta1.Escuderies' Puede moverla o quitarla según sea necesario.
             this.escuderiesTableAdapter.Fill(this.f1DataSet_CLSMugueta1.Escuderies);
 
+            updateImage();
+
         }
 
         private void descEscuderiaTextBox_TextChanged(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace CLS_Daniel_Mugueta
 
         private void escuderiesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            updateImage();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -52,10 +54,29 @@ namespace CLS_Daniel_Mugueta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string imagen;
-            openFileDialog1.ShowDialog();
-            imagen = openFileDialog1.FileName;
-            Image.FromFile(imagen);
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateImage()
+        {
+            string image, path;
+
+            image = txtLogoPath.Text;
+            if (image != "")
+            {
+                path = $"../Images/{image}";
+
+                pictureBox1.Image = Image.FromFile(path);
+            }
+            else
+            {
+                pictureBox1.Image = null;
+            }
         }
     }
 }
