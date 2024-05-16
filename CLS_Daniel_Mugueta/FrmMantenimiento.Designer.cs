@@ -218,7 +218,7 @@ namespace CLS_Daniel_Mugueta
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "\"Imagen PNG|*.png\"";
+            this.openFileDialog1.Filter = "Imagen PNG|*.png";
             // 
             // button1
             // 
@@ -262,6 +262,7 @@ namespace CLS_Daniel_Mugueta
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(646, 320);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.escuderiesDataGridView_CellContentClick);
             // 
             // idEscuderiaDataGridViewTextBoxColumn
             // 
@@ -299,9 +300,10 @@ namespace CLS_Daniel_Mugueta
             // 
             // logoBox
             // 
-            this.logoBox.Location = new System.Drawing.Point(424, 30);
+            this.logoBox.Location = new System.Drawing.Point(441, 44);
             this.logoBox.Name = "logoBox";
-            this.logoBox.Size = new System.Drawing.Size(210, 113);
+            this.logoBox.Size = new System.Drawing.Size(179, 84);
+            this.logoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoBox.TabIndex = 12;
             this.logoBox.TabStop = false;
             // 

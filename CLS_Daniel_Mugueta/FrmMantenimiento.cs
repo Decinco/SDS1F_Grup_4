@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace CLS_Daniel_Mugueta
 {
@@ -42,16 +43,23 @@ namespace CLS_Daniel_Mugueta
         {
             this.BsEscuderia.EndEdit();
             this.escuderiesTableAdapter.Update(f1DataSet_CLSMugueta1.Escuderies);
+
+            updateImage();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string imagePath, imageFile;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) {
 
-        }
+                imagePath = openFileDialog1.FileName;
+                imageFile
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
+                txtLogoPath.Text = imagePath;
+            }
+
+            updateImage();
         }
 
         private void updateImage()
@@ -59,16 +67,22 @@ namespace CLS_Daniel_Mugueta
             string image, path;
 
             image = txtLogoPath.Text;
-            if (image != "")
-            {
-                path = $"../Images/{image}";
 
+            path = $"../Images/{image}";
+
+            if (File.Exists(path))
+            {
                 logoBox.Image = Image.FromFile(path);
             }
             else
             {
-                logoBox.Image = null;
+                logoBox.Image = Image.FromFile("../Images/default.png");
             }
+        }
+
+        private string getFileNameWithoutPath()
+        {
+            return "";
         }
     }
 }
