@@ -79,7 +79,7 @@ namespace CLS_Daniel_Mugueta
             // txtNombre
             // 
             this.txtNombre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsEscuderia, "DescEscuderia", true));
-            this.txtNombre.Location = new System.Drawing.Point(129, 58);
+            this.txtNombre.Location = new System.Drawing.Point(131, 83);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(250, 22);
             this.txtNombre.TabIndex = 1;
@@ -112,7 +112,7 @@ namespace CLS_Daniel_Mugueta
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(646, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(689, 27);
             this.bindingNavigator1.TabIndex = 5;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -222,7 +222,7 @@ namespace CLS_Daniel_Mugueta
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(312, 89);
+            this.button1.Location = new System.Drawing.Point(314, 114);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(67, 23);
             this.button1.TabIndex = 7;
@@ -233,7 +233,7 @@ namespace CLS_Daniel_Mugueta
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 93);
+            this.label2.Location = new System.Drawing.Point(14, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 17);
             this.label2.TabIndex = 4;
@@ -242,7 +242,7 @@ namespace CLS_Daniel_Mugueta
             // txtLogoPath
             // 
             this.txtLogoPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsEscuderia, "Logo", true));
-            this.txtLogoPath.Location = new System.Drawing.Point(129, 90);
+            this.txtLogoPath.Location = new System.Drawing.Point(131, 115);
             this.txtLogoPath.Name = "txtLogoPath";
             this.txtLogoPath.ReadOnly = true;
             this.txtLogoPath.Size = new System.Drawing.Size(177, 22);
@@ -257,11 +257,11 @@ namespace CLS_Daniel_Mugueta
             this.descEscuderiaDataGridViewTextBoxColumn,
             this.logoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.BsEscuderia;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 149);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 192);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(646, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(689, 344);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.escuderiesDataGridView_CellContentClick);
             // 
@@ -293,7 +293,7 @@ namespace CLS_Daniel_Mugueta
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 61);
+            this.label3.Location = new System.Drawing.Point(14, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 11;
@@ -301,9 +301,10 @@ namespace CLS_Daniel_Mugueta
             // 
             // logoBox
             // 
+            this.logoBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.logoBox.Location = new System.Drawing.Point(441, 44);
             this.logoBox.Name = "logoBox";
-            this.logoBox.Size = new System.Drawing.Size(179, 84);
+            this.logoBox.Size = new System.Drawing.Size(215, 128);
             this.logoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoBox.TabIndex = 12;
             this.logoBox.TabStop = false;
@@ -312,7 +313,7 @@ namespace CLS_Daniel_Mugueta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 471);
+            this.ClientSize = new System.Drawing.Size(689, 534);
             this.Controls.Add(this.logoBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
