@@ -50,6 +50,8 @@ namespace CLS_Juan_Paredes
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.descTipusIncidenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1_Paredes1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -78,7 +80,7 @@ namespace CLS_Juan_Paredes
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.descTipusIncidenciaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(336, 64);
+            this.dataGridView1.Location = new System.Drawing.Point(264, 54);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -111,7 +113,7 @@ namespace CLS_Juan_Paredes
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(554, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(462, 27);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -203,7 +205,8 @@ namespace CLS_Juan_Paredes
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(61, 77);
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "DescTipusIncidencia", true));
+            this.textBox1.Location = new System.Drawing.Point(18, 74);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(199, 22);
             this.textBox1.TabIndex = 2;
@@ -211,7 +214,7 @@ namespace CLS_Juan_Paredes
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 42);
+            this.label1.Location = new System.Drawing.Point(15, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 17);
             this.label1.TabIndex = 3;
@@ -226,11 +229,31 @@ namespace CLS_Juan_Paredes
             this.descTipusIncidenciaDataGridViewTextBoxColumn.Name = "descTipusIncidenciaDataGridViewTextBoxColumn";
             this.descTipusIncidenciaDataGridViewTextBoxColumn.Width = 125;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.bindingSource1, "DescTipusIncidencia", true));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(18, 141);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 17);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Descripcion:";
+            // 
             // frm_Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 300);
+            this.ClientSize = new System.Drawing.Size(462, 277);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.bindingNavigator1);
@@ -271,5 +294,7 @@ namespace CLS_Juan_Paredes
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn descTipusIncidenciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
