@@ -31,14 +31,9 @@ namespace CLS_Daniel_Mugueta
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMantenimiento));
-            this.GridEscuderies = new System.Windows.Forms.DataGridView();
-            this.idEscuderiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descEscuderiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BsEscuderia = new System.Windows.Forms.BindingSource(this.components);
             this.f1DataSet_CLSMugueta1 = new CLS_Daniel_Mugueta.F1DataSet_CLSMugueta();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -53,62 +48,23 @@ namespace CLS_Daniel_Mugueta
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.escuderiesTableAdapter = new CLS_Daniel_Mugueta.F1DataSet_CLSMuguetaTableAdapters.EscuderiesTableAdapter();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLogoPath = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.GridEscuderies)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idEscuderiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descEscuderiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.logoBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BsEscuderia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSet_CLSMugueta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // GridEscuderies
-            // 
-            this.GridEscuderies.AutoGenerateColumns = false;
-            this.GridEscuderies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridEscuderies.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idEscuderiaDataGridViewTextBoxColumn,
-            this.descEscuderiaDataGridViewTextBoxColumn,
-            this.logoDataGridViewTextBoxColumn});
-            this.GridEscuderies.DataSource = this.BsEscuderia;
-            this.GridEscuderies.Location = new System.Drawing.Point(0, 153);
-            this.GridEscuderies.Name = "GridEscuderies";
-            this.GridEscuderies.RowHeadersWidth = 51;
-            this.GridEscuderies.RowTemplate.Height = 24;
-            this.GridEscuderies.Size = new System.Drawing.Size(646, 318);
-            this.GridEscuderies.TabIndex = 0;
-            this.GridEscuderies.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.escuderiesDataGridView_CellContentClick);
-            this.GridEscuderies.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.escuderiesDataGridView_CellContentClick);
-            this.GridEscuderies.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.escuderiesDataGridView_CellContentClick);
-            // 
-            // idEscuderiaDataGridViewTextBoxColumn
-            // 
-            this.idEscuderiaDataGridViewTextBoxColumn.DataPropertyName = "idEscuderia";
-            this.idEscuderiaDataGridViewTextBoxColumn.HeaderText = "idEscuderia";
-            this.idEscuderiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idEscuderiaDataGridViewTextBoxColumn.Name = "idEscuderiaDataGridViewTextBoxColumn";
-            this.idEscuderiaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idEscuderiaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // descEscuderiaDataGridViewTextBoxColumn
-            // 
-            this.descEscuderiaDataGridViewTextBoxColumn.DataPropertyName = "DescEscuderia";
-            this.descEscuderiaDataGridViewTextBoxColumn.HeaderText = "DescEscuderia";
-            this.descEscuderiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descEscuderiaDataGridViewTextBoxColumn.Name = "descEscuderiaDataGridViewTextBoxColumn";
-            this.descEscuderiaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // logoDataGridViewTextBoxColumn
-            // 
-            this.logoDataGridViewTextBoxColumn.DataPropertyName = "Logo";
-            this.logoDataGridViewTextBoxColumn.HeaderText = "Logo";
-            this.logoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.logoDataGridViewTextBoxColumn.Name = "logoDataGridViewTextBoxColumn";
-            this.logoDataGridViewTextBoxColumn.Width = 125;
             // 
             // BsEscuderia
             // 
@@ -128,22 +84,13 @@ namespace CLS_Daniel_Mugueta
             this.txtNombre.Size = new System.Drawing.Size(250, 22);
             this.txtNombre.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nombre";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
             this.bindingNavigator1.BindingSource = this.BsEscuderia;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.bindingNavigator1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -221,6 +168,7 @@ namespace CLS_Daniel_Mugueta
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -267,21 +215,13 @@ namespace CLS_Daniel_Mugueta
             // 
             this.escuderiesTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(454, 43);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 88);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "\"Imagen PNG|*.png\"";
             // 
             // button1
             // 
-            this.button1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.BsEscuderia, "Logo", true));
             this.button1.Location = new System.Drawing.Point(312, 89);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(67, 23);
@@ -304,43 +244,97 @@ namespace CLS_Daniel_Mugueta
             this.txtLogoPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsEscuderia, "Logo", true));
             this.txtLogoPath.Location = new System.Drawing.Point(129, 90);
             this.txtLogoPath.Name = "txtLogoPath";
-            this.txtLogoPath.ReadOnly = true;
             this.txtLogoPath.Size = new System.Drawing.Size(177, 22);
             this.txtLogoPath.TabIndex = 8;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idEscuderiaDataGridViewTextBoxColumn,
+            this.descEscuderiaDataGridViewTextBoxColumn,
+            this.logoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.BsEscuderia;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 149);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(646, 320);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // idEscuderiaDataGridViewTextBoxColumn
+            // 
+            this.idEscuderiaDataGridViewTextBoxColumn.DataPropertyName = "idEscuderia";
+            this.idEscuderiaDataGridViewTextBoxColumn.HeaderText = "idEscuderia";
+            this.idEscuderiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idEscuderiaDataGridViewTextBoxColumn.Name = "idEscuderiaDataGridViewTextBoxColumn";
+            this.idEscuderiaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idEscuderiaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descEscuderiaDataGridViewTextBoxColumn
+            // 
+            this.descEscuderiaDataGridViewTextBoxColumn.DataPropertyName = "DescEscuderia";
+            this.descEscuderiaDataGridViewTextBoxColumn.HeaderText = "DescEscuderia";
+            this.descEscuderiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descEscuderiaDataGridViewTextBoxColumn.Name = "descEscuderiaDataGridViewTextBoxColumn";
+            this.descEscuderiaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // logoDataGridViewTextBoxColumn
+            // 
+            this.logoDataGridViewTextBoxColumn.DataPropertyName = "Logo";
+            this.logoDataGridViewTextBoxColumn.HeaderText = "Logo";
+            this.logoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.logoDataGridViewTextBoxColumn.Name = "logoDataGridViewTextBoxColumn";
+            this.logoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 17);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Escuderia";
+            // 
+            // logoBox
+            // 
+            this.logoBox.Location = new System.Drawing.Point(424, 30);
+            this.logoBox.Name = "logoBox";
+            this.logoBox.Size = new System.Drawing.Size(210, 113);
+            this.logoBox.TabIndex = 12;
+            this.logoBox.TabStop = false;
             // 
             // FrmMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 471);
+            this.Controls.Add(this.logoBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtLogoPath);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.GridEscuderies);
             this.Name = "FrmMantenimiento";
             this.Text = "FrmMantenimiento";
             this.Load += new System.EventHandler(this.FrmMantenimiento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GridEscuderies)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BsEscuderia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSet_CLSMugueta1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView GridEscuderies;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -357,13 +351,15 @@ namespace CLS_Daniel_Mugueta
         private F1DataSet_CLSMuguetaTableAdapters.EscuderiesTableAdapter escuderiesTableAdapter;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private F1DataSet_CLSMugueta f1DataSet_CLSMugueta1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idEscuderiaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descEscuderiaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn logoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLogoPath;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEscuderiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descEscuderiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn logoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox logoBox;
     }
 }

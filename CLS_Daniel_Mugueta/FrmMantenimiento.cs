@@ -24,6 +24,7 @@ namespace CLS_Daniel_Mugueta
 
         private void FrmMantenimiento_Load(object sender, EventArgs e)
         {
+
             // TODO: esta línea de código carga datos en la tabla 'f1DataSet_CLSMugueta1.Escuderies' Puede moverla o quitarla según sea necesario.
             this.escuderiesTableAdapter.Fill(this.f1DataSet_CLSMugueta1.Escuderies);
 
@@ -31,19 +32,10 @@ namespace CLS_Daniel_Mugueta
 
         }
 
-        private void descEscuderiaTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void escuderiesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             updateImage();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -71,11 +63,11 @@ namespace CLS_Daniel_Mugueta
             {
                 path = $"../Images/{image}";
 
-                pictureBox1.Image = Image.FromFile(path);
+                logoBox.Image = Image.FromFile(path);
             }
             else
             {
-                pictureBox1.Image = null;
+                logoBox.Image = null;
             }
         }
     }
