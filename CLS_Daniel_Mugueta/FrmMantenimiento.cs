@@ -47,16 +47,20 @@ namespace CLS_Daniel_Mugueta
             updateImage();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // Importar imagen
         {
             string imagePath, imageFile;
             if (openFileDialog1.ShowDialog() == DialogResult.OK) {
 
                 imagePath = openFileDialog1.FileName;
-                imageFile
+                imageFile = Path.GetFileName(imagePath);
 
+                if (!File.Exists($"../Images/{imageFile}"))
+                {
+                    File.Copy(imagePath, $"../Images/{imageFile}");
+                }
 
-                txtLogoPath.Text = imagePath;
+                txtLogoPath.Text = imageFile;
             }
 
             updateImage();
@@ -78,11 +82,6 @@ namespace CLS_Daniel_Mugueta
             {
                 logoBox.Image = Image.FromFile("../Images/default.png");
             }
-        }
-
-        private string getFileNameWithoutPath()
-        {
-            return "";
         }
     }
 }

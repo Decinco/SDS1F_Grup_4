@@ -244,6 +244,7 @@ namespace CLS_Daniel_Mugueta
             this.txtLogoPath.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BsEscuderia, "Logo", true));
             this.txtLogoPath.Location = new System.Drawing.Point(129, 90);
             this.txtLogoPath.Name = "txtLogoPath";
+            this.txtLogoPath.ReadOnly = true;
             this.txtLogoPath.Size = new System.Drawing.Size(177, 22);
             this.txtLogoPath.TabIndex = 8;
             // 
