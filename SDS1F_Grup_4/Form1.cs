@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CLS_Daniel_Mugueta;
 using CLS_Leandro_Varas;
-using cls_Paredes;
+using CLS_Juan_Paredes;
 
 namespace SDS1F_Grup_4
 {
@@ -33,7 +33,7 @@ namespace SDS1F_Grup_4
 
         private void clasificaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cls_Paredes.frmLlista1 form = new frmLlista1();
+            CLS_Juan_Paredes.frm_Mantenimiento form = new frm_Mantenimiento();
             form.Show();
         }
 

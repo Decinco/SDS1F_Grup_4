@@ -1,7 +1,7 @@
 ﻿
-namespace cls_Paredes
+namespace CLS_Juan_Paredes
 {
-    partial class frmMantenimiento2
+    partial class frmLlista1
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace cls_Paredes
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmMantenimiento2";
+            this.Text = "frmLlista1";
         }
 
         #endregion

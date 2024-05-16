@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Compile\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -62,28 +62,23 @@
       <DependentUpon>CrystalReport2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="F1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>F1DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="frmLlista1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLlista1.Designer.cs">
       <DependentUpon>frmLlista1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMantenimiento2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMantenimiento2.Designer.cs">
-      <DependentUpon>frmMantenimiento2.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmOracle3.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmOracle3.Designer.cs">
       <DependentUpon>frmOracle3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_mantenimiento2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_mantenimiento2.Designer.cs">
+      <DependentUpon>frm_mantenimiento2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,23 +100,15 @@
     <EmbeddedResource Include="frmLlista1.resx">
       <DependentUpon>frmLlista1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_mantenimiento2.resx">
+      <DependentUpon>frm_mantenimiento2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="F1DataSet.xsc">
-      <DependentUpon>F1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="F1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>F1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="F1DataSet.xss">
-      <DependentUpon>F1DataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

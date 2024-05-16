@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace cls_Paredes
+namespace CLS_Juan_Paredes
 {
-    public partial class frmMantenimiento2 : Form
+    public partial class Form1 : Form
     {
-        public frmMantenimiento2()
+        public Form1()
         {
             InitializeComponent();
         }

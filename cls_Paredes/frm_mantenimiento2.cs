@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace cls_Paredes
 {
-    public partial class frmLlista1 : Form
+    public partial class frm_mantenimiento2 : Form
     {
-        public frmLlista1()
+        public frm_mantenimiento2()
         {
             InitializeComponent();
-        }
-
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

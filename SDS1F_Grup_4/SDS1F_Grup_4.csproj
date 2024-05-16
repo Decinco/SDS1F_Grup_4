@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Compile\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -87,13 +87,13 @@
       <Project>{947e55c5-fe52-4030-974b-f763b1fe2c0c}</Project>
       <Name>CLS_Daniel_Mugueta</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CLS_Juan_Paredes\CLS_Juan_Paredes.csproj">
+      <Project>{4e48496c-0d58-463d-bd82-83a01d91867b}</Project>
+      <Name>CLS_Juan_Paredes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CLS_Leandro_Varas\CLS_Leandro_Varas\CLS_Leandro_Varas.csproj">
       <Project>{f9e69267-cc50-4051-8b50-966b511727dd}</Project>
       <Name>CLS_Leandro_Varas</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\cls_Paredes\cls_Paredes.csproj">
-      <Project>{f9cf76ca-17ca-4c56-97da-852673dd46cc}</Project>
-      <Name>cls_Paredes</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
