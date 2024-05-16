@@ -109,6 +109,8 @@ namespace CLS_Leandro_Varas
             this.tabla_inf_circuits.TabIndex = 3;
             this.tabla_inf_circuits.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_inf_circuits_CellClick);
             this.tabla_inf_circuits.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_inf_circuits_CellClick);
+            this.tabla_inf_circuits.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_inf_circuits_CellEnter);
+            this.tabla_inf_circuits.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.tabla_inf_circuits_RowsAdded);
             // 
             // idCircuitDataGridViewTextBoxColumn
             // 
@@ -157,6 +159,7 @@ namespace CLS_Leandro_Varas
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.DbCircuits, "Circuit", true));
             this.textBox1.Location = new System.Drawing.Point(139, 73);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(284, 22);
             this.textBox1.TabIndex = 4;
             // 
@@ -164,6 +167,7 @@ namespace CLS_Leandro_Varas
             // 
             this.textBox2.Location = new System.Drawing.Point(71, 73);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(58, 22);
             this.textBox2.TabIndex = 5;
             this.textBox2.Text = "Circuit: ";
@@ -174,6 +178,7 @@ namespace CLS_Leandro_Varas
             // 
             this.textBox3.Location = new System.Drawing.Point(36, 101);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(93, 22);
             this.textBox3.TabIndex = 7;
             this.textBox3.Text = "Localització: ";
@@ -185,6 +190,7 @@ namespace CLS_Leandro_Varas
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.DbCircuits, "Localitzacio", true));
             this.textBox4.Location = new System.Drawing.Point(139, 101);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(284, 22);
             this.textBox4.TabIndex = 6;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -193,6 +199,7 @@ namespace CLS_Leandro_Varas
             // 
             this.textBox5.Location = new System.Drawing.Point(36, 129);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(93, 22);
             this.textBox5.TabIndex = 8;
             this.textBox5.Text = "Largada: ";
@@ -203,6 +210,7 @@ namespace CLS_Leandro_Varas
             this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.DbCircuits, "LlargadaCircuit", true));
             this.textBox6.Location = new System.Drawing.Point(139, 129);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(85, 22);
             this.textBox6.TabIndex = 9;
             // 
@@ -210,6 +218,7 @@ namespace CLS_Leandro_Varas
             // 
             this.textBox7.Location = new System.Drawing.Point(46, 193);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(81, 22);
             this.textBox7.TabIndex = 10;
             this.textBox7.Text = "Esquema: ";
@@ -220,8 +229,6 @@ namespace CLS_Leandro_Varas
             // 
             this.img_pistas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.img_pistas.Cursor = System.Windows.Forms.Cursors.Default;
-            this.img_pistas.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.DbCircuits, "EsquemaCircuit", true));
-            this.img_pistas.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.DbCircuits, "EsquemaCircuit", true));
             this.img_pistas.Location = new System.Drawing.Point(490, 73);
             this.img_pistas.Name = "img_pistas";
             this.img_pistas.Size = new System.Drawing.Size(274, 114);
@@ -391,9 +398,9 @@ namespace CLS_Leandro_Varas
             // esquemaCircuitTextBox
             // 
             this.esquemaCircuitTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.DbCircuits, "EsquemaCircuit", true));
-            this.esquemaCircuitTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.DbCircuits, "EsquemaCircuit", true));
             this.esquemaCircuitTextBox.Location = new System.Drawing.Point(139, 192);
             this.esquemaCircuitTextBox.Name = "esquemaCircuitTextBox";
+            this.esquemaCircuitTextBox.ReadOnly = true;
             this.esquemaCircuitTextBox.Size = new System.Drawing.Size(212, 22);
             this.esquemaCircuitTextBox.TabIndex = 15;
             // 
