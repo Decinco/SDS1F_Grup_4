@@ -30,10 +30,10 @@ namespace CLS_Juan_Paredes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Mantenimiento));
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.BSTipusIncidencia = new System.Windows.Forms.BindingSource(this.components);
             this.f1_Paredes1 = new CLS_Juan_Paredes.F1_Paredes();
             this.tipusIncidenciaTableAdapter = new CLS_Juan_Paredes.F1_ParedesTableAdapters.TipusIncidenciaTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -52,19 +52,18 @@ namespace CLS_Juan_Paredes
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.BSTipusIncidencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1_Paredes1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bindingSource1
+            // BSTipusIncidencia
             // 
-            this.bindingSource1.DataMember = "TipusIncidencia";
-            this.bindingSource1.DataSource = this.f1_Paredes1;
+            this.BSTipusIncidencia.DataMember = "TipusIncidencia";
+            this.BSTipusIncidencia.DataSource = this.f1_Paredes1;
             // 
             // f1_Paredes1
             // 
@@ -78,31 +77,31 @@ namespace CLS_Juan_Paredes
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.descTipusIncidenciaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bindingSource1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(278, 54);
+            this.dataGridView1.DataSource = this.BSTipusIncidencia;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.Location = new System.Drawing.Point(250, 54);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(181, 205);
+            this.dataGridView1.Size = new System.Drawing.Size(178, 205);
             this.dataGridView1.TabIndex = 0;
             // 
             // descTipusIncidenciaDataGridViewTextBoxColumn
@@ -116,7 +115,7 @@ namespace CLS_Juan_Paredes
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.bindingSource1;
+            this.bindingNavigator1.BindingSource = this.BSTipusIncidencia;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -131,7 +130,8 @@ namespace CLS_Juan_Paredes
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
+            this.bindingNavigatorDeleteItem,
+            this.toolStripButton1});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -139,7 +139,7 @@ namespace CLS_Juan_Paredes
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(485, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(446, 31);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -149,8 +149,8 @@ namespace CLS_Juan_Paredes
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Text = "Guardar y cerrar";
             // 
             // bindingNavigatorCountItem
             // 
@@ -231,7 +231,7 @@ namespace CLS_Juan_Paredes
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "DescTipusIncidencia", true));
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BSTipusIncidencia, "DescTipusIncidencia", true));
             this.textBox1.Location = new System.Drawing.Point(18, 74);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(199, 22);
@@ -247,31 +247,21 @@ namespace CLS_Juan_Paredes
             this.label1.Text = "Descripcion:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // comboBox1
+            // toolStripButton1
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.bindingSource1, "DescTipusIncidencia", true));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(18, 141);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Descripcion:";
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton1.Text = "Guardar y cerrar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // frm_Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 327);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(446, 293);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.bindingNavigator1);
@@ -280,7 +270,7 @@ namespace CLS_Juan_Paredes
             this.Name = "frm_Mantenimiento";
             this.Text = "frm_Mantenimiento";
             this.Load += new System.EventHandler(this.frm_Mantenimiento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BSTipusIncidencia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1_Paredes1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
@@ -293,7 +283,7 @@ namespace CLS_Juan_Paredes
 
         #endregion
 
-        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource BSTipusIncidencia;
         private F1_Paredes f1_Paredes1;
         private F1_ParedesTableAdapters.TipusIncidenciaTableAdapter tipusIncidenciaTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -312,7 +302,6 @@ namespace CLS_Juan_Paredes
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn descTipusIncidenciaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

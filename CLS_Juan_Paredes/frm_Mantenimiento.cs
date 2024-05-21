@@ -28,5 +28,12 @@ namespace CLS_Juan_Paredes
         {
 
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            BSTipusIncidencia.EndEdit();
+            tipusIncidenciaTableAdapter.Update(f1_Paredes1.TipusIncidencia);
+        }
     }
 }
