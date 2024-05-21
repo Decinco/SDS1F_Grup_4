@@ -56,6 +56,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>F1DataSet_CLSMugueta.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMantenimientoFK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoFK.Designer.cs">
+      <DependentUpon>FrmMantenimientoFK.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadoEscuderiasPilotos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,6 +105,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoFK.resx">
+      <DependentUpon>FrmMantenimientoFK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListadoEscuderiasPilotos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ListadoEscuderiasPilotos.cs</LastGenOutput>
@@ -131,6 +149,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formula-1-logo-0.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

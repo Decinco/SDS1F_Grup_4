@@ -36,6 +36,7 @@ namespace SDS1F_Grup_4
             this.perfilPilotosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoBBDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.escuderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pilotosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,28 +65,29 @@ namespace SDS1F_Grup_4
             // circuitosYCarrerasToolStripMenuItem
             // 
             this.circuitosYCarrerasToolStripMenuItem.Name = "circuitosYCarrerasToolStripMenuItem";
-            this.circuitosYCarrerasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.circuitosYCarrerasToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.circuitosYCarrerasToolStripMenuItem.Text = "Circuitos y Carreras";
             this.circuitosYCarrerasToolStripMenuItem.Click += new System.EventHandler(this.circuitosYCarrerasToolStripMenuItem_Click);
             // 
             // clasificaciónToolStripMenuItem
             // 
             this.clasificaciónToolStripMenuItem.Name = "clasificaciónToolStripMenuItem";
-            this.clasificaciónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clasificaciónToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.clasificaciónToolStripMenuItem.Text = "Clasificación";
             this.clasificaciónToolStripMenuItem.Click += new System.EventHandler(this.clasificaciónToolStripMenuItem_Click);
             // 
             // perfilPilotosToolStripMenuItem
             // 
             this.perfilPilotosToolStripMenuItem.Name = "perfilPilotosToolStripMenuItem";
-            this.perfilPilotosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.perfilPilotosToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.perfilPilotosToolStripMenuItem.Text = "Perfil Pilotos";
             this.perfilPilotosToolStripMenuItem.Click += new System.EventHandler(this.perfilPilotosToolStripMenuItem_Click);
             // 
             // mantenimientoBBDDToolStripMenuItem
             // 
             this.mantenimientoBBDDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.escuderToolStripMenuItem});
+            this.escuderToolStripMenuItem,
+            this.pilotosToolStripMenuItem});
             this.mantenimientoBBDDToolStripMenuItem.Name = "mantenimientoBBDDToolStripMenuItem";
             this.mantenimientoBBDDToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.mantenimientoBBDDToolStripMenuItem.Text = "Mantenimiento BBDD";
@@ -96,6 +98,13 @@ namespace SDS1F_Grup_4
             this.escuderToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.escuderToolStripMenuItem.Text = "Escuderías";
             this.escuderToolStripMenuItem.Click += new System.EventHandler(this.escuderToolStripMenuItem_Click);
+            // 
+            // pilotosToolStripMenuItem
+            // 
+            this.pilotosToolStripMenuItem.Name = "pilotosToolStripMenuItem";
+            this.pilotosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pilotosToolStripMenuItem.Text = "Pilotos";
+            this.pilotosToolStripMenuItem.Click += new System.EventHandler(this.pilotosToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -122,6 +131,7 @@ namespace SDS1F_Grup_4
         private System.Windows.Forms.ToolStripMenuItem perfilPilotosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoBBDDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem escuderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pilotosToolStripMenuItem;
     }
 }
 

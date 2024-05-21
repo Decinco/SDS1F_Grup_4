@@ -19,8 +19,11 @@ namespace CLS_Daniel_Mugueta
 
         private void FrmMantenimientoFK_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'f1DataSet_CLSMugueta.Pilots' Puede moverla o quitarla según sea necesario.
-            this.pilotsTableAdapter.Fill(this.f1DataSet_CLSMugueta.Pilots);
+            // TODO: esta línea de código carga datos en la tabla 'f1DataSet_CLSMugueta1.Escuderies' Puede moverla o quitarla según sea necesario.
+            this.escuderiesTableAdapter.Fill(this.f1DataSet_CLSMugueta1.Escuderies);
+            // TODO: esta línea de código carga datos en la tabla 'f1DataSet_CLSMugueta1.Pilots' Puede moverla o quitarla según sea necesario.
+            this.pilotsTableAdapter.Fill(this.f1DataSet_CLSMugueta1.Pilots);
+
 
         }
     }

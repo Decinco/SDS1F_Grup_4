@@ -48,5 +48,11 @@ namespace SDS1F_Grup_4
             CLS_Daniel_Mugueta.FrmMantenimiento form = new FrmMantenimiento();
             form.Show();
         }
+
+        private void pilotosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Daniel_Mugueta.FrmMantenimientoFK form = new FrmMantenimientoFK();
+            form.Show();
+        }
     }
 }
