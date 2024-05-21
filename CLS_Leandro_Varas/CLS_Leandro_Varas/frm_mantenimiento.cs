@@ -91,11 +91,6 @@ namespace CLS_Leandro_Varas
             
         }
 
-        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
-        {
-            
-        }
-
         private void tabla_inf_circuits_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             string imagen, ruta;
@@ -112,9 +107,9 @@ namespace CLS_Leandro_Varas
                 img_pistas.Image = Image.FromFile(ruta);
             }
         }
-
-        private void tabla_inf_circuits_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        private void DbCircuits_CurrentChanged(object sender, EventArgs e)
         {
+
         }
     }
 }
