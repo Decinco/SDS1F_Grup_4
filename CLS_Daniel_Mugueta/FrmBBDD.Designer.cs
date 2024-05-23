@@ -31,29 +31,23 @@ namespace CLS_Daniel_Mugueta
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BsCursor = new System.Windows.Forms.BindingSource(this.components);
             this.f1DataSetOracle_CLSMugueta = new CLS_Daniel_Mugueta.F1DataSetOracle_CLSMugueta();
-            this.BsPilots = new System.Windows.Forms.BindingSource(this.components);
-            this.pUNTSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pILOTSTableAdapter = new CLS_Daniel_Mugueta.F1DataSetOracle_CLSMuguetaTableAdapters.PILOTSTableAdapter();
             this.cmbPilots = new System.Windows.Forms.ComboBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pILOTSTableAdapter = new CLS_Daniel_Mugueta.F1DataSetOracle_CLSMuguetaTableAdapters.PILOTSTableAdapter();
+            this.imgFerrari = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPT = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BsCursor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSetOracle_CLSMugueta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BsPilots)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFerrari)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.gPDataGridViewTextBoxColumn,
-            this.pUNTSDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.BsCursor;
             this.dataGridView1.Location = new System.Drawing.Point(0, 192);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -61,89 +55,100 @@ namespace CLS_Daniel_Mugueta
             this.dataGridView1.Size = new System.Drawing.Size(682, 361);
             this.dataGridView1.TabIndex = 2;
             // 
-            // BsCursor
-            // 
-            this.BsCursor.DataMember = "RESULTATS_PILOT.CURSOR_PILOT";
-            this.BsCursor.DataSource = this.f1DataSetOracle_CLSMugueta;
-            // 
             // f1DataSetOracle_CLSMugueta
             // 
             this.f1DataSetOracle_CLSMugueta.DataSetName = "F1DataSetOracle_CLSMugueta";
             this.f1DataSetOracle_CLSMugueta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // BsPilots
+            // cmbPilots
             // 
-            this.BsPilots.DataMember = "PILOTS";
-            this.BsPilots.DataSource = this.f1DataSetOracle_CLSMugueta;
+            this.cmbPilots.DataSource = this.bindingSource1;
+            this.cmbPilots.DisplayMember = "NAME";
+            this.cmbPilots.FormattingEnabled = true;
+            this.cmbPilots.Location = new System.Drawing.Point(143, 54);
+            this.cmbPilots.Name = "cmbPilots";
+            this.cmbPilots.Size = new System.Drawing.Size(256, 24);
+            this.cmbPilots.TabIndex = 3;
+            this.cmbPilots.ValueMember = "IDPILOT";
+            this.cmbPilots.SelectedValueChanged += new System.EventHandler(this.cmbPilots_SelectedValueChanged);
             // 
-            // pUNTSDataGridViewTextBoxColumn
+            // bindingSource1
             // 
-            this.pUNTSDataGridViewTextBoxColumn.DataPropertyName = "PUNTS";
-            this.pUNTSDataGridViewTextBoxColumn.HeaderText = "PUNTS";
-            this.pUNTSDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pUNTSDataGridViewTextBoxColumn.Name = "pUNTSDataGridViewTextBoxColumn";
-            this.pUNTSDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // gPDataGridViewTextBoxColumn
-            // 
-            this.gPDataGridViewTextBoxColumn.DataPropertyName = "GP";
-            this.gPDataGridViewTextBoxColumn.HeaderText = "GP";
-            this.gPDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.gPDataGridViewTextBoxColumn.Name = "gPDataGridViewTextBoxColumn";
-            this.gPDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Width = 125;
+            this.bindingSource1.DataMember = "PILOTS";
+            this.bindingSource1.DataSource = this.f1DataSetOracle_CLSMugueta;
             // 
             // pILOTSTableAdapter
             // 
             this.pILOTSTableAdapter.ClearBeforeFill = true;
             // 
-            // cmbPilots
+            // imgFerrari
             // 
-            this.cmbPilots.DataSource = this.BsPilots;
-            this.cmbPilots.DisplayMember = "NAME";
-            this.cmbPilots.FormattingEnabled = true;
-            this.cmbPilots.Location = new System.Drawing.Point(12, 12);
-            this.cmbPilots.Name = "cmbPilots";
-            this.cmbPilots.Size = new System.Drawing.Size(121, 24);
-            this.cmbPilots.TabIndex = 3;
-            this.cmbPilots.ValueMember = "IDPILOT";
-            this.cmbPilots.SelectedValueChanged += new System.EventHandler(this.cmbPilots_SelectedValueChanged);
+            this.imgFerrari.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imgFerrari.Location = new System.Drawing.Point(435, 29);
+            this.imgFerrari.Name = "imgFerrari";
+            this.imgFerrari.Size = new System.Drawing.Size(215, 128);
+            this.imgFerrari.TabIndex = 4;
+            this.imgFerrari.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Piloto";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Puntos Totales";
+            // 
+            // txtPT
+            // 
+            this.txtPT.Location = new System.Drawing.Point(143, 108);
+            this.txtPT.Name = "txtPT";
+            this.txtPT.ReadOnly = true;
+            this.txtPT.Size = new System.Drawing.Size(256, 22);
+            this.txtPT.TabIndex = 7;
             // 
             // FrmBBDD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 553);
+            this.Controls.Add(this.txtPT);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.imgFerrari);
             this.Controls.Add(this.cmbPilots);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmBBDD";
             this.Text = "FrmBBDD";
             this.Load += new System.EventHandler(this.FrmBBDD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BsCursor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSetOracle_CLSMugueta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BsPilots)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFerrari)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource BsCursor;
         private F1DataSetOracle_CLSMugueta f1DataSetOracle_CLSMugueta;
-        private System.Windows.Forms.BindingSource BsPilots;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pUNTSDataGridViewTextBoxColumn;
-        private F1DataSetOracle_CLSMuguetaTableAdapters.PILOTSTableAdapter pILOTSTableAdapter;
         private System.Windows.Forms.ComboBox cmbPilots;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private F1DataSetOracle_CLSMuguetaTableAdapters.PILOTSTableAdapter pILOTSTableAdapter;
+        private System.Windows.Forms.PictureBox imgFerrari;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPT;
     }
 }

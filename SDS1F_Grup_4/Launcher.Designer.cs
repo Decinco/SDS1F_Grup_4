@@ -98,14 +98,14 @@ namespace SDS1F_Grup_4
             // escuderToolStripMenuItem
             // 
             this.escuderToolStripMenuItem.Name = "escuderToolStripMenuItem";
-            this.escuderToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.escuderToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.escuderToolStripMenuItem.Text = "Escuderías";
             this.escuderToolStripMenuItem.Click += new System.EventHandler(this.escuderToolStripMenuItem_Click);
             // 
             // pilotosToolStripMenuItem
             // 
             this.pilotosToolStripMenuItem.Name = "pilotosToolStripMenuItem";
-            this.pilotosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pilotosToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.pilotosToolStripMenuItem.Text = "Pilotos";
             this.pilotosToolStripMenuItem.Click += new System.EventHandler(this.pilotosToolStripMenuItem_Click);
             // 
