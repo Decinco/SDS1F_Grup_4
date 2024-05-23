@@ -20,42 +20,25 @@ namespace SDS1F_Grup_4
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void circuitosYCarrerasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CLS_Leandro_Varas.frm_lista form = new frm_lista();
-            form.Show();
-        }
-
-        private void clasificaciónToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CLS_Juan_Paredes.frmLlista form = new frmLlista();
-            form.Show();
-        }
-
-        private void perfilPilotosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void informePerfilPilotosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CLS_Daniel_Mugueta.FrmLista form = new FrmLista();
             form.Show();
         }
 
-        private void escuderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void escuderíasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CLS_Daniel_Mugueta.FrmMantenimiento form = new FrmMantenimiento();
             form.Show();
         }
 
-        private void pilotosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pilotosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             CLS_Daniel_Mugueta.FrmMantenimientoFK form = new FrmMantenimientoFK();
             form.Show();
         }
 
-        private void puntuacionesPorPilotoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void análisisClasificaciónPorPilotoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CLS_Daniel_Mugueta.FrmBBDD form = new FrmBBDD();
             form.Show();
