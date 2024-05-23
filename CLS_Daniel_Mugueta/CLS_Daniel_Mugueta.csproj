@@ -202,9 +202,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\formula-1-logo-0.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\formula-1-logo-200.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

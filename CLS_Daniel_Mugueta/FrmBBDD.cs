@@ -23,23 +23,12 @@ namespace CLS_Daniel_Mugueta
         }
 
 
-
         public FrmBBDD()
         {
             InitializeComponent();
 
             // Inicializar conexión
             ConnString = @"TNS_ADMIN=C:\Users\danie\Oracle\network\admin;USER ID=F1;PASSWORD=1234;DATA SOURCE=10.0.15.22:1521/XEPDB1;PERSIST SECURITY INFO=True";
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void FrmBBDD_Load(object sender, EventArgs e)
@@ -89,8 +78,6 @@ namespace CLS_Daniel_Mugueta
 
         private void GetPuntTotal()
         {
-
-            string total;
 
             // Crear Conexión
             OracleConnection dbSource = new OracleConnection(ConnString);

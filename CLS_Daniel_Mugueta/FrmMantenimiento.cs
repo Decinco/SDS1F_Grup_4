@@ -18,11 +18,6 @@ namespace CLS_Daniel_Mugueta
             InitializeComponent();
         }
 
-        private void circuitsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmMantenimiento_Load(object sender, EventArgs e)
         {
 
