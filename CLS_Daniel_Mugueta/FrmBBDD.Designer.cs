@@ -31,14 +31,18 @@ namespace CLS_Daniel_Mugueta
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.BsCursor = new System.Windows.Forms.BindingSource(this.components);
             this.f1DataSetOracle_CLSMugueta = new CLS_Daniel_Mugueta.F1DataSetOracle_CLSMugueta();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BsPilots = new System.Windows.Forms.BindingSource(this.components);
             this.pUNTSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pILOTSTableAdapter = new CLS_Daniel_Mugueta.F1DataSetOracle_CLSMuguetaTableAdapters.PILOTSTableAdapter();
+            this.cmbPilots = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BsCursor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSetOracle_CLSMugueta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BsPilots)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -49,7 +53,7 @@ namespace CLS_Daniel_Mugueta
             this.iDDataGridViewTextBoxColumn,
             this.gPDataGridViewTextBoxColumn,
             this.pUNTSDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bindingSource1;
+            this.dataGridView1.DataSource = this.BsCursor;
             this.dataGridView1.Location = new System.Drawing.Point(0, 192);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -57,31 +61,20 @@ namespace CLS_Daniel_Mugueta
             this.dataGridView1.Size = new System.Drawing.Size(682, 361);
             this.dataGridView1.TabIndex = 2;
             // 
-            // bindingSource1
+            // BsCursor
             // 
-            this.bindingSource1.DataMember = "RESULTATS_PILOT.CURSOR_PILOT";
-            this.bindingSource1.DataSource = this.f1DataSetOracle_CLSMugueta;
+            this.BsCursor.DataMember = "RESULTATS_PILOT.CURSOR_PILOT";
+            this.BsCursor.DataSource = this.f1DataSetOracle_CLSMugueta;
             // 
             // f1DataSetOracle_CLSMugueta
             // 
             this.f1DataSetOracle_CLSMugueta.DataSetName = "F1DataSetOracle_CLSMugueta";
             this.f1DataSetOracle_CLSMugueta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // iDDataGridViewTextBoxColumn
+            // BsPilots
             // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // gPDataGridViewTextBoxColumn
-            // 
-            this.gPDataGridViewTextBoxColumn.DataPropertyName = "GP";
-            this.gPDataGridViewTextBoxColumn.HeaderText = "GP";
-            this.gPDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.gPDataGridViewTextBoxColumn.Name = "gPDataGridViewTextBoxColumn";
-            this.gPDataGridViewTextBoxColumn.Width = 125;
+            this.BsPilots.DataMember = "PILOTS";
+            this.BsPilots.DataSource = this.f1DataSetOracle_CLSMugueta;
             // 
             // pUNTSDataGridViewTextBoxColumn
             // 
@@ -91,18 +84,52 @@ namespace CLS_Daniel_Mugueta
             this.pUNTSDataGridViewTextBoxColumn.Name = "pUNTSDataGridViewTextBoxColumn";
             this.pUNTSDataGridViewTextBoxColumn.Width = 125;
             // 
+            // gPDataGridViewTextBoxColumn
+            // 
+            this.gPDataGridViewTextBoxColumn.DataPropertyName = "GP";
+            this.gPDataGridViewTextBoxColumn.HeaderText = "GP";
+            this.gPDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gPDataGridViewTextBoxColumn.Name = "gPDataGridViewTextBoxColumn";
+            this.gPDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // pILOTSTableAdapter
+            // 
+            this.pILOTSTableAdapter.ClearBeforeFill = true;
+            // 
+            // cmbPilots
+            // 
+            this.cmbPilots.DataSource = this.BsPilots;
+            this.cmbPilots.DisplayMember = "NAME";
+            this.cmbPilots.FormattingEnabled = true;
+            this.cmbPilots.Location = new System.Drawing.Point(12, 12);
+            this.cmbPilots.Name = "cmbPilots";
+            this.cmbPilots.Size = new System.Drawing.Size(121, 24);
+            this.cmbPilots.TabIndex = 3;
+            this.cmbPilots.ValueMember = "IDPILOT";
+            this.cmbPilots.SelectedValueChanged += new System.EventHandler(this.cmbPilots_SelectedValueChanged);
+            // 
             // FrmBBDD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 553);
+            this.Controls.Add(this.cmbPilots);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmBBDD";
             this.Text = "FrmBBDD";
             this.Load += new System.EventHandler(this.FrmBBDD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BsCursor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSetOracle_CLSMugueta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BsPilots)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -110,10 +137,13 @@ namespace CLS_Daniel_Mugueta
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource BsCursor;
+        private F1DataSetOracle_CLSMugueta f1DataSetOracle_CLSMugueta;
+        private System.Windows.Forms.BindingSource BsPilots;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pUNTSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource bindingSource1;
-        private F1DataSetOracle_CLSMugueta f1DataSetOracle_CLSMugueta;
+        private F1DataSetOracle_CLSMuguetaTableAdapters.PILOTSTableAdapter pILOTSTableAdapter;
+        private System.Windows.Forms.ComboBox cmbPilots;
     }
 }
