@@ -88,16 +88,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="F1DataSetOracle_CLSMugueta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>F1DataSetOracle_CLSMugueta.xsd</DependentUpon>
+    </Compile>
     <Compile Include="F1DataSet_CLSMugueta.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>F1DataSet_CLSMugueta.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMantenimientoFK.cs">
       <SubType>Form</SubType>
@@ -142,9 +141,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoFK.resx">
       <DependentUpon>FrmMantenimientoFK.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +167,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="F1DataSetOracle_CLSMugueta.xsc">
+      <DependentUpon>F1DataSetOracle_CLSMugueta.xsd</DependentUpon>
+    </None>
+    <None Include="F1DataSetOracle_CLSMugueta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>F1DataSetOracle_CLSMugueta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="F1DataSetOracle_CLSMugueta.xss">
+      <DependentUpon>F1DataSetOracle_CLSMugueta.xsd</DependentUpon>
+    </None>
     <None Include="F1DataSet_CLSMugueta.xsc">
       <DependentUpon>F1DataSet_CLSMugueta.xsd</DependentUpon>
     </None>

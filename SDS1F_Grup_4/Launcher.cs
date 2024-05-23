@@ -13,9 +13,9 @@ using CLS_Juan_Paredes;
 
 namespace SDS1F_Grup_4
 {
-    public partial class Form1 : Form
+    public partial class Launcher : Form
     {
-        public Form1()
+        public Launcher()
         {
             InitializeComponent();
         }
@@ -52,6 +52,12 @@ namespace SDS1F_Grup_4
         private void pilotosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CLS_Daniel_Mugueta.FrmMantenimientoFK form = new FrmMantenimientoFK();
+            form.Show();
+        }
+
+        private void puntuacionesPorPilotoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Daniel_Mugueta.FrmBBDD form = new FrmBBDD();
             form.Show();
         }
     }

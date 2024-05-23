@@ -1,7 +1,7 @@
 ﻿
 namespace SDS1F_Grup_4
 {
-    partial class Form1
+    partial class Launcher
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -37,6 +37,8 @@ namespace SDS1F_Grup_4
             this.mantenimientoBBDDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.escuderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilotosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.análisisDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puntuacionesPorPilotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +47,8 @@ namespace SDS1F_Grup_4
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.informaciónF1ToolStripMenuItem,
-            this.mantenimientoBBDDToolStripMenuItem});
+            this.mantenimientoBBDDToolStripMenuItem,
+            this.análisisDeDatosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(576, 28);
@@ -106,14 +109,29 @@ namespace SDS1F_Grup_4
             this.pilotosToolStripMenuItem.Text = "Pilotos";
             this.pilotosToolStripMenuItem.Click += new System.EventHandler(this.pilotosToolStripMenuItem_Click);
             // 
-            // Form1
+            // análisisDeDatosToolStripMenuItem
+            // 
+            this.análisisDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.puntuacionesPorPilotoToolStripMenuItem});
+            this.análisisDeDatosToolStripMenuItem.Name = "análisisDeDatosToolStripMenuItem";
+            this.análisisDeDatosToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.análisisDeDatosToolStripMenuItem.Text = "Análisis de datos";
+            // 
+            // puntuacionesPorPilotoToolStripMenuItem
+            // 
+            this.puntuacionesPorPilotoToolStripMenuItem.Name = "puntuacionesPorPilotoToolStripMenuItem";
+            this.puntuacionesPorPilotoToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.puntuacionesPorPilotoToolStripMenuItem.Text = "Puntuaciones por Piloto";
+            this.puntuacionesPorPilotoToolStripMenuItem.Click += new System.EventHandler(this.puntuacionesPorPilotoToolStripMenuItem_Click);
+            // 
+            // Launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 293);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "Launcher";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -132,6 +150,8 @@ namespace SDS1F_Grup_4
         private System.Windows.Forms.ToolStripMenuItem mantenimientoBBDDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem escuderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pilotosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem análisisDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem puntuacionesPorPilotoToolStripMenuItem;
     }
 }
 
