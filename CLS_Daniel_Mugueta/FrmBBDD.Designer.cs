@@ -30,6 +30,7 @@ namespace CLS_Daniel_Mugueta
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBBDD));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.f1DataSetOracle_CLSMugueta = new CLS_Daniel_Mugueta.F1DataSetOracle_CLSMugueta();
             this.cmbPilots = new System.Windows.Forms.ComboBox();
@@ -50,6 +51,7 @@ namespace CLS_Daniel_Mugueta
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 192);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(682, 361);
@@ -129,8 +131,9 @@ namespace CLS_Daniel_Mugueta
             this.Controls.Add(this.imgF1);
             this.Controls.Add(this.cmbPilots);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBBDD";
-            this.Text = "FrmBBDD";
+            this.Text = "DanielMugueta - Clasificaciones por Piloto";
             this.Load += new System.EventHandler(this.FrmBBDD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSetOracle_CLSMugueta)).EndInit();

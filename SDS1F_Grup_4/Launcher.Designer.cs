@@ -29,6 +29,7 @@ namespace SDS1F_Grup_4
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Launcher));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.informaciónF1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.circuitosYCarrerasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -130,9 +131,10 @@ namespace SDS1F_Grup_4
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 293);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Launcher";
-            this.Text = "Form1";
+            this.Text = "SDS1F - Grupo 4 - Menú Principal";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

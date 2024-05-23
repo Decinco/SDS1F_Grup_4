@@ -22,7 +22,7 @@ namespace SDS1F_Grup_4
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("HOLA BUENAS");
+            
         }
 
         private void circuitosYCarrerasToolStripMenuItem_Click(object sender, EventArgs e)

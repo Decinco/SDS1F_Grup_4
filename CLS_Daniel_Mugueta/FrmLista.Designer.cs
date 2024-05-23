@@ -29,9 +29,10 @@ namespace CLS_Daniel_Mugueta
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLista));
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.ListadoEscuderiasPilotos1 = new CLS_Daniel_Mugueta.ListadoEscuderiasPilotos();
             this.ListadoEscuderiasPilotos2 = new CLS_Daniel_Mugueta.ListadoEscuderiasPilotos();
+            this.ListadoEscuderiasPilotos1 = new CLS_Daniel_Mugueta.ListadoEscuderiasPilotos();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -52,8 +53,10 @@ namespace CLS_Daniel_Mugueta
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLista";
-            this.Text = "FrmLista";
+            this.Text = "DanielMugueta - Informe Perfil Pilotos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
