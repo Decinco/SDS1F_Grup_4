@@ -35,14 +35,14 @@ namespace CLS_Daniel_Mugueta
             this.cmbPilots = new System.Windows.Forms.ComboBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pILOTSTableAdapter = new CLS_Daniel_Mugueta.F1DataSetOracle_CLSMuguetaTableAdapters.PILOTSTableAdapter();
-            this.imgFerrari = new System.Windows.Forms.PictureBox();
+            this.imgF1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPT = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSetOracle_CLSMugueta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFerrari)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgF1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -81,14 +81,16 @@ namespace CLS_Daniel_Mugueta
             // 
             this.pILOTSTableAdapter.ClearBeforeFill = true;
             // 
-            // imgFerrari
+            // imgF1
             // 
-            this.imgFerrari.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imgFerrari.Location = new System.Drawing.Point(435, 29);
-            this.imgFerrari.Name = "imgFerrari";
-            this.imgFerrari.Size = new System.Drawing.Size(215, 128);
-            this.imgFerrari.TabIndex = 4;
-            this.imgFerrari.TabStop = false;
+            this.imgF1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imgF1.Image = global::CLS_Daniel_Mugueta.Properties.Resources.formula_1_logo_200;
+            this.imgF1.Location = new System.Drawing.Point(435, 29);
+            this.imgF1.Name = "imgF1";
+            this.imgF1.Size = new System.Drawing.Size(215, 128);
+            this.imgF1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgF1.TabIndex = 4;
+            this.imgF1.TabStop = false;
             // 
             // label1
             // 
@@ -124,7 +126,7 @@ namespace CLS_Daniel_Mugueta
             this.Controls.Add(this.txtPT);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.imgFerrari);
+            this.Controls.Add(this.imgF1);
             this.Controls.Add(this.cmbPilots);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmBBDD";
@@ -133,7 +135,7 @@ namespace CLS_Daniel_Mugueta
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSetOracle_CLSMugueta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFerrari)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgF1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +148,7 @@ namespace CLS_Daniel_Mugueta
         private System.Windows.Forms.ComboBox cmbPilots;
         private System.Windows.Forms.BindingSource bindingSource1;
         private F1DataSetOracle_CLSMuguetaTableAdapters.PILOTSTableAdapter pILOTSTableAdapter;
-        private System.Windows.Forms.PictureBox imgFerrari;
+        private System.Windows.Forms.PictureBox imgF1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPT;

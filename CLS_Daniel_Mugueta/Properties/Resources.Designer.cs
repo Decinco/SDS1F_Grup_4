@@ -69,5 +69,15 @@ namespace CLS_Daniel_Mugueta.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formula_1_logo_200 {
+            get {
+                object obj = ResourceManager.GetObject("formula-1-logo-200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -23,8 +23,6 @@ namespace CLS_Daniel_Mugueta
             this.escuderiesTableAdapter.Fill(this.f1DataSet_CLSMugueta1.Escuderies);
             // TODO: esta línea de código carga datos en la tabla 'f1DataSet_CLSMugueta1.Pilots' Puede moverla o quitarla según sea necesario.
             this.pilotsTableAdapter.Fill(this.f1DataSet_CLSMugueta1.Pilots);
-
-
         }
 
         private void cmbEscuderia_SelectedValueChanged(object sender, EventArgs e)

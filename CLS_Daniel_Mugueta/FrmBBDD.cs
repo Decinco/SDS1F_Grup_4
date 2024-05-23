@@ -46,8 +46,6 @@ namespace CLS_Daniel_Mugueta
         {
             // TODO: esta línea de código carga datos en la tabla 'f1DataSetOracle_CLSMugueta.PILOTS' Puede moverla o quitarla según sea necesario.
             this.pILOTSTableAdapter.Fill(this.f1DataSetOracle_CLSMugueta.PILOTS);
-
-            imgFerrari = Image.FromFile("..\)
         }
 
         private void GetValues()

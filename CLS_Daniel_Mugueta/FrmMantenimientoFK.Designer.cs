@@ -46,7 +46,7 @@ namespace CLS_Daniel_Mugueta
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.imgFerrari = new System.Windows.Forms.PictureBox();
+            this.imgF1 = new System.Windows.Forms.PictureBox();
             this.pilotsTableAdapter = new CLS_Daniel_Mugueta.F1DataSet_CLSMuguetaTableAdapters.PilotsTableAdapter();
             this.BSEscuderies = new System.Windows.Forms.BindingSource(this.components);
             this.escuderiesTableAdapter = new CLS_Daniel_Mugueta.F1DataSet_CLSMuguetaTableAdapters.EscuderiesTableAdapter();
@@ -67,7 +67,7 @@ namespace CLS_Daniel_Mugueta
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BSPilots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSet_CLSMugueta1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFerrari)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgF1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BSEscuderies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -203,14 +203,16 @@ namespace CLS_Daniel_Mugueta
             this.label1.TabIndex = 11;
             this.label1.Text = "Piloto";
             // 
-            // imgFerrari
+            // imgF1
             // 
-            this.imgFerrari.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imgFerrari.Location = new System.Drawing.Point(444, 44);
-            this.imgFerrari.Name = "imgFerrari";
-            this.imgFerrari.Size = new System.Drawing.Size(215, 128);
-            this.imgFerrari.TabIndex = 2;
-            this.imgFerrari.TabStop = false;
+            this.imgF1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imgF1.Image = global::CLS_Daniel_Mugueta.Properties.Resources.formula_1_logo_200;
+            this.imgF1.Location = new System.Drawing.Point(444, 44);
+            this.imgF1.Name = "imgF1";
+            this.imgF1.Size = new System.Drawing.Size(215, 128);
+            this.imgF1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgF1.TabIndex = 2;
+            this.imgF1.TabStop = false;
             // 
             // pilotsTableAdapter
             // 
@@ -251,7 +253,7 @@ namespace CLS_Daniel_Mugueta
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(682, 31);
+            this.bindingNavigator1.Size = new System.Drawing.Size(682, 27);
             this.bindingNavigator1.TabIndex = 19;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -261,13 +263,13 @@ namespace CLS_Daniel_Mugueta
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -277,7 +279,7 @@ namespace CLS_Daniel_Mugueta
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
@@ -286,7 +288,7 @@ namespace CLS_Daniel_Mugueta
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
@@ -295,18 +297,19 @@ namespace CLS_Daniel_Mugueta
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -315,7 +318,7 @@ namespace CLS_Daniel_Mugueta
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -323,7 +326,7 @@ namespace CLS_Daniel_Mugueta
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
             // 
             // bindingNavigatorMoveLastItem
@@ -332,13 +335,13 @@ namespace CLS_Daniel_Mugueta
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // cmbEscuderia
             // 
@@ -376,7 +379,7 @@ namespace CLS_Daniel_Mugueta
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.imgFerrari);
+            this.Controls.Add(this.imgF1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmMantenimientoFK";
             this.Text = " ";
@@ -384,7 +387,7 @@ namespace CLS_Daniel_Mugueta
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BSPilots)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSet_CLSMugueta1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFerrari)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgF1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BSEscuderies)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
@@ -396,7 +399,7 @@ namespace CLS_Daniel_Mugueta
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox imgFerrari;
+        private System.Windows.Forms.PictureBox imgF1;
         private System.Windows.Forms.TextBox txtDorsal;
         private System.Windows.Forms.TextBox txtCarnet;
         private System.Windows.Forms.TextBox txtPilot;
