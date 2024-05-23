@@ -184,5 +184,11 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CLS_Leandro_Varas\CLS_Leandro_Varas\CLS_Leandro_Varas.csproj">
+      <Project>{F9E69267-CC50-4051-8B50-966B511727DD}</Project>
+      <Name>CLS_Leandro_Varas</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
