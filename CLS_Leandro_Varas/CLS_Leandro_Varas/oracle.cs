@@ -27,8 +27,10 @@ namespace CLS_Leandro_Varas
 
         private void oracle_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'oracledb.GP' Puede moverla o quitarla según sea necesario.
+            this.gPTableAdapter1.Fill(this.oracledb.GP);
             // TODO: esta línea de código carga datos en la tabla 'f1_CLS_Leandro.ClassificacioGP' Puede moverla o quitarla según sea necesario.
-            this.classificacioGPTableAdapter.Fill(this.f1_CLS_Leandro.ClassificacioGP);
+            //this.classificacioGPTableAdapter.Fill(this.f1_CLS_Leandro.ClassificacioGP);
             // TODO: esta línea de código carga datos en la tabla 'f1_CLS_Leandro.Pilots' Puede moverla o quitarla según sea necesario.
             this.pilotsTableAdapter.Fill(this.f1_CLS_Leandro.Pilots);
             // TODO: esta línea de código carga datos en la tabla 'f1_CLS_Leandro.GP' Puede moverla o quitarla según sea necesario.

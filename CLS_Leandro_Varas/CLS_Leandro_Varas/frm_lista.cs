@@ -28,5 +28,11 @@ namespace CLS_Leandro_Varas
             CLS_Leandro_Varas.frm_mantenimiento form = new frm_mantenimiento();
             form.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CLS_Leandro_Varas.oracle form = new oracle();
+            form.Show();
+        }
     }
 }
