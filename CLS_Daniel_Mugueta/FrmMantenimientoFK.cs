@@ -33,5 +33,11 @@ namespace CLS_Daniel_Mugueta
                 BSEscuderies.EndEdit();
             }
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.BSPilots.EndEdit();
+            this.pilotsTableAdapter.Update(f1DataSet_CLSMugueta1.Pilots);
+        }
     }
 }
