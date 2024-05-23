@@ -30,7 +30,7 @@ namespace CLS_Daniel_Mugueta
             if (cmbEscuderia.SelectedValue != null)
             {
                 txtEscuderia.Text = cmbEscuderia.SelectedValue.ToString();
-                BSEscuderies.EndEdit();
+                BSPilots.EndEdit();
             }
         }
 
@@ -50,6 +50,8 @@ namespace CLS_Daniel_Mugueta
                 fila = f1DataSet_CLSMugueta1.Escuderies.FindByidEscuderia(int.Parse(id));
 
                 dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = fila.DescEscuderia;
+
+                BSPilots.EndEdit();
 
             }
         }
