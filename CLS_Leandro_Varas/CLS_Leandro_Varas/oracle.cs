@@ -51,10 +51,6 @@ namespace CLS_Leandro_Varas
                 MostrarResultados();
                 MostrarGanador();
             }
-            else
-            {
-                MessageBox.Show("Por favor, introduce un número válido para pg_seleccionada.");
-            }
         }
         private void SetPgSeleccionada(int pgSeleccionada)
         {
@@ -93,29 +89,35 @@ namespace CLS_Leandro_Varas
         }
         private void MostrarGanador()
         {
-            using (var connection = new OracleConnection(connectionString))
+            try
             {
-                connection.Open();
-                using (var command = new OracleCommand("Cursor_gPremi.mostrar_ganador", connection))
+                using (var connection = new OracleConnection(connectionString))
                 {
-                    command.CommandType = CommandType.StoredProcedure;
+                    connection.Open();
+                    using (var command = new OracleCommand("Cursor_gPremi.mostrar_ganador", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
 
-                    // Agregar parámetro de salida para el nombre del ganador
-                    OracleParameter outParameter = new OracleParameter();
-                    outParameter.ParameterName = "v_name";
-                    outParameter.OracleDbType = OracleDbType.Varchar2;
-                    outParameter.Direction = ParameterDirection.Output;
-                    outParameter.Size = 255; // Tamaño máximo del nombre del piloto
-                    command.Parameters.Add(outParameter);
+                        // Parámetro de salida para el nombre del ganador
+                        OracleParameter outParameter = new OracleParameter();
+                        outParameter.ParameterName = "p_nombre";
+                        outParameter.OracleDbType = OracleDbType.Varchar2;
+                        outParameter.Direction = ParameterDirection.Output;
+                        outParameter.Size = 255; // Tamaño máximo del nombre del piloto
+                        command.Parameters.Add(outParameter);
 
-                    command.ExecuteNonQuery();
+                        command.ExecuteNonQuery();
 
-                    // Obtener el nombre del ganador del parámetro de salida
-                    string nombreGanador = outParameter.Value.ToString();
+                        // Obtener el nombre del ganador del parámetro de salida
+                        string nombreGanador = outParameter.Value.ToString();
 
-                    // Mostrar el nombre del ganador en la TextBox
-                    Ganador.Text = nombreGanador;
+                        Nom_ganador.Text = nombreGanador;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Nom_ganador.Text = "";
             }
         }
     }
