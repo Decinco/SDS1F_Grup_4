@@ -59,13 +59,13 @@ namespace CLS_Daniel_Mugueta
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.cmbEscuderia = new System.Windows.Forms.ComboBox();
             this.txtEscuderia = new System.Windows.Forms.TextBox();
-            this.dorsalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.puntsCarnetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEscuderiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Escuderia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPilotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idPilotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEscuderiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.puntsCarnetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dorsalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Escuderia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.BSPilots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1DataSet_CLSMugueta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgF1)).BeginInit();
@@ -196,7 +196,7 @@ namespace CLS_Daniel_Mugueta
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(682, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(682, 31);
             this.bindingNavigator1.TabIndex = 19;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -206,7 +206,7 @@ namespace CLS_Daniel_Mugueta
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // bindingNavigatorCountItem
@@ -317,45 +317,28 @@ namespace CLS_Daniel_Mugueta
             this.txtEscuderia.TabIndex = 21;
             this.txtEscuderia.TextChanged += new System.EventHandler(this.txtEscuderia_TextChanged);
             // 
-            // dorsalDataGridViewTextBoxColumn
+            // dataGridView1
             // 
-            this.dorsalDataGridViewTextBoxColumn.DataPropertyName = "Dorsal";
-            this.dorsalDataGridViewTextBoxColumn.HeaderText = "Dorsal";
-            this.dorsalDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dorsalDataGridViewTextBoxColumn.Name = "dorsalDataGridViewTextBoxColumn";
-            this.dorsalDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // puntsCarnetDataGridViewTextBoxColumn
-            // 
-            this.puntsCarnetDataGridViewTextBoxColumn.DataPropertyName = "PuntsCarnet";
-            this.puntsCarnetDataGridViewTextBoxColumn.HeaderText = "PuntsCarnet";
-            this.puntsCarnetDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.puntsCarnetDataGridViewTextBoxColumn.Name = "puntsCarnetDataGridViewTextBoxColumn";
-            this.puntsCarnetDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idEscuderiaDataGridViewTextBoxColumn
-            // 
-            this.idEscuderiaDataGridViewTextBoxColumn.DataPropertyName = "idEscuderia";
-            this.idEscuderiaDataGridViewTextBoxColumn.HeaderText = "idEscuderia";
-            this.idEscuderiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idEscuderiaDataGridViewTextBoxColumn.Name = "idEscuderiaDataGridViewTextBoxColumn";
-            this.idEscuderiaDataGridViewTextBoxColumn.Visible = false;
-            this.idEscuderiaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // Escuderia
-            // 
-            this.Escuderia.HeaderText = "Escuderia";
-            this.Escuderia.MinimumWidth = 6;
-            this.Escuderia.Name = "Escuderia";
-            this.Escuderia.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idPilotDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.idEscuderiaDataGridViewTextBoxColumn,
+            this.puntsCarnetDataGridViewTextBoxColumn,
+            this.dorsalDataGridViewTextBoxColumn,
+            this.Escuderia});
+            this.dataGridView1.DataSource = this.BSPilots;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 192);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(682, 361);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // idPilotDataGridViewTextBoxColumn
             // 
@@ -367,25 +350,45 @@ namespace CLS_Daniel_Mugueta
             this.idPilotDataGridViewTextBoxColumn.Visible = false;
             this.idPilotDataGridViewTextBoxColumn.Width = 125;
             // 
-            // dataGridView1
+            // nameDataGridViewTextBoxColumn
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idPilotDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.Escuderia,
-            this.idEscuderiaDataGridViewTextBoxColumn,
-            this.puntsCarnetDataGridViewTextBoxColumn,
-            this.dorsalDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.BSPilots;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 192);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(682, 361);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idEscuderiaDataGridViewTextBoxColumn
+            // 
+            this.idEscuderiaDataGridViewTextBoxColumn.DataPropertyName = "idEscuderia";
+            this.idEscuderiaDataGridViewTextBoxColumn.HeaderText = "idEscuderia";
+            this.idEscuderiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idEscuderiaDataGridViewTextBoxColumn.Name = "idEscuderiaDataGridViewTextBoxColumn";
+            this.idEscuderiaDataGridViewTextBoxColumn.Visible = false;
+            this.idEscuderiaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // puntsCarnetDataGridViewTextBoxColumn
+            // 
+            this.puntsCarnetDataGridViewTextBoxColumn.DataPropertyName = "PuntsCarnet";
+            this.puntsCarnetDataGridViewTextBoxColumn.HeaderText = "PuntsCarnet";
+            this.puntsCarnetDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.puntsCarnetDataGridViewTextBoxColumn.Name = "puntsCarnetDataGridViewTextBoxColumn";
+            this.puntsCarnetDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dorsalDataGridViewTextBoxColumn
+            // 
+            this.dorsalDataGridViewTextBoxColumn.DataPropertyName = "Dorsal";
+            this.dorsalDataGridViewTextBoxColumn.HeaderText = "Dorsal";
+            this.dorsalDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dorsalDataGridViewTextBoxColumn.Name = "dorsalDataGridViewTextBoxColumn";
+            this.dorsalDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Escuderia
+            // 
+            this.Escuderia.HeaderText = "Escuderia";
+            this.Escuderia.MinimumWidth = 6;
+            this.Escuderia.Name = "Escuderia";
+            this.Escuderia.Width = 125;
             // 
             // FrmMantenimientoFK
             // 
@@ -450,12 +453,12 @@ namespace CLS_Daniel_Mugueta
         private System.Windows.Forms.ComboBox cmbEscuderia;
         private System.Windows.Forms.TextBox txtEscuderia;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dorsalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn puntsCarnetDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idEscuderiaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Escuderia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPilotDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPilotDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEscuderiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn puntsCarnetDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dorsalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Escuderia;
     }
 }

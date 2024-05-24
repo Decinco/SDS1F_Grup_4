@@ -42,10 +42,10 @@ namespace CLS_Daniel_Mugueta
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex == 5)
             {
                 F1DataSet_CLSMugueta.EscuderiesRow fila;
-                string id = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string id = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
 
                 fila = f1DataSet_CLSMugueta1.Escuderies.FindByidEscuderia(int.Parse(id));
 

@@ -249,6 +249,8 @@ namespace CLS_Daniel_Mugueta
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -258,6 +260,7 @@ namespace CLS_Daniel_Mugueta
             this.dataGridView1.DataSource = this.BsEscuderia;
             this.dataGridView1.Location = new System.Drawing.Point(0, 192);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(682, 361);
@@ -280,6 +283,7 @@ namespace CLS_Daniel_Mugueta
             this.descEscuderiaDataGridViewTextBoxColumn.HeaderText = "DescEscuderia";
             this.descEscuderiaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.descEscuderiaDataGridViewTextBoxColumn.Name = "descEscuderiaDataGridViewTextBoxColumn";
+            this.descEscuderiaDataGridViewTextBoxColumn.ReadOnly = true;
             this.descEscuderiaDataGridViewTextBoxColumn.Width = 125;
             // 
             // logoDataGridViewTextBoxColumn
@@ -288,6 +292,7 @@ namespace CLS_Daniel_Mugueta
             this.logoDataGridViewTextBoxColumn.HeaderText = "Logo";
             this.logoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.logoDataGridViewTextBoxColumn.Name = "logoDataGridViewTextBoxColumn";
+            this.logoDataGridViewTextBoxColumn.ReadOnly = true;
             this.logoDataGridViewTextBoxColumn.Width = 125;
             // 
             // label3
