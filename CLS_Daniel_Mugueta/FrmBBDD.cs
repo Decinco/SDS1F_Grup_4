@@ -37,6 +37,29 @@ namespace CLS_Daniel_Mugueta
             this.pILOTSTableAdapter.Fill(this.f1DataSetOracle_CLSMugueta.PILOTS);
         }
 
+        private void GetValues(bool algo)
+        {
+            string commandString = $"Resultats_Pilot.Cursor_Pilot({cmbPilots.SelectedValue}.in.Int32,.out.RefCursor)";
+            OracleSPCommandBuilder command = new OracleSPCommandBuilder(commandString, ConnString, true);
+
+            // Ejecutar comando y recuperar datos
+            try
+            {
+                using (command.Connection)
+                {
+                    // Datos tabla
+                    OracleDataAdapter dta = new OracleDataAdapter(command.ResultingCommand);
+                    DataSet pilotsClassificacio = new DataSet();
+                    dta.Fill(pilotsClassificacio);
+                    dataGridView1.DataSource = pilotsClassificacio.Tables[0];
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ha ocurrido un error al obtener las puntuaciones del piloto");
+            }
+        }
+
         private void GetValues()
         {
             // Crear Conexión
@@ -74,6 +97,13 @@ namespace CLS_Daniel_Mugueta
                 MessageBox.Show("Ha ocurrido un error al obtener las puntuaciones del piloto");
             }
 
+        }
+
+        private void GetPuntTotal(bool algo)
+        {
+            string commandString = $"Resultats_Pilot.Suma_Punts({cmbPilots.SelectedValue}.in.Int32)";
+            OracleSPCommandBuilder command = new OracleSPCommandBuilder(commandString, ConnString, OracleDbType.Int32, true);
+            txtPT.Text = command.ReturnValue;
         }
 
         private void GetPuntTotal()
@@ -116,8 +146,8 @@ namespace CLS_Daniel_Mugueta
         {
             if (cmbPilots.SelectedValue != null)
             {
-                GetValues();
-                GetPuntTotal();
+                GetValues(true);
+                GetPuntTotal(true);
             }
         }
     }
