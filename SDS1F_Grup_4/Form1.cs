@@ -42,5 +42,28 @@ namespace SDS1F_Grup_4
             CLS_Daniel_Mugueta.FrmLista form = new FrmLista();
             form.Show();
         }
+
+        private void tipusDincidènciesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Juan_Paredes.frmLlista1 form = new frmLlista1();
+            form.Show();
+        }
+
+        private void incidènciesDunPilotToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void incidènciesDunPilotToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CLS_Juan_Paredes.frmOracle form = new frmOracle();
+            form.Show();
+        }
+
+        private void tipusDincidènciesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CLS_Juan_Paredes.frm_Mantenimiento form = new frm_Mantenimiento();
+            form.Show();
+        }
     }
 }
