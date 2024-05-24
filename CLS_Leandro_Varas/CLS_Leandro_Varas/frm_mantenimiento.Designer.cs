@@ -40,13 +40,13 @@ namespace CLS_Leandro_Varas
             this.esquemaCircuitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.llargadaCircuitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.localitzacioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Circuitotxt = new System.Windows.Forms.TextBox();
+            this.CircuitoTbox = new System.Windows.Forms.TextBox();
+            this.LocalizacionTbox = new System.Windows.Forms.TextBox();
+            this.Localizaciontxt = new System.Windows.Forms.TextBox();
+            this.LargoTbox = new System.Windows.Forms.TextBox();
+            this.Largotxt = new System.Windows.Forms.TextBox();
+            this.esquemaTbox = new System.Windows.Forms.TextBox();
             this.img_pistas = new System.Windows.Forms.PictureBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -108,8 +108,6 @@ namespace CLS_Leandro_Varas
             this.tabla_inf_circuits.RowTemplate.Height = 24;
             this.tabla_inf_circuits.Size = new System.Drawing.Size(798, 301);
             this.tabla_inf_circuits.TabIndex = 3;
-            this.tabla_inf_circuits.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_inf_circuits_CellClick);
-            this.tabla_inf_circuits.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_inf_circuits_CellClick);
             this.tabla_inf_circuits.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_inf_circuits_CellEnter);
             // 
             // idCircuitDataGridViewTextBoxColumn
@@ -154,76 +152,72 @@ namespace CLS_Leandro_Varas
             this.localitzacioDataGridViewTextBoxColumn.Name = "localitzacioDataGridViewTextBoxColumn";
             this.localitzacioDataGridViewTextBoxColumn.Width = 125;
             // 
-            // textBox1
+            // Circuitotxt
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.DbCircuits, "Circuit", true));
-            this.textBox1.Location = new System.Drawing.Point(139, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(284, 22);
-            this.textBox1.TabIndex = 4;
+            this.Circuitotxt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.DbCircuits, "Circuit", true));
+            this.Circuitotxt.Location = new System.Drawing.Point(139, 73);
+            this.Circuitotxt.Name = "Circuitotxt";
+            this.Circuitotxt.ReadOnly = true;
+            this.Circuitotxt.Size = new System.Drawing.Size(284, 22);
+            this.Circuitotxt.TabIndex = 4;
             // 
-            // textBox2
+            // CircuitoTbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(71, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(58, 22);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Circuit: ";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.CircuitoTbox.Location = new System.Drawing.Point(71, 73);
+            this.CircuitoTbox.Name = "CircuitoTbox";
+            this.CircuitoTbox.ReadOnly = true;
+            this.CircuitoTbox.Size = new System.Drawing.Size(58, 22);
+            this.CircuitoTbox.TabIndex = 5;
+            this.CircuitoTbox.Text = "Circuit: ";
+            this.CircuitoTbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox3
+            // LocalizacionTbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(36, 101);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(93, 22);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "Localització: ";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.LocalizacionTbox.Location = new System.Drawing.Point(36, 101);
+            this.LocalizacionTbox.Name = "LocalizacionTbox";
+            this.LocalizacionTbox.ReadOnly = true;
+            this.LocalizacionTbox.Size = new System.Drawing.Size(93, 22);
+            this.LocalizacionTbox.TabIndex = 7;
+            this.LocalizacionTbox.Text = "Localització: ";
+            this.LocalizacionTbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox4
+            // Localizaciontxt
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.DbCircuits, "Localitzacio", true));
-            this.textBox4.Location = new System.Drawing.Point(139, 101);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(284, 22);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.Localizaciontxt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.DbCircuits, "Localitzacio", true));
+            this.Localizaciontxt.Location = new System.Drawing.Point(139, 101);
+            this.Localizaciontxt.Name = "Localizaciontxt";
+            this.Localizaciontxt.ReadOnly = true;
+            this.Localizaciontxt.Size = new System.Drawing.Size(284, 22);
+            this.Localizaciontxt.TabIndex = 6;
             // 
-            // textBox5
+            // LargoTbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(36, 129);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(93, 22);
-            this.textBox5.TabIndex = 8;
-            this.textBox5.Text = "Largada: ";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.LargoTbox.Location = new System.Drawing.Point(36, 129);
+            this.LargoTbox.Name = "LargoTbox";
+            this.LargoTbox.ReadOnly = true;
+            this.LargoTbox.Size = new System.Drawing.Size(93, 22);
+            this.LargoTbox.TabIndex = 8;
+            this.LargoTbox.Text = "Largada: ";
+            this.LargoTbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox6
+            // Largotxt
             // 
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.DbCircuits, "LlargadaCircuit", true));
-            this.textBox6.Location = new System.Drawing.Point(139, 129);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(85, 22);
-            this.textBox6.TabIndex = 9;
+            this.Largotxt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.DbCircuits, "LlargadaCircuit", true));
+            this.Largotxt.Location = new System.Drawing.Point(139, 129);
+            this.Largotxt.Name = "Largotxt";
+            this.Largotxt.ReadOnly = true;
+            this.Largotxt.Size = new System.Drawing.Size(85, 22);
+            this.Largotxt.TabIndex = 9;
             // 
-            // textBox7
+            // esquemaTbox
             // 
-            this.textBox7.Location = new System.Drawing.Point(46, 193);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(81, 22);
-            this.textBox7.TabIndex = 10;
-            this.textBox7.Text = "Esquema: ";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.esquemaTbox.Location = new System.Drawing.Point(46, 193);
+            this.esquemaTbox.Name = "esquemaTbox";
+            this.esquemaTbox.ReadOnly = true;
+            this.esquemaTbox.Size = new System.Drawing.Size(81, 22);
+            this.esquemaTbox.TabIndex = 10;
+            this.esquemaTbox.Text = "Esquema: ";
+            this.esquemaTbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // img_pistas
             // 
@@ -263,7 +257,7 @@ namespace CLS_Leandro_Varas
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(843, 31);
+            this.bindingNavigator1.Size = new System.Drawing.Size(843, 27);
             this.bindingNavigator1.TabIndex = 12;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -273,13 +267,13 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -289,7 +283,7 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -299,7 +293,7 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
@@ -308,13 +302,13 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -329,7 +323,7 @@ namespace CLS_Leandro_Varas
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -337,7 +331,7 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
             // 
             // bindingNavigatorMoveLastItem
@@ -346,13 +340,13 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton1
             // 
@@ -360,7 +354,7 @@ namespace CLS_Leandro_Varas
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -413,13 +407,13 @@ namespace CLS_Leandro_Varas
             this.Controls.Add(this.selec_img);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.img_pistas);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.esquemaTbox);
+            this.Controls.Add(this.Largotxt);
+            this.Controls.Add(this.LargoTbox);
+            this.Controls.Add(this.LocalizacionTbox);
+            this.Controls.Add(this.Localizaciontxt);
+            this.Controls.Add(this.CircuitoTbox);
+            this.Controls.Add(this.Circuitotxt);
             this.Controls.Add(this.tabla_inf_circuits);
             this.Name = "frm_mantenimiento";
             this.Text = "frm_mantenimiento";
@@ -447,13 +441,13 @@ namespace CLS_Leandro_Varas
         private System.Windows.Forms.DataGridViewTextBoxColumn esquemaCircuitDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn llargadaCircuitDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn localitzacioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox Circuitotxt;
+        private System.Windows.Forms.TextBox CircuitoTbox;
+        private System.Windows.Forms.TextBox LocalizacionTbox;
+        private System.Windows.Forms.TextBox Localizaciontxt;
+        private System.Windows.Forms.TextBox LargoTbox;
+        private System.Windows.Forms.TextBox Largotxt;
+        private System.Windows.Forms.TextBox esquemaTbox;
         private System.Windows.Forms.PictureBox img_pistas;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;

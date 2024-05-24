@@ -24,25 +24,6 @@ namespace CLS_Leandro_Varas
             this.CirucitsTableAdapter.Fill(this.f1_CLS_Leandro1.Circuits);
             
         }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -53,11 +34,6 @@ namespace CLS_Leandro_Varas
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void select_image_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -84,11 +60,6 @@ namespace CLS_Leandro_Varas
             {
                 MessageBox.Show("El archivo seleccionado no se encuentra en la base de datos");
             }
-        }
-
-        private void tabla_inf_circuits_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void tabla_inf_circuits_CellEnter(object sender, DataGridViewCellEventArgs e)
