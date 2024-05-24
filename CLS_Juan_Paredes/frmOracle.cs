@@ -16,5 +16,17 @@ namespace CLS_Juan_Paredes
         {
             InitializeComponent();
         }
+
+        private void frmOracle_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'oracle_dataSet1.PILOTS' Puede moverla o quitarla según sea necesario.
+            this.pILOTSTableAdapter.Fill(this.oracle_dataSet1.PILOTS);
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

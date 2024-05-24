@@ -125,6 +125,11 @@
     <Compile Include="frm_Mantenimiento.Designer.cs">
       <DependentUpon>frm_Mantenimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Oracle_dataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Oracle_dataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CrystalReport1.rpt">
@@ -137,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLlista1.resx">
       <DependentUpon>frmLlista1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOracle.resx">
+      <DependentUpon>frmOracle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Mantenimiento.resx">
       <DependentUpon>frm_Mantenimiento.cs</DependentUpon>
@@ -166,6 +174,17 @@
     </None>
     <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle_dataSet.xsc">
+      <DependentUpon>Oracle_dataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Oracle_dataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Oracle_dataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle_dataSet.xss">
+      <DependentUpon>Oracle_dataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

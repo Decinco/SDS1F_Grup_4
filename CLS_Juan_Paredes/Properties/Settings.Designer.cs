@@ -33,5 +33,16 @@ namespace CLS_Juan_Paredes.Properties {
                 return ((string)(this["F1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("TNS_ADMIN=C:\\Users\\juanp\\Oracle\\network\\admin;USER ID=F1;PASSWORD=1234;DATA SOURC" +
+            "E=10.0.15.22:1521/XEPDB1;PERSIST SECURITY INFO=True")]
+        public string Oracle_Paredes {
+            get {
+                return ((string)(this["Oracle_Paredes"]));
+            }
+        }
     }
 }
