@@ -55,5 +55,14 @@ namespace CLS_Daniel_Mugueta
 
             }
         }
+
+        private void txtEscuderia_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEscuderia.Text != "")
+            {
+                cmbEscuderia.SelectedValue = txtEscuderia.Text;
+                BSPilots.EndEdit();
+            }
+        }
     }
 }

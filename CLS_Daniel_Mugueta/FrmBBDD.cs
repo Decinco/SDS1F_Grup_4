@@ -146,8 +146,8 @@ namespace CLS_Daniel_Mugueta
         {
             if (cmbPilots.SelectedValue != null)
             {
-                GetValues(true);
-                GetPuntTotal(true);
+                GetValues();
+                GetPuntTotal();
             }
         }
     }
