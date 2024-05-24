@@ -42,7 +42,11 @@ namespace CLS_Daniel_Mugueta
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == 5)
+            bool existeix;
+
+            existeix = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() != "";
+
+            if (e.ColumnIndex == 5 && existeix)
             {
                 F1DataSet_CLSMugueta.EscuderiesRow fila;
                 string id = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
