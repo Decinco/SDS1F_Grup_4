@@ -37,8 +37,9 @@ namespace SDS1F_Grup_4
             this.juanParedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipusDincidènciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incidènciesDunPilotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.incidènciesDunPilotToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipusDincidènciesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimentoDelCircuitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeIncidénciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descripciónDeIncidénciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,21 +68,21 @@ namespace SDS1F_Grup_4
             // circuitosYCarrerasToolStripMenuItem
             // 
             this.circuitosYCarrerasToolStripMenuItem.Name = "circuitosYCarrerasToolStripMenuItem";
-            this.circuitosYCarrerasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.circuitosYCarrerasToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.circuitosYCarrerasToolStripMenuItem.Text = "Circuitos y Carreras";
             this.circuitosYCarrerasToolStripMenuItem.Click += new System.EventHandler(this.circuitosYCarrerasToolStripMenuItem_Click);
             // 
             // clasificaciónToolStripMenuItem
             // 
             this.clasificaciónToolStripMenuItem.Name = "clasificaciónToolStripMenuItem";
-            this.clasificaciónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clasificaciónToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.clasificaciónToolStripMenuItem.Text = "Clasificación";
             this.clasificaciónToolStripMenuItem.Click += new System.EventHandler(this.clasificaciónToolStripMenuItem_Click);
             // 
             // perfilPilotosToolStripMenuItem
             // 
             this.perfilPilotosToolStripMenuItem.Name = "perfilPilotosToolStripMenuItem";
-            this.perfilPilotosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.perfilPilotosToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.perfilPilotosToolStripMenuItem.Text = "Perfil Pilotos";
             this.perfilPilotosToolStripMenuItem.Click += new System.EventHandler(this.perfilPilotosToolStripMenuItem_Click);
             // 
@@ -90,7 +91,7 @@ namespace SDS1F_Grup_4
             this.juanParedesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tipusDincidènciesToolStripMenuItem,
             this.incidènciesDunPilotToolStripMenuItem,
-            this.tipusDincidènciesToolStripMenuItem1});
+            this.mantenimentoDelCircuitoToolStripMenuItem});
             this.juanParedesToolStripMenuItem.Name = "juanParedesToolStripMenuItem";
             this.juanParedesToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
             this.juanParedesToolStripMenuItem.Text = "Juan Paredes";
@@ -98,32 +99,39 @@ namespace SDS1F_Grup_4
             // tipusDincidènciesToolStripMenuItem
             // 
             this.tipusDincidènciesToolStripMenuItem.Name = "tipusDincidènciesToolStripMenuItem";
-            this.tipusDincidènciesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.tipusDincidènciesToolStripMenuItem.Text = "Classificació per GP";
+            this.tipusDincidènciesToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
+            this.tipusDincidènciesToolStripMenuItem.Text = "Classificación por GP";
             this.tipusDincidènciesToolStripMenuItem.Click += new System.EventHandler(this.tipusDincidènciesToolStripMenuItem_Click);
             // 
             // incidènciesDunPilotToolStripMenuItem
             // 
-            this.incidènciesDunPilotToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.incidènciesDunPilotToolStripMenuItem1});
             this.incidènciesDunPilotToolStripMenuItem.Name = "incidènciesDunPilotToolStripMenuItem";
-            this.incidènciesDunPilotToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.incidènciesDunPilotToolStripMenuItem.Text = "Oracle";
-            this.incidènciesDunPilotToolStripMenuItem.Click += new System.EventHandler(this.incidènciesDunPilotToolStripMenuItem_Click);
+            this.incidènciesDunPilotToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
+            this.incidènciesDunPilotToolStripMenuItem.Text = "Incidéncias del piloto";
+            this.incidènciesDunPilotToolStripMenuItem.Click += new System.EventHandler(this.incidènciesDunPilotToolStripMenuItem_Click_1);
             // 
-            // incidènciesDunPilotToolStripMenuItem1
+            // mantenimentoDelCircuitoToolStripMenuItem
             // 
-            this.incidènciesDunPilotToolStripMenuItem1.Name = "incidènciesDunPilotToolStripMenuItem1";
-            this.incidènciesDunPilotToolStripMenuItem1.Size = new System.Drawing.Size(232, 26);
-            this.incidènciesDunPilotToolStripMenuItem1.Text = "Incidències d’un pilot";
-            this.incidènciesDunPilotToolStripMenuItem1.Click += new System.EventHandler(this.incidènciesDunPilotToolStripMenuItem1_Click);
+            this.mantenimentoDelCircuitoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tiposDeIncidénciasToolStripMenuItem,
+            this.descripciónDeIncidénciasToolStripMenuItem});
+            this.mantenimentoDelCircuitoToolStripMenuItem.Name = "mantenimentoDelCircuitoToolStripMenuItem";
+            this.mantenimentoDelCircuitoToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
+            this.mantenimentoDelCircuitoToolStripMenuItem.Text = "Mantenimento del Circuito";
             // 
-            // tipusDincidènciesToolStripMenuItem1
+            // tiposDeIncidénciasToolStripMenuItem
             // 
-            this.tipusDincidènciesToolStripMenuItem1.Name = "tipusDincidènciesToolStripMenuItem1";
-            this.tipusDincidènciesToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.tipusDincidènciesToolStripMenuItem1.Text = "Tipus d’incidències";
-            this.tipusDincidènciesToolStripMenuItem1.Click += new System.EventHandler(this.tipusDincidènciesToolStripMenuItem1_Click);
+            this.tiposDeIncidénciasToolStripMenuItem.Name = "tiposDeIncidénciasToolStripMenuItem";
+            this.tiposDeIncidénciasToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.tiposDeIncidénciasToolStripMenuItem.Text = "Tipos de incidéncias";
+            this.tiposDeIncidénciasToolStripMenuItem.Click += new System.EventHandler(this.tiposDeIncidénciasToolStripMenuItem_Click);
+            // 
+            // descripciónDeIncidénciasToolStripMenuItem
+            // 
+            this.descripciónDeIncidénciasToolStripMenuItem.Name = "descripciónDeIncidénciasToolStripMenuItem";
+            this.descripciónDeIncidénciasToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
+            this.descripciónDeIncidénciasToolStripMenuItem.Text = "Descripción de incidéncias";
+            this.descripciónDeIncidénciasToolStripMenuItem.Click += new System.EventHandler(this.descripciónDeIncidénciasToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -151,8 +159,9 @@ namespace SDS1F_Grup_4
         private System.Windows.Forms.ToolStripMenuItem juanParedesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipusDincidènciesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem incidènciesDunPilotToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem incidènciesDunPilotToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem tipusDincidènciesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mantenimentoDelCircuitoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeIncidénciasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem descripciónDeIncidénciasToolStripMenuItem;
     }
 }
 

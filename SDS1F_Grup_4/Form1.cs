@@ -49,20 +49,21 @@ namespace SDS1F_Grup_4
             form.Show();
         }
 
-        private void incidènciesDunPilotToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void incidènciesDunPilotToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void incidènciesDunPilotToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             CLS_Juan_Paredes.frmOracle form = new frmOracle();
             form.Show();
         }
 
-        private void tipusDincidènciesToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void tiposDeIncidénciasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CLS_Juan_Paredes.frm_Mantenimiento form = new frm_Mantenimiento();
+            form.Show();
+        }
+
+        private void descripciónDeIncidénciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Juan_Paredes.frmMantenimiento_FK form = new frmMantenimiento_FK();
             form.Show();
         }
     }
