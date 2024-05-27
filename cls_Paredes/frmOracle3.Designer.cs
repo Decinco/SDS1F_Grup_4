@@ -1,7 +1,7 @@
 ﻿
 namespace cls_Paredes
 {
-    partial class frmLlista
+    partial class frmOracle3
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace cls_Paredes
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmLlista";
+            this.Text = "frmOracle3";
         }
 
         #endregion

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace cls_Paredes
 {
-    public partial class frmLlista : Form
+    public partial class frmOracle3 : Form
     {
-        public frmLlista()
+        public frmOracle3()
         {
             InitializeComponent();
         }

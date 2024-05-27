@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace cls_Paredes
 {
-    public partial class frmLlista : Form
+    public partial class frm_mantenimiento2 : Form
     {
-        public frmLlista()
+        public frm_mantenimiento2()
         {
             InitializeComponent();
         }

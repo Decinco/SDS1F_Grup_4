@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cls_Paredes", "cls_Paredes\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLS_Leandro_Varas", "CLS_Leandro_Varas\CLS_Leandro_Varas\CLS_Leandro_Varas.csproj", "{F9E69267-CC50-4051-8B50-966B511727DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLS_Juan_Paredes", "CLS_Juan_Paredes\CLS_Juan_Paredes.csproj", "{4E48496C-0D58-463D-BD82-83A01D91867B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F9E69267-CC50-4051-8B50-966B511727DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9E69267-CC50-4051-8B50-966B511727DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9E69267-CC50-4051-8B50-966B511727DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E48496C-0D58-463D-BD82-83A01D91867B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E48496C-0D58-463D-BD82-83A01D91867B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E48496C-0D58-463D-BD82-83A01D91867B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E48496C-0D58-463D-BD82-83A01D91867B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

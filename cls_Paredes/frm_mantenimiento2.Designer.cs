@@ -1,7 +1,7 @@
 ﻿
-namespace CLS_Juan_Paredes
+namespace cls_Paredes
 {
-    partial class frmOracle
+    partial class frm_mantenimiento2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,17 @@ namespace CLS_Juan_Paredes
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frm_mantenimiento2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmOracle";
+            this.Name = "frm_mantenimiento2";
+            this.Text = "frm_mantenimiento";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

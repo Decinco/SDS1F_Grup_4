@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B5ECB91B-CF01-4629-B13B-3F5C6827ACDA}</ProjectGuid>
+    <ProjectGuid>{4E48496C-0D58-463D-BD82-83A01D91867B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SDS1F_Grup_4</RootNamespace>
-    <AssemblyName>SDS1F_Grup_4</AssemblyName>
+    <RootNamespace>CLS_Juan_Paredes</RootNamespace>
+    <AssemblyName>CLS_Juan_Paredes</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Compile\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -32,13 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>f_logo_icon_248908.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -50,8 +49,8 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.1\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Formats.Asn1, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Formats.Asn1.8.0.0\lib\net462\System.Formats.Asn1.dll</HintPath>
@@ -78,6 +77,8 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -89,16 +90,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Launcher.cs">
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="F1_Paredes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>F1_Paredes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmLlista1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Launcher.Designer.cs">
-      <DependentUpon>Launcher.cs</DependentUpon>
+    <Compile Include="frmLlista1.Designer.cs">
+      <DependentUpon>frmLlista1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantenimiento_FK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantenimiento_FK.Designer.cs">
+      <DependentUpon>frmMantenimiento_FK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOracle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOracle.Designer.cs">
+      <DependentUpon>frmOracle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Mantenimiento.Designer.cs">
+      <DependentUpon>frm_Mantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_dataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Oracle_dataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Launcher.resx">
-      <DependentUpon>Launcher.cs</DependentUpon>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLlista1.resx">
+      <DependentUpon>frmLlista1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantenimiento_FK.resx">
+      <DependentUpon>frmMantenimiento_FK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOracle.resx">
+      <DependentUpon>frmOracle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Mantenimiento.resx">
+      <DependentUpon>frm_Mantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,11 +167,33 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="F1_Paredes.xsc">
+      <DependentUpon>F1_Paredes.xsd</DependentUpon>
+    </None>
+    <None Include="F1_Paredes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>F1_Paredes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="F1_Paredes.xss">
+      <DependentUpon>F1_Paredes.xsd</DependentUpon>
+    </None>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle_dataSet.xsc">
+      <DependentUpon>Oracle_dataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Oracle_dataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Oracle_dataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle_dataSet.xss">
+      <DependentUpon>Oracle_dataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -130,24 +210,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CLS_Daniel_Mugueta\CLS_Daniel_Mugueta.csproj">
-      <Project>{947e55c5-fe52-4030-974b-f763b1fe2c0c}</Project>
-      <Name>CLS_Daniel_Mugueta</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CLS_Juan_Paredes\CLS_Juan_Paredes.csproj">
-      <Project>{4e48496c-0d58-463d-bd82-83a01d91867b}</Project>
-      <Name>CLS_Juan_Paredes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CLS_Leandro_Varas\CLS_Leandro_Varas\CLS_Leandro_Varas.csproj">
-      <Project>{f9e69267-cc50-4051-8b50-966b511727dd}</Project>
-      <Name>CLS_Leandro_Varas</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="f_logo_icon_248908.ico" />
+    <ProjectReference Include="..\CLS_Leandro_Varas\CLS_Leandro_Varas\CLS_Leandro_Varas.csproj">
+      <Project>{F9E69267-CC50-4051-8B50-966B511727DD}</Project>
+      <Name>CLS_Leandro_Varas</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

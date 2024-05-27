@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace cls_Paredes
+namespace CLS_Juan_Paredes
 {
-    public partial class frmLlista : Form
+    public partial class frmLlista1 : Form
     {
-        public frmLlista()
+        public frmLlista1()
         {
             InitializeComponent();
         }

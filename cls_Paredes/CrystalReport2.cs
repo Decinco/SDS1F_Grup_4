@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CLS_Daniel_Mugueta {
+namespace cls_Paredes {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace CLS_Daniel_Mugueta {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class ListadoEscuderiasPilotos : ReportClass {
+    public class CrystalReport2 : ReportClass {
         
-        public ListadoEscuderiasPilotos() {
+        public CrystalReport2() {
         }
         
         public override string ResourceName {
             get {
-                return "ListadoEscuderiasPilotos.rpt";
+                return "CrystalReport2.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace CLS_Daniel_Mugueta {
         
         public override string FullResourceName {
             get {
-                return "CLS_Daniel_Mugueta.ListadoEscuderiasPilotos.rpt";
+                return "cls_Paredes.CrystalReport2.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace CLS_Daniel_Mugueta {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedListadoEscuderiasPilotos : Component, ICachedReport {
+    public class CachedCrystalReport2 : Component, ICachedReport {
         
-        public CachedListadoEscuderiasPilotos() {
+        public CachedCrystalReport2() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace CLS_Daniel_Mugueta {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            ListadoEscuderiasPilotos rpt = new ListadoEscuderiasPilotos();
+            CrystalReport2 rpt = new CrystalReport2();
             rpt.Site = this.Site;
             return rpt;
         }

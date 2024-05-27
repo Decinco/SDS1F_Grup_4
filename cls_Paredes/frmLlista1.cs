@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CLS_Juan_Paredes
+namespace cls_Paredes
 {
-    public partial class frmOracle : Form
+    public partial class frmLlista1 : Form
     {
-        public frmOracle()
+        public frmLlista1()
         {
             InitializeComponent();
+        }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
