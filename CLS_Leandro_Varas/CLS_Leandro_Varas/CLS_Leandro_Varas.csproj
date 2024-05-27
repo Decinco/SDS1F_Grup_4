@@ -205,11 +205,5 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\cls_Paredes\cls_Paredes.csproj">
-      <Project>{F9CF76CA-17CA-4C56-97DA-852673DD46CC}</Project>
-      <Name>cls_Paredes</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
