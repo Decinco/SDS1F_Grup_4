@@ -185,7 +185,7 @@ namespace CLS_Leandro_Varas
             this.gPBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.gPBindingNavigator.Name = "gPBindingNavigator";
             this.gPBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.gPBindingNavigator.Size = new System.Drawing.Size(1020, 27);
+            this.gPBindingNavigator.Size = new System.Drawing.Size(1020, 31);
             this.gPBindingNavigator.TabIndex = 0;
             this.gPBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -195,7 +195,7 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // bindingNavigatorCountItem
