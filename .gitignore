@@ -362,3 +362,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+Compile/CLS_Leandro_Varas.dll
+Compile/cls_Paredes.dll
+/Compile
