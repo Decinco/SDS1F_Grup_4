@@ -31,7 +31,6 @@ namespace CLS_Leandro_Varas
             this.circuitsTableAdapter.Fill(this.f1_CLS_Leandro.Circuits);
             // TODO: esta línea de código carga datos en la tabla 'f1_CLS_Leandro.GP' Puede moverla o quitarla según sea necesario.
             this.gPTableAdapter.Fill(this.f1_CLS_Leandro.GP);
-
         }
 
         private void descGPLabel_Click(object sender, EventArgs e)
@@ -47,6 +46,45 @@ namespace CLS_Leandro_Varas
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+        private void idCircuitTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                circuitComboBox.SelectedValue = idCircuitTextBox.Text;
+                gPBindingSource1.EndEdit();
+            }
+            catch
+            {
+            }
+        }
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+            bool com_cell;
+
+            com_cell = DatosGP_circuit.Rows[e.RowIndex].Cells[4].Value.ToString() != "";
+            if (e.ColumnIndex == 5 && com_cell)
+            {
+                F1_CLS_Leandro.CircuitsRow fila;
+
+                string id = DatosGP_circuit.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                fila = f1_CLS_Leandro.Circuits.FindByidCircuit(int.Parse(id));
+
+                DatosGP_circuit.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = fila.Circuit;
+
+                gPBindingSource1.EndEdit();  
+            }
+        }
+
+        private void circuitComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (circuitComboBox.SelectedValue != null)
+            {
+                idCircuitTextBox.Text = circuitComboBox.SelectedValue.ToString();
+                gPBindingSource1.EndEdit();
+            }
         }
     }
 }

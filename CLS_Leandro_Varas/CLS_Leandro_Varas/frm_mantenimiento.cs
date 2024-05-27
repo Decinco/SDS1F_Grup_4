@@ -22,7 +22,6 @@ namespace CLS_Leandro_Varas
         {
             // TODO: esta línea de código carga datos en la tabla 'f1_CLS_Leandro1.Circuits' Puede moverla o quitarla según sea necesario.
             this.CirucitsTableAdapter.Fill(this.f1_CLS_Leandro1.Circuits);
-            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -39,27 +38,6 @@ namespace CLS_Leandro_Varas
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string imagen, ruta;
-            
-            try
-            {
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    imagen = openFileDialog1.FileName;
-                    img_pistas.Image = Image.FromFile(imagen);
-
-                    ruta = Path.GetFileName(imagen);
-                    esquemaCircuitTextBox.Text = ruta;
-                }  
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El archivo seleccionado no se encuentra en la base de datos");
-            }
         }
 
         private void tabla_inf_circuits_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -81,6 +59,27 @@ namespace CLS_Leandro_Varas
         private void DbCircuits_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void SelectImage_Click(object sender, EventArgs e)
+        {
+            string imagen, ruta;
+
+            try
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    imagen = openFileDialog1.FileName;
+                    img_pistas.Image = Image.FromFile(imagen);
+
+                    ruta = Path.GetFileName(imagen);
+                    esquemaCircuitTextBox.Text = ruta;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no se encuentra en la base de datos");
+            }
         }
     }
 }

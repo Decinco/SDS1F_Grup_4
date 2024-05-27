@@ -372,7 +372,7 @@ namespace CLS_Leandro_Varas
             this.selec_img.TabIndex = 13;
             this.selec_img.Text = "...";
             this.selec_img.UseVisualStyleBackColor = true;
-            this.selec_img.Click += new System.EventHandler(this.button1_Click);
+            this.selec_img.Click += new System.EventHandler(this.SelectImage_Click);
             // 
             // tableAdapterManager
             // 
