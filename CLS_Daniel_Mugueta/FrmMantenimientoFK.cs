@@ -46,7 +46,7 @@ namespace CLS_Daniel_Mugueta
 
             existeix = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() != "";
 
-            if (e.ColumnIndex == 5 && existeix)
+            if (e.ColumnIndex == 5 && existeix) 
             {
                 F1DataSet_CLSMugueta.EscuderiesRow fila;
                 string id = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();

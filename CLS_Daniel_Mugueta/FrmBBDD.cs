@@ -37,7 +37,7 @@ namespace CLS_Daniel_Mugueta
             this.pILOTSTableAdapter.Fill(this.f1DataSetOracle_CLSMugueta.PILOTS);
         }
 
-        private void GetValues(bool algo) // Esta sobrecarga utiliza la clase de creación de comandos (OracleSPCommandBuilder). No, la variable no hace nada.
+        private void GetValuesAuto() // Esta variante utiliza una clase de creación de comandos que he creado (OracleSPCommandBuilder).
         {
             string commandString = $"Resultats_Pilot.Cursor_Pilot({cmbPilots.SelectedValue}.in.Int32,.out.RefCursor)";
             OracleSPCommandBuilder command = new OracleSPCommandBuilder(commandString, ConnString, true);
@@ -99,7 +99,7 @@ namespace CLS_Daniel_Mugueta
 
         }
 
-        private void GetPuntTotal(bool algo) // Esta sobrecarga utiliza la clase de creación de comandos (OracleSPCommandBuilder). No, la variable no hace nada.
+        private void GetPuntTotalAuto() // Esta variante utiliza una clase de creación de comandos que he creado (OracleSPCommandBuilder).
         {
             string commandString = $"Resultats_Pilot.Suma_Punts({cmbPilots.SelectedValue}.in.Int32)";
             OracleSPCommandBuilder command = new OracleSPCommandBuilder(commandString, ConnString, OracleDbType.Int32, true);
