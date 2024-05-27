@@ -53,8 +53,6 @@ namespace CLS_Juan_Paredes
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.f1DataSet1 = new CLS_Leandro_Varas.F1DataSet();
-            this.f1DataSet2 = new CLS_Leandro_Varas.F1DataSet();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BSTipusIncidencia)).BeginInit();
@@ -62,8 +60,6 @@ namespace CLS_Juan_Paredes
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.f1DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.f1DataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // BSTipusIncidencia
@@ -263,16 +259,6 @@ namespace CLS_Juan_Paredes
             this.label1.Text = "Descripcion Incidéncias:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // f1DataSet1
-            // 
-            this.f1DataSet1.DataSetName = "F1DataSet";
-            this.f1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // f1DataSet2
-            // 
-            this.f1DataSet2.DataSetName = "F1DataSet";
-            this.f1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // comboBox1
             // 
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BSTipusIncidencia, "DescTipusIncidencia", true));
@@ -316,8 +302,6 @@ namespace CLS_Juan_Paredes
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.f1DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.f1DataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,8 +329,6 @@ namespace CLS_Juan_Paredes
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn descTipusIncidenciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private CLS_Leandro_Varas.F1DataSet f1DataSet1;
-        private CLS_Leandro_Varas.F1DataSet f1DataSet2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
     }
