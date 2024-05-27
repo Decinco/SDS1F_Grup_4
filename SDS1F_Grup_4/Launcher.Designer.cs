@@ -37,6 +37,18 @@ namespace SDS1F_Grup_4
             this.escuderíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilotosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.análisisClasificaciónPorPilotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.juanParedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leandroVarasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informeClasificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposIncidenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incidenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incidenciasDeUnPilotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informeCircuitosYGPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.circuitosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gPsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resultadosGPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +56,9 @@ namespace SDS1F_Grup_4
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.danielMuguetaToolStripMenuItem});
+            this.danielMuguetaToolStripMenuItem,
+            this.juanParedesToolStripMenuItem,
+            this.leandroVarasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(576, 28);
@@ -80,14 +94,14 @@ namespace SDS1F_Grup_4
             // escuderíasToolStripMenuItem
             // 
             this.escuderíasToolStripMenuItem.Name = "escuderíasToolStripMenuItem";
-            this.escuderíasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.escuderíasToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.escuderíasToolStripMenuItem.Text = "Escuderías";
             this.escuderíasToolStripMenuItem.Click += new System.EventHandler(this.escuderíasToolStripMenuItem_Click);
             // 
             // pilotosToolStripMenuItem
             // 
             this.pilotosToolStripMenuItem.Name = "pilotosToolStripMenuItem";
-            this.pilotosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pilotosToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.pilotosToolStripMenuItem.Text = "Pilotos";
             this.pilotosToolStripMenuItem.Click += new System.EventHandler(this.pilotosToolStripMenuItem_Click_1);
             // 
@@ -97,6 +111,100 @@ namespace SDS1F_Grup_4
             this.análisisClasificaciónPorPilotoToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
             this.análisisClasificaciónPorPilotoToolStripMenuItem.Text = "Clasificación por Piloto";
             this.análisisClasificaciónPorPilotoToolStripMenuItem.Click += new System.EventHandler(this.análisisClasificaciónPorPilotoToolStripMenuItem_Click);
+            // 
+            // juanParedesToolStripMenuItem
+            // 
+            this.juanParedesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.informeClasificacionesToolStripMenuItem,
+            this.mantenimientoToolStripMenuItem,
+            this.incidenciasDeUnPilotoToolStripMenuItem});
+            this.juanParedesToolStripMenuItem.Name = "juanParedesToolStripMenuItem";
+            this.juanParedesToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
+            this.juanParedesToolStripMenuItem.Text = "JuanParedes";
+            // 
+            // leandroVarasToolStripMenuItem
+            // 
+            this.leandroVarasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.informeCircuitosYGPToolStripMenuItem,
+            this.mantenimientoToolStripMenuItem1,
+            this.resultadosGPToolStripMenuItem});
+            this.leandroVarasToolStripMenuItem.Name = "leandroVarasToolStripMenuItem";
+            this.leandroVarasToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
+            this.leandroVarasToolStripMenuItem.Text = "LeandroVaras";
+            // 
+            // informeClasificacionesToolStripMenuItem
+            // 
+            this.informeClasificacionesToolStripMenuItem.Name = "informeClasificacionesToolStripMenuItem";
+            this.informeClasificacionesToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.informeClasificacionesToolStripMenuItem.Text = "Informe Clasificaciones";
+            this.informeClasificacionesToolStripMenuItem.Click += new System.EventHandler(this.informeClasificacionesToolStripMenuItem_Click);
+            // 
+            // mantenimientoToolStripMenuItem
+            // 
+            this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tiposIncidenciasToolStripMenuItem,
+            this.incidenciasToolStripMenuItem});
+            this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            // 
+            // tiposIncidenciasToolStripMenuItem
+            // 
+            this.tiposIncidenciasToolStripMenuItem.Name = "tiposIncidenciasToolStripMenuItem";
+            this.tiposIncidenciasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tiposIncidenciasToolStripMenuItem.Text = "Tipos Incidencias";
+            this.tiposIncidenciasToolStripMenuItem.Click += new System.EventHandler(this.tiposIncidenciasToolStripMenuItem_Click);
+            // 
+            // incidenciasToolStripMenuItem
+            // 
+            this.incidenciasToolStripMenuItem.Name = "incidenciasToolStripMenuItem";
+            this.incidenciasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.incidenciasToolStripMenuItem.Text = "Incidencias";
+            this.incidenciasToolStripMenuItem.Click += new System.EventHandler(this.incidenciasToolStripMenuItem_Click);
+            // 
+            // incidenciasDeUnPilotoToolStripMenuItem
+            // 
+            this.incidenciasDeUnPilotoToolStripMenuItem.Name = "incidenciasDeUnPilotoToolStripMenuItem";
+            this.incidenciasDeUnPilotoToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.incidenciasDeUnPilotoToolStripMenuItem.Text = "Incidencias de un Piloto";
+            this.incidenciasDeUnPilotoToolStripMenuItem.Click += new System.EventHandler(this.incidenciasDeUnPilotoToolStripMenuItem_Click);
+            // 
+            // informeCircuitosYGPToolStripMenuItem
+            // 
+            this.informeCircuitosYGPToolStripMenuItem.Name = "informeCircuitosYGPToolStripMenuItem";
+            this.informeCircuitosYGPToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.informeCircuitosYGPToolStripMenuItem.Text = "Informe Circuitos y GP";
+            this.informeCircuitosYGPToolStripMenuItem.Click += new System.EventHandler(this.informeCircuitosYGPToolStripMenuItem_Click);
+            // 
+            // mantenimientoToolStripMenuItem1
+            // 
+            this.mantenimientoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.circuitosToolStripMenuItem,
+            this.gPsToolStripMenuItem});
+            this.mantenimientoToolStripMenuItem1.Name = "mantenimientoToolStripMenuItem1";
+            this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(238, 26);
+            this.mantenimientoToolStripMenuItem1.Text = "Mantenimiento";
+            // 
+            // circuitosToolStripMenuItem
+            // 
+            this.circuitosToolStripMenuItem.Name = "circuitosToolStripMenuItem";
+            this.circuitosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.circuitosToolStripMenuItem.Text = "Circuitos";
+            this.circuitosToolStripMenuItem.Click += new System.EventHandler(this.circuitosToolStripMenuItem_Click);
+            // 
+            // gPsToolStripMenuItem
+            // 
+            this.gPsToolStripMenuItem.Name = "gPsToolStripMenuItem";
+            this.gPsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gPsToolStripMenuItem.Text = "GPs";
+            this.gPsToolStripMenuItem.Click += new System.EventHandler(this.gPsToolStripMenuItem_Click);
+            // 
+            // resultadosGPToolStripMenuItem
+            // 
+            this.resultadosGPToolStripMenuItem.Name = "resultadosGPToolStripMenuItem";
+            this.resultadosGPToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.resultadosGPToolStripMenuItem.Text = "Resultados GP";
+            this.resultadosGPToolStripMenuItem.Click += new System.EventHandler(this.resultadosGPToolStripMenuItem_Click);
             // 
             // Launcher
             // 
@@ -123,6 +231,18 @@ namespace SDS1F_Grup_4
         private System.Windows.Forms.ToolStripMenuItem análisisClasificaciónPorPilotoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem escuderíasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pilotosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem juanParedesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem leandroVarasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informeClasificacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposIncidenciasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incidenciasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incidenciasDeUnPilotoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informeCircuitosYGPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem circuitosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gPsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resultadosGPToolStripMenuItem;
     }
 }
 

@@ -43,5 +43,53 @@ namespace SDS1F_Grup_4
             CLS_Daniel_Mugueta.FrmBBDD form = new FrmBBDD();
             form.Show();
         }
+
+        private void informeClasificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Juan_Paredes.frmLlista1 form = new frmLlista1();
+            form.Show();
+        }
+
+        private void tiposIncidenciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Juan_Paredes.frm_Mantenimiento form = new frm_Mantenimiento();
+            form.Show();
+        }
+
+        private void incidenciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Juan_Paredes.frmMantenimiento_FK form = new frmMantenimiento_FK();
+            form.Show();
+        }
+
+        private void incidenciasDeUnPilotoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Juan_Paredes.frmOracle form = new frmOracle();
+            form.Show();
+        }
+
+        private void informeCircuitosYGPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Leandro_Varas.frm_lista form = new frm_lista();
+            form.Show();
+        }
+
+        private void circuitosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Leandro_Varas.frm_mantenimiento form = new frm_mantenimiento();
+            form.Show();
+        }
+
+        private void gPsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Leandro_Varas.frm_mantenimientoFK form = new frm_mantenimientoFK();
+            form.Show();
+        }
+
+        private void resultadosGPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CLS_Leandro_Varas.oracle form = new oracle();
+            form.Show();
+        }
     }
 }
