@@ -80,11 +80,7 @@ namespace CLS_Leandro_Varas
 
         private void circuitComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (circuitComboBox.SelectedValue != null)
-            {
-                idCircuitTextBox.Text = circuitComboBox.SelectedValue.ToString();
-                gPBindingSource1.EndEdit();
-            }
+
         }
     }
 }
