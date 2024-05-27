@@ -32,9 +32,9 @@ namespace CLS_Juan_Paredes
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMantenimiento_FK));
             this.f1_Paredes1 = new CLS_Juan_Paredes.F1_Paredes();
-            this.BSIncidencia_FK = new System.Windows.Forms.BindingSource(this.components);
+            this.BSIncidencias = new System.Windows.Forms.BindingSource(this.components);
             this.incidenciesTableAdapter = new CLS_Juan_Paredes.F1_ParedesTableAdapters.IncidenciesTableAdapter();
-            this.BSTipusIncidencia_FK = new System.Windows.Forms.BindingSource(this.components);
+            this.BSTiposIncidencias = new System.Windows.Forms.BindingSource(this.components);
             this.tipusIncidenciaTableAdapter = new CLS_Juan_Paredes.F1_ParedesTableAdapters.TipusIncidenciaTableAdapter();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -49,21 +49,23 @@ namespace CLS_Juan_Paredes
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fKDetallsIncidenciesIncidenciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.detallsIncidenciesTableAdapter = new CLS_Juan_Paredes.F1_ParedesTableAdapters.DetallsIncidenciesTableAdapter();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.id_Incidencias = new System.Windows.Forms.TextBox();
+            this.desc_incidencias = new System.Windows.Forms.TextBox();
+            this.cmb_descIncidencias = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.descTipusIncidenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GuardarYCerrar = new System.Windows.Forms.ToolStripButton();
+            this.idTipusIncidenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescTipusIncidencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idIncidenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descIncidenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idGPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.f1_Paredes1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BSIncidencia_FK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BSTipusIncidencia_FK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BSIncidencias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BSTiposIncidencias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKDetallsIncidenciesIncidenciesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // f1_Paredes1
@@ -71,19 +73,19 @@ namespace CLS_Juan_Paredes
             this.f1_Paredes1.DataSetName = "F1_Paredes";
             this.f1_Paredes1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // BSIncidencia_FK
+            // BSIncidencias
             // 
-            this.BSIncidencia_FK.DataMember = "Incidencies";
-            this.BSIncidencia_FK.DataSource = this.f1_Paredes1;
+            this.BSIncidencias.DataMember = "Incidencies";
+            this.BSIncidencias.DataSource = this.f1_Paredes1;
             // 
             // incidenciesTableAdapter
             // 
             this.incidenciesTableAdapter.ClearBeforeFill = true;
             // 
-            // BSTipusIncidencia_FK
+            // BSTiposIncidencias
             // 
-            this.BSTipusIncidencia_FK.DataMember = "TipusIncidencia";
-            this.BSTipusIncidencia_FK.DataSource = this.f1_Paredes1;
+            this.BSTiposIncidencias.DataMember = "TipusIncidencia";
+            this.BSTiposIncidencias.DataSource = this.f1_Paredes1;
             // 
             // tipusIncidenciaTableAdapter
             // 
@@ -92,6 +94,7 @@ namespace CLS_Juan_Paredes
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BindingSource = this.BSIncidencias;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -107,7 +110,7 @@ namespace CLS_Juan_Paredes
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.toolStripButton1});
+            this.GuardarYCerrar});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -115,7 +118,7 @@ namespace CLS_Juan_Paredes
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(668, 31);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1002, 27);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -193,7 +196,7 @@ namespace CLS_Juan_Paredes
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // bindingNavigatorDeleteItem
@@ -207,101 +210,153 @@ namespace CLS_Juan_Paredes
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.descTipusIncidenciaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.BSTipusIncidencia_FK;
-            this.dataGridView1.Location = new System.Drawing.Point(324, 58);
+            this.idTipusIncidenciaDataGridViewTextBoxColumn,
+            this.DescTipusIncidencia,
+            this.idIncidenciaDataGridViewTextBoxColumn,
+            this.descIncidenciaDataGridViewTextBoxColumn,
+            this.idGPDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.BSIncidencias;
+            this.dataGridView1.Location = new System.Drawing.Point(357, 72);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(332, 258);
+            this.dataGridView1.Size = new System.Drawing.Size(633, 366);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
-            // fKDetallsIncidenciesIncidenciesBindingSource
+            // id_Incidencias
             // 
-            this.fKDetallsIncidenciesIncidenciesBindingSource.DataMember = "FK_DetallsIncidencies_Incidencies";
-            this.fKDetallsIncidenciesIncidenciesBindingSource.DataSource = this.BSIncidencia_FK;
+            this.id_Incidencias.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BSIncidencias, "idTipusIncidencia", true));
+            this.id_Incidencias.Location = new System.Drawing.Point(49, 228);
+            this.id_Incidencias.Name = "id_Incidencias";
+            this.id_Incidencias.ReadOnly = true;
+            this.id_Incidencias.Size = new System.Drawing.Size(100, 22);
+            this.id_Incidencias.TabIndex = 2;
+            this.id_Incidencias.TextChanged += new System.EventHandler(this.id_Incidencias_TextChanged);
             // 
-            // detallsIncidenciesTableAdapter
+            // desc_incidencias
             // 
-            this.detallsIncidenciesTableAdapter.ClearBeforeFill = true;
+            this.desc_incidencias.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.BSIncidencias, "DescIncidencia", true));
+            this.desc_incidencias.Location = new System.Drawing.Point(49, 110);
+            this.desc_incidencias.Name = "desc_incidencias";
+            this.desc_incidencias.Size = new System.Drawing.Size(258, 22);
+            this.desc_incidencias.TabIndex = 3;
             // 
-            // textBox1
+            // cmb_descIncidencias
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 22);
-            this.textBox1.TabIndex = 2;
+            this.cmb_descIncidencias.DataSource = this.BSTiposIncidencias;
+            this.cmb_descIncidencias.DisplayMember = "DescTipusIncidencia";
+            this.cmb_descIncidencias.FormattingEnabled = true;
+            this.cmb_descIncidencias.Location = new System.Drawing.Point(49, 228);
+            this.cmb_descIncidencias.Name = "cmb_descIncidencias";
+            this.cmb_descIncidencias.Size = new System.Drawing.Size(223, 24);
+            this.cmb_descIncidencias.TabIndex = 4;
+            this.cmb_descIncidencias.ValueMember = "idTipusIncidencia";
+            this.cmb_descIncidencias.SelectedValueChanged += new System.EventHandler(this.cmb_descIncidencias_SelectedValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 125);
+            this.label1.Location = new System.Drawing.Point(46, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Descripción de la incidéncia:\r\n";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(28, 146);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(250, 24);
-            this.comboBox1.TabIndex = 4;
+            this.label1.Size = new System.Drawing.Size(141, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Tipos de Incidencias:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 58);
+            this.label2.Location = new System.Drawing.Point(46, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 18);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Incidéncia:";
+            this.label2.Size = new System.Drawing.Size(82, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Incidencias:";
             // 
-            // toolStripButton1
+            // GuardarYCerrar
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.GuardarYCerrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.GuardarYCerrar.Image = ((System.Drawing.Image)(resources.GetObject("GuardarYCerrar.Image")));
+            this.GuardarYCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.GuardarYCerrar.Name = "GuardarYCerrar";
+            this.GuardarYCerrar.Size = new System.Drawing.Size(29, 24);
+            this.GuardarYCerrar.Text = "Guardar";
+            this.GuardarYCerrar.Click += new System.EventHandler(this.GuardarYCerrar_Click);
             // 
-            // descTipusIncidenciaDataGridViewTextBoxColumn
+            // idTipusIncidenciaDataGridViewTextBoxColumn
             // 
-            this.descTipusIncidenciaDataGridViewTextBoxColumn.DataPropertyName = "DescTipusIncidencia";
-            this.descTipusIncidenciaDataGridViewTextBoxColumn.HeaderText = "Tipos de Incidéncias";
-            this.descTipusIncidenciaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descTipusIncidenciaDataGridViewTextBoxColumn.Name = "descTipusIncidenciaDataGridViewTextBoxColumn";
-            this.descTipusIncidenciaDataGridViewTextBoxColumn.Width = 165;
+            this.idTipusIncidenciaDataGridViewTextBoxColumn.DataPropertyName = "idTipusIncidencia";
+            this.idTipusIncidenciaDataGridViewTextBoxColumn.HeaderText = "idTipusIncidencia";
+            this.idTipusIncidenciaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idTipusIncidenciaDataGridViewTextBoxColumn.Name = "idTipusIncidenciaDataGridViewTextBoxColumn";
+            this.idTipusIncidenciaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idTipusIncidenciaDataGridViewTextBoxColumn.Visible = false;
+            this.idTipusIncidenciaDataGridViewTextBoxColumn.Width = 125;
             // 
-            // frmOracle_FK
+            // DescTipusIncidencia
+            // 
+            this.DescTipusIncidencia.HeaderText = "Tipos de Incidencias";
+            this.DescTipusIncidencia.MinimumWidth = 6;
+            this.DescTipusIncidencia.Name = "DescTipusIncidencia";
+            this.DescTipusIncidencia.ReadOnly = true;
+            this.DescTipusIncidencia.Width = 125;
+            // 
+            // idIncidenciaDataGridViewTextBoxColumn
+            // 
+            this.idIncidenciaDataGridViewTextBoxColumn.DataPropertyName = "idIncidencia";
+            this.idIncidenciaDataGridViewTextBoxColumn.HeaderText = "idIncidencia";
+            this.idIncidenciaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idIncidenciaDataGridViewTextBoxColumn.Name = "idIncidenciaDataGridViewTextBoxColumn";
+            this.idIncidenciaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idIncidenciaDataGridViewTextBoxColumn.Visible = false;
+            this.idIncidenciaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descIncidenciaDataGridViewTextBoxColumn
+            // 
+            this.descIncidenciaDataGridViewTextBoxColumn.DataPropertyName = "DescIncidencia";
+            this.descIncidenciaDataGridViewTextBoxColumn.HeaderText = "Incidencia";
+            this.descIncidenciaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descIncidenciaDataGridViewTextBoxColumn.Name = "descIncidenciaDataGridViewTextBoxColumn";
+            this.descIncidenciaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descIncidenciaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idGPDataGridViewTextBoxColumn
+            // 
+            this.idGPDataGridViewTextBoxColumn.DataPropertyName = "idGP";
+            this.idGPDataGridViewTextBoxColumn.HeaderText = "idGP";
+            this.idGPDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idGPDataGridViewTextBoxColumn.Name = "idGPDataGridViewTextBoxColumn";
+            this.idGPDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idGPDataGridViewTextBoxColumn.Visible = false;
+            this.idGPDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // frmMantenimiento_FK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 328);
+            this.ClientSize = new System.Drawing.Size(1002, 450);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cmb_descIncidencias);
+            this.Controls.Add(this.desc_incidencias);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bindingNavigator1);
-            this.Name = "frmOracle_FK";
-            this.Text = "frmOracle_FK";
-            this.Load += new System.EventHandler(this.frmOracle_FK_Load);
+            this.Controls.Add(this.id_Incidencias);
+            this.Name = "frmMantenimiento_FK";
+            this.Text = "frmMantenimiento_FK";
+            this.Load += new System.EventHandler(this.frmMantenimiento_FK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.f1_Paredes1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BSIncidencia_FK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BSTipusIncidencia_FK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BSIncidencias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BSTiposIncidencias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKDetallsIncidenciesIncidenciesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,9 +365,9 @@ namespace CLS_Juan_Paredes
         #endregion
 
         private F1_Paredes f1_Paredes1;
-        private System.Windows.Forms.BindingSource BSIncidencia_FK;
+        private System.Windows.Forms.BindingSource BSIncidencias;
         private F1_ParedesTableAdapters.IncidenciesTableAdapter incidenciesTableAdapter;
-        private System.Windows.Forms.BindingSource BSTipusIncidencia_FK;
+        private System.Windows.Forms.BindingSource BSTiposIncidencias;
         private F1_ParedesTableAdapters.TipusIncidenciaTableAdapter tipusIncidenciaTableAdapter;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
@@ -327,13 +382,16 @@ namespace CLS_Juan_Paredes
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource fKDetallsIncidenciesIncidenciesBindingSource;
-        private F1_ParedesTableAdapters.DetallsIncidenciesTableAdapter detallsIncidenciesTableAdapter;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox id_Incidencias;
+        private System.Windows.Forms.TextBox desc_incidencias;
+        private System.Windows.Forms.ComboBox cmb_descIncidencias;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descTipusIncidenciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripButton GuardarYCerrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTipusIncidenciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescTipusIncidencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idIncidenciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descIncidenciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idGPDataGridViewTextBoxColumn;
     }
 }

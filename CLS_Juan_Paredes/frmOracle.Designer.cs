@@ -50,7 +50,7 @@ namespace CLS_Juan_Paredes
             // iDPILOTLabel
             // 
             iDPILOTLabel.AutoSize = true;
-            iDPILOTLabel.Location = new System.Drawing.Point(303, 36);
+            iDPILOTLabel.Location = new System.Drawing.Point(116, 37);
             iDPILOTLabel.Name = "iDPILOTLabel";
             iDPILOTLabel.Size = new System.Drawing.Size(39, 17);
             iDPILOTLabel.TabIndex = 3;
@@ -61,7 +61,7 @@ namespace CLS_Juan_Paredes
             this.nombres_pilots.DataSource = this.bindingSource1;
             this.nombres_pilots.DisplayMember = "NAME";
             this.nombres_pilots.FormattingEnabled = true;
-            this.nombres_pilots.Location = new System.Drawing.Point(119, 70);
+            this.nombres_pilots.Location = new System.Drawing.Point(118, 70);
             this.nombres_pilots.Name = "nombres_pilots";
             this.nombres_pilots.Size = new System.Drawing.Size(223, 24);
             this.nombres_pilots.TabIndex = 1;

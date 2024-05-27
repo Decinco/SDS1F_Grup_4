@@ -113,17 +113,17 @@
     <Compile Include="frmLlista1.Designer.cs">
       <DependentUpon>frmLlista1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOracle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmOracle.Designer.cs">
-      <DependentUpon>frmOracle.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMantenimiento_FK.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMantenimiento_FK.Designer.cs">
       <DependentUpon>frmMantenimiento_FK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOracle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOracle.Designer.cs">
+      <DependentUpon>frmOracle.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Mantenimiento.cs">
       <SubType>Form</SubType>
@@ -149,11 +149,11 @@
     <EmbeddedResource Include="frmLlista1.resx">
       <DependentUpon>frmLlista1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOracle.resx">
-      <DependentUpon>frmOracle.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMantenimiento_FK.resx">
       <DependentUpon>frmMantenimiento_FK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOracle.resx">
+      <DependentUpon>frmOracle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Mantenimiento.resx">
       <DependentUpon>frm_Mantenimiento.cs</DependentUpon>
