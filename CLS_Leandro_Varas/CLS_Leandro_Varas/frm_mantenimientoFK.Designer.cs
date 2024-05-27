@@ -417,6 +417,7 @@ namespace CLS_Leandro_Varas
             this.idCircuitDataGridViewTextBoxColumn.Name = "idCircuitDataGridViewTextBoxColumn";
             this.idCircuitDataGridViewTextBoxColumn.ReadOnly = true;
             this.idCircuitDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.idCircuitDataGridViewTextBoxColumn.Visible = false;
             this.idCircuitDataGridViewTextBoxColumn.Width = 125;
             // 
             // Circuit
