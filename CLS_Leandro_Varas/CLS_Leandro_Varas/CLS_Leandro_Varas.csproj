@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,6 +35,7 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -41,6 +43,9 @@
       <HintPath>..\..\packages\Oracle.ManagedDataAccess.23.4.0\lib\net472\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -74,6 +79,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -84,11 +90,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="F1CR.cs">
+    <Compile Include="F1_CLS_Leandro.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>F1CR.rpt</DependentUpon>
-      <SubType>Component</SubType>
+      <DependentUpon>F1_CLS_Leandro.xsd</DependentUpon>
     </Compile>
     <Compile Include="F1_Grand_Prix_Information.cs">
       <AutoGen>True</AutoGen>
@@ -108,19 +113,36 @@
     <Compile Include="frm_mantenimiento.Designer.cs">
       <DependentUpon>frm_mantenimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_mantenimientoFK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_mantenimientoFK.Designer.cs">
+      <DependentUpon>frm_mantenimientoFK.cs</DependentUpon>
+    </Compile>
     <Compile Include="oracle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="oracle.Designer.cs">
       <DependentUpon>oracle.cs</DependentUpon>
     </Compile>
+    <Compile Include="oracledb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>oracledb.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="F1CR.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>F1CR.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="F1_Grand_Prix_Information.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>F1_Grand_Prix_Information.cs</LastGenOutput>
@@ -128,12 +150,37 @@
     <EmbeddedResource Include="frm_lista.resx">
       <DependentUpon>frm_lista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_mantenimiento.resx">
+      <DependentUpon>frm_mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_mantenimientoFK.resx">
+      <DependentUpon>frm_mantenimientoFK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oracle.resx">
+      <DependentUpon>oracle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="app.config" />
+    <None Include="F1_CLS_Leandro.xsc">
+      <DependentUpon>F1_CLS_Leandro.xsd</DependentUpon>
+    </None>
+    <None Include="F1_CLS_Leandro.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>F1_CLS_Leandro.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="F1_CLS_Leandro.xss">
+      <DependentUpon>F1_CLS_Leandro.xsd</DependentUpon>
+    </None>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -141,6 +188,28 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="oracledb.xsc">
+      <DependentUpon>oracledb.xsd</DependentUpon>
+    </None>
+    <None Include="oracledb.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>oracledb.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="oracledb.xss">
+      <DependentUpon>oracledb.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\cls_Paredes\cls_Paredes.csproj">
+      <Project>{F9CF76CA-17CA-4C56-97DA-852673DD46CC}</Project>
+      <Name>cls_Paredes</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

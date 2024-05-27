@@ -16,5 +16,28 @@ namespace CLS_Leandro_Varas
         {
             InitializeComponent();
         }
+
+        private void frm_lista_Load(object sender, EventArgs e)
+        {
+            //F1CR gp_info = new F1CR();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CLS_Leandro_Varas.frm_mantenimientoFK form = new frm_mantenimientoFK();
+            form.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            CLS_Leandro_Varas.oracle form = new oracle();
+            form.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CLS_Leandro_Varas.frm_mantenimiento form = new frm_mantenimiento();
+            form.Show();
+        }
     }
 }
