@@ -119,6 +119,12 @@
     <Compile Include="frmOracle.Designer.cs">
       <DependentUpon>frmOracle.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMantenimiento_FK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantenimiento_FK.Designer.cs">
+      <DependentUpon>frmMantenimiento_FK.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Mantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOracle.resx">
       <DependentUpon>frmOracle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantenimiento_FK.resx">
+      <DependentUpon>frmMantenimiento_FK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Mantenimiento.resx">
       <DependentUpon>frm_Mantenimiento.cs</DependentUpon>
