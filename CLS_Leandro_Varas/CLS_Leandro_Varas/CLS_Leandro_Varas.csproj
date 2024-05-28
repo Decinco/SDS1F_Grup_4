@@ -90,6 +90,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="F1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>F1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="F1_CLS_Leandro.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -170,6 +175,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="app.config" />
+    <None Include="F1DataSet.xsc">
+      <DependentUpon>F1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="F1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>F1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="F1DataSet.xss">
+      <DependentUpon>F1DataSet.xsd</DependentUpon>
+    </None>
     <None Include="F1_CLS_Leandro.xsc">
       <DependentUpon>F1_CLS_Leandro.xsd</DependentUpon>
     </None>

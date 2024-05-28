@@ -38,12 +38,12 @@ namespace SDS1F_Grup_4
             this.pilotosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.análisisClasificaciónPorPilotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.juanParedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.leandroVarasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informeClasificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposIncidenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incidenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incidenciasDeUnPilotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leandroVarasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informeCircuitosYGPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.circuitosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +61,7 @@ namespace SDS1F_Grup_4
             this.leandroVarasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(576, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(576, 30);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,7 +72,7 @@ namespace SDS1F_Grup_4
             this.mantenimientoEscuderíasToolStripMenuItem,
             this.análisisClasificaciónPorPilotoToolStripMenuItem});
             this.danielMuguetaToolStripMenuItem.Name = "danielMuguetaToolStripMenuItem";
-            this.danielMuguetaToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
+            this.danielMuguetaToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.danielMuguetaToolStripMenuItem.Text = "DanielMugueta";
             // 
             // informePerfilPilotosToolStripMenuItem
@@ -119,18 +119,8 @@ namespace SDS1F_Grup_4
             this.mantenimientoToolStripMenuItem,
             this.incidenciasDeUnPilotoToolStripMenuItem});
             this.juanParedesToolStripMenuItem.Name = "juanParedesToolStripMenuItem";
-            this.juanParedesToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
+            this.juanParedesToolStripMenuItem.Size = new System.Drawing.Size(103, 26);
             this.juanParedesToolStripMenuItem.Text = "JuanParedes";
-            // 
-            // leandroVarasToolStripMenuItem
-            // 
-            this.leandroVarasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.informeCircuitosYGPToolStripMenuItem,
-            this.mantenimientoToolStripMenuItem1,
-            this.resultadosGPToolStripMenuItem});
-            this.leandroVarasToolStripMenuItem.Name = "leandroVarasToolStripMenuItem";
-            this.leandroVarasToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
-            this.leandroVarasToolStripMenuItem.Text = "LeandroVaras";
             // 
             // informeClasificacionesToolStripMenuItem
             // 
@@ -151,14 +141,14 @@ namespace SDS1F_Grup_4
             // tiposIncidenciasToolStripMenuItem
             // 
             this.tiposIncidenciasToolStripMenuItem.Name = "tiposIncidenciasToolStripMenuItem";
-            this.tiposIncidenciasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tiposIncidenciasToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.tiposIncidenciasToolStripMenuItem.Text = "Tipos Incidencias";
             this.tiposIncidenciasToolStripMenuItem.Click += new System.EventHandler(this.tiposIncidenciasToolStripMenuItem_Click);
             // 
             // incidenciasToolStripMenuItem
             // 
             this.incidenciasToolStripMenuItem.Name = "incidenciasToolStripMenuItem";
-            this.incidenciasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.incidenciasToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.incidenciasToolStripMenuItem.Text = "Incidencias";
             this.incidenciasToolStripMenuItem.Click += new System.EventHandler(this.incidenciasToolStripMenuItem_Click);
             // 
@@ -168,6 +158,16 @@ namespace SDS1F_Grup_4
             this.incidenciasDeUnPilotoToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
             this.incidenciasDeUnPilotoToolStripMenuItem.Text = "Incidencias de un Piloto";
             this.incidenciasDeUnPilotoToolStripMenuItem.Click += new System.EventHandler(this.incidenciasDeUnPilotoToolStripMenuItem_Click);
+            // 
+            // leandroVarasToolStripMenuItem
+            // 
+            this.leandroVarasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.informeCircuitosYGPToolStripMenuItem,
+            this.mantenimientoToolStripMenuItem1,
+            this.resultadosGPToolStripMenuItem});
+            this.leandroVarasToolStripMenuItem.Name = "leandroVarasToolStripMenuItem";
+            this.leandroVarasToolStripMenuItem.Size = new System.Drawing.Size(112, 26);
+            this.leandroVarasToolStripMenuItem.Text = "LeandroVaras";
             // 
             // informeCircuitosYGPToolStripMenuItem
             // 
@@ -188,14 +188,14 @@ namespace SDS1F_Grup_4
             // circuitosToolStripMenuItem
             // 
             this.circuitosToolStripMenuItem.Name = "circuitosToolStripMenuItem";
-            this.circuitosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.circuitosToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.circuitosToolStripMenuItem.Text = "Circuitos";
             this.circuitosToolStripMenuItem.Click += new System.EventHandler(this.circuitosToolStripMenuItem_Click);
             // 
             // gPsToolStripMenuItem
             // 
             this.gPsToolStripMenuItem.Name = "gPsToolStripMenuItem";
-            this.gPsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gPsToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.gPsToolStripMenuItem.Text = "GPs";
             this.gPsToolStripMenuItem.Click += new System.EventHandler(this.gPsToolStripMenuItem_Click);
             // 
@@ -213,6 +213,7 @@ namespace SDS1F_Grup_4
             this.ClientSize = new System.Drawing.Size(576, 293);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Launcher";
             this.Text = "SDS1F - Grupo 4 - Menú Principal";
