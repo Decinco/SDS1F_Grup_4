@@ -415,8 +415,9 @@ namespace CLS_Leandro_Varas
             this.Controls.Add(this.CircuitoTbox);
             this.Controls.Add(this.Circuitotxt);
             this.Controls.Add(this.tabla_inf_circuits);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_mantenimiento";
-            this.Text = "frm_mantenimiento";
+            this.Text = "LeandroVaras - Mantenimiento de Circuitos";
             this.Load += new System.EventHandler(this.frm_mantenimiento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.f1_CLS_Leandro1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DbCircuits)).EndInit();

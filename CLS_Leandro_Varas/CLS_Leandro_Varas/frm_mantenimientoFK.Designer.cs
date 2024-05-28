@@ -54,22 +54,22 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gPBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.descGPTextBox = new System.Windows.Forms.TextBox();
+            this.gPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.temporadaTextBox = new System.Windows.Forms.TextBox();
             this.dataGPDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.circuitsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.circuitComboBox = new System.Windows.Forms.ComboBox();
             this.DatosGP_circuit = new System.Windows.Forms.DataGridView();
-            this.f1_CLS_Leandro1 = new CLS_Leandro_Varas.F1_CLS_Leandro();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.gPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.idCircuitTextBox = new System.Windows.Forms.TextBox();
             this.idGPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descGPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCircuitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Circuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.f1_CLS_Leandro1 = new CLS_Leandro_Varas.F1_CLS_Leandro();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.idCircuitTextBox = new System.Windows.Forms.TextBox();
             descGPLabel = new System.Windows.Forms.Label();
             temporadaLabel = new System.Windows.Forms.Label();
             dataGPLabel = new System.Windows.Forms.Label();
@@ -78,12 +78,12 @@ namespace CLS_Leandro_Varas
             ((System.ComponentModel.ISupportInitialize)(this.gPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gPBindingNavigator)).BeginInit();
             this.gPBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gPBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circuitsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DatosGP_circuit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1_CLS_Leandro1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gPBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // descGPLabel
@@ -185,7 +185,7 @@ namespace CLS_Leandro_Varas
             this.gPBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.gPBindingNavigator.Name = "gPBindingNavigator";
             this.gPBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.gPBindingNavigator.Size = new System.Drawing.Size(1020, 31);
+            this.gPBindingNavigator.Size = new System.Drawing.Size(1020, 27);
             this.gPBindingNavigator.TabIndex = 0;
             this.gPBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -195,13 +195,13 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -211,7 +211,7 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
@@ -220,7 +220,7 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
@@ -229,13 +229,13 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -250,7 +250,7 @@ namespace CLS_Leandro_Varas
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -258,7 +258,7 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
             // 
             // bindingNavigatorMoveLastItem
@@ -267,20 +267,20 @@ namespace CLS_Leandro_Varas
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // gPBindingNavigatorSaveItem
             // 
             this.gPBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.gPBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("gPBindingNavigatorSaveItem.Image")));
             this.gPBindingNavigatorSaveItem.Name = "gPBindingNavigatorSaveItem";
-            this.gPBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
+            this.gPBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.gPBindingNavigatorSaveItem.Text = "Guardar datos";
             this.gPBindingNavigatorSaveItem.Click += new System.EventHandler(this.gPBindingNavigatorSaveItem_Click);
             // 
@@ -292,6 +292,11 @@ namespace CLS_Leandro_Varas
             this.descGPTextBox.Size = new System.Drawing.Size(139, 22);
             this.descGPTextBox.TabIndex = 2;
             this.descGPTextBox.TextChanged += new System.EventHandler(this.descGPTextBox_TextChanged);
+            // 
+            // gPBindingSource1
+            // 
+            this.gPBindingSource1.DataMember = "GP";
+            this.gPBindingSource1.DataSource = this.f1_CLS_Leandro;
             // 
             // temporadaTextBox
             // 
@@ -349,29 +354,6 @@ namespace CLS_Leandro_Varas
             this.DatosGP_circuit.TabIndex = 9;
             this.DatosGP_circuit.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
-            // f1_CLS_Leandro1
-            // 
-            this.f1_CLS_Leandro1.DataSetName = "F1_CLS_Leandro";
-            this.f1_CLS_Leandro1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
-            // 
-            // gPBindingSource1
-            // 
-            this.gPBindingSource1.DataMember = "GP";
-            this.gPBindingSource1.DataSource = this.f1_CLS_Leandro;
-            // 
-            // idCircuitTextBox
-            // 
-            this.idCircuitTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gPBindingSource1, "idCircuit", true));
-            this.idCircuitTextBox.Location = new System.Drawing.Point(600, 66);
-            this.idCircuitTextBox.Name = "idCircuitTextBox";
-            this.idCircuitTextBox.Size = new System.Drawing.Size(10, 22);
-            this.idCircuitTextBox.TabIndex = 11;
-            this.idCircuitTextBox.TextChanged += new System.EventHandler(this.idCircuitTextBox_TextChanged);
-            // 
             // idGPDataGridViewTextBoxColumn
             // 
             this.idGPDataGridViewTextBoxColumn.DataPropertyName = "idGP";
@@ -428,6 +410,24 @@ namespace CLS_Leandro_Varas
             this.Circuit.ReadOnly = true;
             this.Circuit.Width = 125;
             // 
+            // f1_CLS_Leandro1
+            // 
+            this.f1_CLS_Leandro1.DataSetName = "F1_CLS_Leandro";
+            this.f1_CLS_Leandro1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            // 
+            // idCircuitTextBox
+            // 
+            this.idCircuitTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gPBindingSource1, "idCircuit", true));
+            this.idCircuitTextBox.Location = new System.Drawing.Point(600, 66);
+            this.idCircuitTextBox.Name = "idCircuitTextBox";
+            this.idCircuitTextBox.Size = new System.Drawing.Size(10, 22);
+            this.idCircuitTextBox.TabIndex = 11;
+            this.idCircuitTextBox.TextChanged += new System.EventHandler(this.idCircuitTextBox_TextChanged);
+            // 
             // frm_mantenimientoFK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -444,20 +444,21 @@ namespace CLS_Leandro_Varas
             this.Controls.Add(this.descGPTextBox);
             this.Controls.Add(this.gPBindingNavigator);
             this.Controls.Add(this.idCircuitTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_mantenimientoFK";
-            this.Text = "3";
+            this.Text = "LeandroVaras - Mantenimiento de GPs";
             this.Load += new System.EventHandler(this.frm_mantenimientoFK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.f1_CLS_Leandro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gPBindingNavigator)).EndInit();
             this.gPBindingNavigator.ResumeLayout(false);
             this.gPBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gPBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circuitsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DatosGP_circuit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1_CLS_Leandro1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gPBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

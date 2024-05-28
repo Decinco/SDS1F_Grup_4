@@ -29,6 +29,7 @@ namespace CLS_Juan_Paredes
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLlista1));
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.CrystalReport11 = new CLS_Juan_Paredes.CrystalReport1();
             this.SuspendLayout();
@@ -51,8 +52,9 @@ namespace CLS_Juan_Paredes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 701);
             this.Controls.Add(this.crystalReportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLlista1";
-            this.Text = "frmLlista1";
+            this.Text = "JuanParedes - Informe Clasificaciones";
             this.ResumeLayout(false);
 
         }

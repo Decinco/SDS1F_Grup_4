@@ -61,7 +61,7 @@ namespace SDS1F_Grup_4
             this.leandroVarasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(576, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(576, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,7 +72,7 @@ namespace SDS1F_Grup_4
             this.mantenimientoEscuderíasToolStripMenuItem,
             this.análisisClasificaciónPorPilotoToolStripMenuItem});
             this.danielMuguetaToolStripMenuItem.Name = "danielMuguetaToolStripMenuItem";
-            this.danielMuguetaToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.danielMuguetaToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
             this.danielMuguetaToolStripMenuItem.Text = "DanielMugueta";
             // 
             // informePerfilPilotosToolStripMenuItem
@@ -119,7 +119,7 @@ namespace SDS1F_Grup_4
             this.mantenimientoToolStripMenuItem,
             this.incidenciasDeUnPilotoToolStripMenuItem});
             this.juanParedesToolStripMenuItem.Name = "juanParedesToolStripMenuItem";
-            this.juanParedesToolStripMenuItem.Size = new System.Drawing.Size(103, 26);
+            this.juanParedesToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
             this.juanParedesToolStripMenuItem.Text = "JuanParedes";
             // 
             // informeClasificacionesToolStripMenuItem
@@ -166,7 +166,7 @@ namespace SDS1F_Grup_4
             this.mantenimientoToolStripMenuItem1,
             this.resultadosGPToolStripMenuItem});
             this.leandroVarasToolStripMenuItem.Name = "leandroVarasToolStripMenuItem";
-            this.leandroVarasToolStripMenuItem.Size = new System.Drawing.Size(112, 26);
+            this.leandroVarasToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.leandroVarasToolStripMenuItem.Text = "LeandroVaras";
             // 
             // informeCircuitosYGPToolStripMenuItem
@@ -217,6 +217,7 @@ namespace SDS1F_Grup_4
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Launcher";
             this.Text = "SDS1F - Grupo 4 - Menú Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

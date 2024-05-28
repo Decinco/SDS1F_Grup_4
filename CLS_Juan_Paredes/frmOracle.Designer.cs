@@ -31,6 +31,7 @@ namespace CLS_Juan_Paredes
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label iDPILOTLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOracle));
             this.nombres_pilots = new System.Windows.Forms.ComboBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.oracle_dataSet1 = new CLS_Juan_Paredes.Oracle_dataSet();
@@ -155,8 +156,9 @@ namespace CLS_Juan_Paredes
             this.Controls.Add(iDPILOTLabel);
             this.Controls.Add(this.nombres_pilots);
             this.Controls.Add(this.iDPILOTTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmOracle";
-            this.Text = "frmOracle";
+            this.Text = "JuanParedes - Incidencias de un Piloto";
             this.Load += new System.EventHandler(this.frmOracle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oracle_dataSet1)).EndInit();

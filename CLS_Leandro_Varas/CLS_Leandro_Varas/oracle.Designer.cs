@@ -31,6 +31,7 @@ namespace CLS_Leandro_Varas
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label descGPLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(oracle));
             this.gPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.f1_CLS_Leandro = new CLS_Leandro_Varas.F1_CLS_Leandro();
             this.Resultados = new System.Windows.Forms.Button();
@@ -40,11 +41,11 @@ namespace CLS_Leandro_Varas
             this.pilotsTableAdapter = new CLS_Leandro_Varas.F1_CLS_LeandroTableAdapters.PilotsTableAdapter();
             this.oracledb = new CLS_Leandro_Varas.oracledb();
             this.tableAdapterManager1 = new CLS_Leandro_Varas.oracledbTableAdapters.TableAdapterManager();
+            this.gPTableAdapter1 = new CLS_Leandro_Varas.oracledbTableAdapters.GPTableAdapter();
             this.dESCGPComboBox = new System.Windows.Forms.ComboBox();
             this.gPBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.iDGPTextBox = new System.Windows.Forms.TextBox();
             this.gPTableAdapter = new CLS_Leandro_Varas.F1_CLS_LeandroTableAdapters.GPTableAdapter();
-            this.gPTableAdapter1 = new CLS_Leandro_Varas.oracledbTableAdapters.GPTableAdapter();
             descGPLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1_CLS_Leandro)).BeginInit();
@@ -137,6 +138,10 @@ namespace CLS_Leandro_Varas
             this.tableAdapterManager1.TIPUSINCIDENCIATableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = CLS_Leandro_Varas.oracledbTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // gPTableAdapter1
+            // 
+            this.gPTableAdapter1.ClearBeforeFill = true;
+            // 
             // dESCGPComboBox
             // 
             this.dESCGPComboBox.DataSource = this.gPBindingSource2;
@@ -165,10 +170,6 @@ namespace CLS_Leandro_Varas
             // 
             this.gPTableAdapter.ClearBeforeFill = true;
             // 
-            // gPTableAdapter1
-            // 
-            this.gPTableAdapter1.ClearBeforeFill = true;
-            // 
             // oracle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -181,8 +182,9 @@ namespace CLS_Leandro_Varas
             this.Controls.Add(this.Resultados);
             this.Controls.Add(descGPLabel);
             this.Controls.Add(this.iDGPTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "oracle";
-            this.Text = "oracle";
+            this.Text = "LeandroVaras - Resultados GP";
             this.Load += new System.EventHandler(this.oracle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.f1_CLS_Leandro)).EndInit();

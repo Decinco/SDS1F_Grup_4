@@ -107,7 +107,7 @@ namespace CLS_Leandro_Varas
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 Nom_ganador.Text = "";
             }

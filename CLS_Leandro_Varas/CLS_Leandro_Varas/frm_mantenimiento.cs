@@ -76,7 +76,7 @@ namespace CLS_Leandro_Varas
                     esquemaCircuitTextBox.Text = ruta;
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("El archivo seleccionado no se encuentra en la base de datos");
             }

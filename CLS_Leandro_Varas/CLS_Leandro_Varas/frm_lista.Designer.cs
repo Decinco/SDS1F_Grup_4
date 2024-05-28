@@ -29,6 +29,7 @@ namespace CLS_Leandro_Varas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_lista));
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.F1_Grand_Prix_Information1 = new CLS_Leandro_Varas.F1_Grand_Prix_Information();
             this.SuspendLayout();
@@ -51,8 +52,9 @@ namespace CLS_Leandro_Varas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 638);
             this.Controls.Add(this.crystalReportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_lista";
-            this.Text = "frm_lista";
+            this.Text = "LeandroVaras - Informe Circutios y GP";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_lista_Load);
             this.ResumeLayout(false);
